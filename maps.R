@@ -68,29 +68,6 @@ hs <- geocode("housten")
 da <- geocode("dallas")
 ch <- geocode("chicago")
 ny <- geocode("new york city")
-# cities <- bind_rows(la, sf, hs, da, ch, ny)
-# 
-# map.data <- map_data("state")   
-# points <- data.frame(x = as.numeric(cities$lon), y = as.numeric(cities$lat))
-# 
-# ggplot(map.data) + 
-#   geom_map(aes(map_id = region),  
-#            map = map.data,  
-#            fill = "white",             
-#            color = "grey20", size = 0.25) + 
-#   expand_limits(x = map.data$long, y = map.data$lat) +            
-#   theme(axis.line = element_blank(),  
-#         axis.text = element_blank(),  
-#         axis.ticks = element_blank(),                     
-#         axis.title = element_blank(),  
-#         panel.background = element_blank(),  
-#         panel.border = element_blank(),                     
-#         panel.grid.major = element_blank(), 
-#         plot.background = element_blank(),                     
-#         plot.margin = unit(0 * c( -1.5, -1.5, -1.5, -1.5), "lines")) +  
-#   geom_point(data = points,             
-#              aes(x = x, y = y), size = 3,  
-#              alpha = 1/5, color = "darkblue")
 
 us.map <- get_map(us, maptype = "roadmap", zoom = 4)
 unitedstates.map <- ggmap(us.map, extent = "device") +
@@ -98,26 +75,54 @@ unitedstates.map <- ggmap(us.map, extent = "device") +
     data = la,
     aes(x = lon, y = lat),
     color = "red", size = 3) +
+  geom_text(
+    data = la,
+    aes(label = "Los Angelos Times"),
+    hjust = 0.5, vjust = -2, size = 3) +
   geom_point(
     data = sf,
     aes(x = lon, y = lat),
     color = "red", size = 3) +
+  geom_text(
+    data = sf,
+    aes(label = "San Francisco Chronicle"),
+    hjust = -0.1, size = 3) +
   geom_point(
     data = hs,
     aes(x = lon, y = lat),
     color = "red", size = 3) +
+  geom_text(
+    data = hs,
+    aes(label = "Housten Chronicle"),
+    hjust = 0.5, vjust = 3, size = 3) +
   geom_point(
     data = da,
     aes(x = lon, y = lat),
     color = "red", size = 3) +
+  geom_text(
+    data = da,
+    aes(label = "Dallas News"),
+    hjust = 0.5, vjust = 1.5, size = 3) +
   geom_point(
     data = ch,
     aes(x = lon, y = lat),
     color = "red", size = 3) +
+  geom_text(
+    data = ch,
+    aes(label = "Chicago Tribune"),
+    hjust = -0.05, vjust = 1.5, size = 3) +
   geom_point(
     data = ny,
     aes(x = lon, y = lat),
-    color = "red", size = 3)
+    color = "red", size = 3) +
+  geom_text(
+    data = ny,
+    aes(label = "New York"),
+    hjust = -0.1, size = 3) +
+  geom_text(
+    data = ny,
+    aes(label = "New York Times"),
+    hjust = 0.9, vjust = -1, size = 3)
 
 save.image(file = "us.RData")
 load("us.RData")
