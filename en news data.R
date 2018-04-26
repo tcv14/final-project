@@ -68,6 +68,10 @@ save(sfc, file = "./News Article Data/sfc.RData")
 load("./News Article Data/sfc.RData")
 
 # complete english news articles
-news.english <- bind_rows(nyt, lat, cht, tex, sfc)
+news.english <- bind_rows(nyt, lat, cht, tex, sfc) %>% 
+  filter(value != ' ') %>%
+  filter(value != '') %>%
+  unique()
+
 save(news.english, file = "./News Article Data/news.english.RData")
 load("./News Article Data/news.english.RData")

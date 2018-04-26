@@ -76,6 +76,9 @@ save(sz, file = "./News Article Data/sz.RData")
 load("./News Article Data/sz.RData")
 
 # complete german news articles
-news.german <- bind_rows(dw, ts, fa, bm, sz)
+news.german <- bind_rows(dw, ts, fa, bm, sz) %>%
+  filter(value != '') %>%
+  unique()
+
 save(news.german, file = "./News Article Data/news.german.RData")
 load("./News Article Data/news.german.RData")
