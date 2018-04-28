@@ -42,10 +42,10 @@ news.german.words <- news.german %>%
   mutate(word = replace(word, word == "firmen", "firma"))
 
 # find highest frequency words
-news_frequency.de <- news.german.words %>% count(word, sort = TRUE)
+news_count.de <- news.german.words %>% count(word, sort = TRUE)
 
 # plot highest frequency words
-plot_frequency.de <- news_frequency.de %>%
+plot_count.de <- news_count.de %>%
   filter(n > quantile(n, 0.99)) %>%
   mutate(word = reorder(word, n)) %>%
   ggplot(aes(word, n)) + geom_col() + xlab(NULL) + coord_flip()
@@ -73,23 +73,23 @@ tweet.all_german.words <- tweet.german %>%
   anti_join(stop_words)
 
 # finding most commonly used hashtags
-tweet.hashtag_frequency.de <- tweet.all_german.words %>% 
+tweet.hashtag_count.de <- tweet.all_german.words %>% 
   filter(word == str_extract_all(word, "#\\S+")) %>% 
   count(word, sort = TRUE)
 
 # plot most commonly used hashtags
-plot_tweet.hashtag_frequency.de <- tweet.hashtag_frequency.de %>%
+plot_tweet.hashtag_count.de <- tweet.hashtag_count.de %>%
   filter(n > quantile(n, 0.95)) %>%
   mutate(word = reorder(word, n)) %>%
   ggplot(aes(word, n)) + geom_col() + xlab(NULL) + coord_flip()
 
 # finding most commonly used mentions
-tweet.mention_frequency.de <- tweet.all_german.words %>% 
+tweet.mention_count.de <- tweet.all_german.words %>% 
   filter(word == str_extract_all(word, "@\\S+")) %>% 
   count(word, sort = TRUE)
 
 # plot most commonly used mentions
-plot_tweet.mention_frequency.de <- tweet.mention_frequency.de %>%
+plot_tweet.mention_count.de <- tweet.mention_count.de %>%
   filter(n > quantile(n, 0.9)) %>%
   mutate(word = reorder(word, n)) %>%
   ggplot(aes(word, n)) + geom_col() + xlab(NULL) + coord_flip()
@@ -98,17 +98,50 @@ plot_tweet.mention_frequency.de <- tweet.mention_frequency.de %>%
 tweet.german.words <- tweet.all_german.words %>%
   mutate(word = str_replace_all(word, "#\\S+", "")) %>%
   mutate(word = str_replace_all(word, "@\\S+", "")) %>%
+  mutate(word = gsub('[[:punct:]]+', '', word)) %>%
   filter(word != '')
 
 # finding most commonly used words outside of hashtags and mentions
-tweet_frequency.de <- tweet.german.words %>% count(word, sort = TRUE)
+tweet_count.de <- tweet.german.words %>% count(word, sort = TRUE)
 
 # plot most commonly used words outside of hashtags and mentions
-plot_tweet_frequency.de <- tweet_frequency.de %>%
+plot_tweet_count.de <- tweet_count.de %>%
   filter(n > quantile(n, 0.99)) %>%
   mutate(word = reorder(word, n)) %>%
   ggplot(aes(word, n)) + geom_col() + xlab(NULL) + coord_flip()
 
+
+######################################################
+### Comparing News Articles and Twitter Word Usage ###
+######################################################
+
+# find frequency for each word in the news articles and from twitter
+frequency.de <- bind_rows(mutate(news.german.words, type = "News Article"),
+                          mutate(tweet.german.words, type = "Twitter")) %>%
+  count(type, word) %>%
+  group_by(type) %>%
+  mutate(proportion = n / sum(n)) %>%
+  select(-n) %>%
+  spread(type, proportion) %>%
+  gather(type, proportion, `News Article`)
+
+library(scales)
+
+# plot frequencies on same plot, words closer to the line have similar frequencies in both types of text
+ggplot(frequency.de, aes(x = proportion, y = `Twitter`, color = abs(`Twitter` - proportion))) +
+  geom_abline(color = "gray40", lty = 2) +
+  geom_jitter(alpha = 0.1, size = 2.5, width = 0.3, height = 0.3) +
+  geom_text(aes(label = word), check_overlap = TRUE, vjust = 1.5) +
+  scale_x_log10(labels = percent_format()) +
+  scale_y_log10(labels = percent_format()) +
+  scale_color_gradient(limits = c(0, 0.001), low = "darkslategray4", high = "gray75") +
+  facet_wrap(~type, ncol = 1) +
+  theme(legend.position="none") +
+  labs(y = "Twitter", x = NULL)
+
+# correlation test
+correlation <- cor.test(data = frequency.de[frequency.de$type == "News Article",], ~ proportion + `Twitter`)
+#knitr::kable(correlation)
 
 ##########################
 ### Sentiment Analysis ###
