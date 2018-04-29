@@ -32,11 +32,16 @@ news.english.words <- news.english %>%
 # find highest frequency words
 news_count.en <- news.english.words %>% count(word, sort = TRUE)
 
-# plot highest frequency words
+# plot highest 1% of frequently used words
 plot_count.en <- news_count.en %>%
   filter(n > quantile(n, 0.99)) %>%
   mutate(word = reorder(word, n)) %>%
   ggplot(aes(word, n)) + geom_col() + xlab(NULL) + coord_flip()
+
+# plot a wordcloud of the 50 most commonly used words
+wordcloud(news_count.en$word, news_count.en$n, min.freq = 1, max.words = 50, 
+            random.order = FALSE, rot.per = 0.35, colors = brewer.pal(8, "Dark2"),
+          vfont = c("sans serif", "plain"))
 
 ###################
 ### For Twitter ###
@@ -99,6 +104,7 @@ plot_tweet_count.en <- tweet_count.en %>%
 ######################################################
 ### Comparing News Articles and Twitter Word Usage ###
 ######################################################
+library(scales)
 
 # find frequency for each word in the news articles and from twitter
 frequency.en <- bind_rows(mutate(news.english.words, type = "News Article"),
@@ -108,34 +114,38 @@ frequency.en <- bind_rows(mutate(news.english.words, type = "News Article"),
   mutate(proportion = n / sum(n)) %>%
   select(-n) %>%
   spread(type, proportion) %>%
-  gather(type, proportion, `News Article`)
-
-library(scales)
+  gather(type, proportion, `News Article`) %>%
+  mutate(difference = abs(`Twitter` - proportion))
 
 # plot frequencies on same plot, words closer to the line have similar frequencies in both types of text
-ggplot(frequency.en, aes(x = proportion, y = `Twitter`, color = abs(`Twitter` - proportion))) +
+plot_frequency.en <- ggplot(frequency.en, aes(x = proportion, y = `Twitter`, color = difference)) +
   geom_abline(color = "gray40", lty = 2) +
   geom_jitter(alpha = 0.1, size = 2.5, width = 0.3, height = 0.3) +
   geom_text(aes(label = word), check_overlap = TRUE, vjust = 1.5) +
   scale_x_log10(labels = percent_format()) +
   scale_y_log10(labels = percent_format()) +
-  scale_color_gradient(limits = c(0, 0.001), low = "darkslategray4", high = "gray75") +
+  scale_color_gradient(limits = c(0, 0.003), low = "darkslategray4", high = "hotpink2") +
   facet_wrap(~type, ncol = 1) +
-  theme(legend.position="none") +
-  labs(y = "Twitter", x = NULL)
+  theme(legend.position = "right") +
+  labs(x = NULL, y = "Twitter") +
+  ggtitle("Comparing Word Usage Between Twitter and News Articles (English)")
 
 # correlation test
-correlation <- cor.test(data = frequency.en[frequency.en$type == "News Article",], ~ proportion + `Twitter`)
-#knitr::kable(correlation)
+correlation.en <- cor.test(data = frequency.en[frequency.en$type == "News Article",], ~ proportion + `Twitter`)
+#knitr::kable(correlation.en)
 
 ##########################
 ### Sentiment Analysis ###
 ##########################
+library(wordcloud)
+library(reshape2)
 
-# load sentiments
+# load sentiment lexicons
+# scores from -5 to 5, with negative scores indicating negative sentiment and positive scores indicating positive sentiment
 afinn <- get_sentiments("afinn")
+# positive, negative
 bing <- get_sentiments("bing")
-# positive, negative, anger, anticipation, disgust, fear, joy, sadness, surprise, and trust
+# positive, negative, anger, anticipation, disgust, fear, joy, sadness, surprise, trust
 nrc <- get_sentiments("nrc")
 
 ### Looking at news articles ###
@@ -158,9 +168,87 @@ news.disgust <- news.english.words %>%
   inner_join(nrc_disgust) %>%
   count(word, sort = TRUE)
 
+# using the bing sentiment lexicon
 news.bing <- news.english.words %>%
   inner_join(bing) %>%
   count(sentiment) %>%
   spread(sentiment, n) %>%
   mutate(sentiment = positive - negative)
+#knitr::kable(news.bing)
+news.bing_count <- news.english.words %>%
+  inner_join(bing) %>%
+  count(word, sentiment, sort = TRUE) %>%
+  ungroup()
+# plotting negative and positive words side-by-side to compare
+plot_news.bing_count <- news.bing_count %>%
+  group_by(sentiment) %>%
+  top_n(10) %>%
+  ungroup() %>%
+  mutate(word = reorder(word, n)) %>%
+  ggplot(aes(word, n, fill = sentiment)) +
+  geom_col(show.legend = FALSE) +
+  facet_wrap(~sentiment, scales = "free_y") +
+  labs(y = "Type of Sentiment", x = NULL) +
+  coord_flip()
+# plotting a comparison word cloud
+news.english.words %>% inner_join(bing) %>%
+  count(word, sentiment, sort = TRUE) %>%
+  acast(word ~ sentiment, value.var = "n", fill = 0) %>%
+  comparison.cloud(colors = c("gray80", "gray20"), max.words = 20)
 
+# using the afinn sentiment lexicon
+news.afinn <- news.english.words %>%
+  inner_join(afinn) %>%
+  summarize(sentiment = sum(score))
+# divide -262 by 5 gives -52.4 (used to compare with German)
+
+### Looking at tweets ###
+
+# starting with the nrc sentiment for negative
+tweet.negative <- tweet.english.words %>%
+  inner_join(nrc_negative) %>%
+  count(word, sort = TRUE)
+
+# then moving to the nrc sentiment for anger
+tweet.anger <- tweet.english.words %>%
+  inner_join(nrc_anger) %>%
+  count(word, sort = TRUE)
+
+# finally examining the nrc sentiment for disgust
+tweet.disgust <- tweet.english.words %>%
+  inner_join(nrc_disgust) %>%
+  count(word, sort = TRUE)
+
+# using the bing sentiment lexicon
+tweet.bing <- tweet.english.words %>%
+  inner_join(bing) %>%
+  count(sentiment) %>%
+  spread(sentiment, n) %>%
+  mutate(sentiment = positive - negative)
+#knitr::kable(tweet.bing)
+tweet.bing_count <- tweet.english.words %>%
+  inner_join(bing) %>%
+  count(word, sentiment, sort = TRUE) %>%
+  ungroup()
+# plotting negative and positive words side-by-side to compare
+plot_tweet.bing_count <- tweet.bing_count %>%
+  group_by(sentiment) %>%
+  top_n(10) %>%
+  ungroup() %>%
+  mutate(word = reorder(word, n)) %>%
+  ggplot(aes(word, n, fill = sentiment)) +
+  geom_col(show.legend = FALSE) +
+  facet_wrap(~sentiment, scales = "free_y") +
+  labs(y = "Type of Sentiment", x = NULL) +
+  coord_flip()
+# plotting a comparison word cloud
+tweet.english.words %>% inner_join(bing) %>%
+  count(word, sentiment, sort = TRUE) %>%
+  acast(word ~ sentiment, value.var = "n", fill = 0) %>%
+  comparison.cloud(colors = c("gray80", "gray20"), max.words = 20)
+
+# using the afinn sentiment lexicon
+tweet.afinn <- tweet.english.words %>%
+  inner_join(afinn) %>%
+  summarize(sentiment = sum(score))
+# divide -8176 by 5 gives -1635.2 (used to compare with German)

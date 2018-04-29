@@ -1,15 +1,18 @@
 library(tidyverse)
 library(tidytext)
+library(stringr)
 #install.packages("lsa")
 library(lsa)
-#install.packages("quanteda")
-library(quanteda)
+#install.packages("tm")
+library(tm)
 
 # load stop words
 data(stop_words)
 stopwords_lsa <- as_data_frame(stopwords_de)
 colnames(stopwords_lsa) <- "word"
 stopwords_quanteda <- as_data_frame(stopwords("german"))
+stopwords_tm <- as_data_frame(stopwords("german"))
+colnames(stopwords_tm) <- "word"
 colnames(stopwords_quanteda) <- "word"
 own_stopwords.de <- tibble(
   `word` = c("facebook", "mark", "zuckerberg", "zuckerbergs", "cambridge", "analytica", "us",
@@ -34,6 +37,7 @@ news.german.words <- news.german %>%
   filter(word != '') %>%
   anti_join(stopwords_lsa) %>%
   anti_join(stopwords_quanteda) %>%
+  anti_join(stopwords_tm) %>%
   anti_join(own_stopwords.de) %>%
   anti_join(stop_words) %>%
   mutate(word = replace(word, word == "nutzern", "nutzer")) %>%
@@ -49,6 +53,10 @@ plot_count.de <- news_count.de %>%
   filter(n > quantile(n, 0.99)) %>%
   mutate(word = reorder(word, n)) %>%
   ggplot(aes(word, n)) + geom_col() + xlab(NULL) + coord_flip()
+
+# plot a wordcloud of the 50 most commonly used words
+wordcloud(news_count.de$word, news_count.de$n, min.freq = 1, max.words = 50, 
+          random.order = FALSE, rot.per = 0.35, colors = brewer.pal(8, "Dark2"))
 
 ###################
 ### For Twitter ###
@@ -69,6 +77,7 @@ tweet.all_german.words <- tweet.german %>%
   filter(word != '') %>%
   anti_join(stopwords_lsa) %>%
   anti_join(stopwords_quanteda) %>%
+  anti_join(stopwords_tm) %>%
   anti_join(own_stopwords.de) %>%
   anti_join(stop_words)
 
@@ -114,6 +123,7 @@ plot_tweet_count.de <- tweet_count.de %>%
 ######################################################
 ### Comparing News Articles and Twitter Word Usage ###
 ######################################################
+library(scales)
 
 # find frequency for each word in the news articles and from twitter
 frequency.de <- bind_rows(mutate(news.german.words, type = "News Article"),
@@ -123,43 +133,121 @@ frequency.de <- bind_rows(mutate(news.german.words, type = "News Article"),
   mutate(proportion = n / sum(n)) %>%
   select(-n) %>%
   spread(type, proportion) %>%
-  gather(type, proportion, `News Article`)
-
-library(scales)
+  gather(type, proportion, `News Article`) %>%
+  mutate(difference = abs(`Twitter` - proportion))
 
 # plot frequencies on same plot, words closer to the line have similar frequencies in both types of text
-ggplot(frequency.de, aes(x = proportion, y = `Twitter`, color = abs(`Twitter` - proportion))) +
+plot_frequency.de <- ggplot(frequency.de, aes(x = proportion, y = `Twitter`, color = difference)) +
   geom_abline(color = "gray40", lty = 2) +
   geom_jitter(alpha = 0.1, size = 2.5, width = 0.3, height = 0.3) +
   geom_text(aes(label = word), check_overlap = TRUE, vjust = 1.5) +
   scale_x_log10(labels = percent_format()) +
   scale_y_log10(labels = percent_format()) +
-  scale_color_gradient(limits = c(0, 0.001), low = "darkslategray4", high = "gray75") +
+  scale_color_gradient(limits = c(0, 0.003), low = "darkslategray4", high = "hotpink2") +
   facet_wrap(~type, ncol = 1) +
-  theme(legend.position="none") +
-  labs(y = "Twitter", x = NULL)
+  theme(legend.position = "right") +
+  labs(y = "Twitter", x = NULL) +
+  ggtitle("Comparing Word Usage Between Twitter and News Articles (German)")
 
 # correlation test
-correlation <- cor.test(data = frequency.de[frequency.de$type == "News Article",], ~ proportion + `Twitter`)
-#knitr::kable(correlation)
+correlation.de <- cor.test(data = frequency.de[frequency.de$type == "News Article",], ~ proportion + `Twitter`)
+#knitr::kable(correlation.de)
 
 ##########################
 ### Sentiment Analysis ###
 ##########################
+library(wordcloud)
+library(reshape2)
 
 # Wörter laden und vorbereiten
-sent <- c(
+sentiment.de <- c(
   # positive Wörter
   readLines(paste0("SentiWS_v1.8c_Positive.txt"), encoding = "UTF-8"),
   # negative Wörter
-  readLines(paste0("SentiWS_v1.8c_Negative.txt"), encoding = "UTF-8")
-) %>% 
+  readLines(paste0("SentiWS_v1.8c_Negative.txt"), encoding = "UTF-8")) %>% 
   lapply(function(x) {
     # Extrahieren der einzelnen Spalten
     res <- strsplit(x, "\t", fixed = TRUE)[[1]]
-    return(data.frame(words = res[1], value = res[2], stringsAsFactors = FALSE))
-  }) %>%
-  bind_rows %>% 
-  mutate(words = gsub("\\|.*", "", words) %>% tolower, value = as.numeric(value)) %>% 
+    return(data.frame(words = res[1], value = res[2], stringsAsFactors = FALSE))}) %>%
+  bind_rows() %>% 
+  mutate(word = gsub("\\|.*", "", words) %>% tolower, value = as.numeric(value)) %>% 
   # manche Wörter kommen doppelt vor, hier nehmen wir den mittleren Wert
-  group_by(words) %>% summarise(value = mean(value)) %>% ungroup
+  group_by(word) %>% summarise(value = mean(value)) %>% 
+  ungroup() %>%
+  mutate(sentiment = ifelse(value > 0, "positive", "negative"))
+
+### Looking at news articles ###
+
+posneg <- sentiment.de %>%
+  select(word, sentiment)
+
+# using the positive/negative sentiment
+news.posneg <- news.german.words %>%
+  inner_join(posneg) %>%
+  count(sentiment) %>%
+  spread(sentiment, n) %>%
+  mutate(sentiment = positive - negative)
+#knitr::kable(news.posneg)
+news.posneg_count <- news.german.words %>%
+  inner_join(posneg) %>%
+  count(word, sentiment, sort = TRUE) %>%
+  ungroup()
+# plotting negative and positive words side-by-side to compare
+plot_news.posneg_count <- news.posneg_count %>%
+  group_by(sentiment) %>%
+  top_n(10) %>%
+  ungroup() %>%
+  mutate(word = reorder(word, n)) %>%
+  ggplot(aes(word, n, fill = sentiment)) +
+  geom_col(show.legend = FALSE) +
+  facet_wrap(~sentiment, scales = "free_y") +
+  labs(y = "Type of Sentiment", x = NULL) +
+  coord_flip()
+# plotting a comparison word cloud
+news.german.words %>% inner_join(posneg) %>%
+  count(word, sentiment, sort = TRUE) %>%
+  acast(word ~ sentiment, value.var = "n", fill = 0) %>%
+  comparison.cloud(colors = c("gray80", "gray20"), max.words = 20)
+
+# using the sentiment value assigned to each word
+senval <- sentiment.de %>%
+  select(word, value)
+
+news.senval <- news.german.words %>%
+  inner_join(senval) %>%
+  summarize(sentiment = sum(value))
+
+### Looking at tweets ###
+
+# using the positive/negative sentiment
+tweet.posneg <- tweet.german.words %>%
+  inner_join(posneg) %>%
+  count(sentiment) %>%
+  spread(sentiment, n) %>%
+  mutate(sentiment = positive - negative)
+#knitr::kable(news.posneg)
+tweet.posneg_count <- tweet.german.words %>%
+  inner_join(posneg) %>%
+  count(word, sentiment, sort = TRUE) %>%
+  ungroup()
+# plotting negative and positive words side-by-side to compare
+plot_tweet.posneg_count <- tweet.posneg_count %>%
+  group_by(sentiment) %>%
+  top_n(10) %>%
+  ungroup() %>%
+  mutate(word = reorder(word, n)) %>%
+  ggplot(aes(word, n, fill = sentiment)) +
+  geom_col(show.legend = FALSE) +
+  facet_wrap(~sentiment, scales = "free_y") +
+  labs(y = "Type of Sentiment", x = NULL) +
+  coord_flip()
+# plotting a comparison word cloud
+tweet.german.words %>% inner_join(posneg) %>%
+  count(word, sentiment, sort = TRUE) %>%
+  acast(word ~ sentiment, value.var = "n", fill = 0) %>%
+  comparison.cloud(colors = c("gray80", "gray20"), max.words = 20)
+
+# using the sentiment value assigned to each word
+tweet.senval <- tweet.german.words %>%
+  inner_join(senval) %>%
+  summarize(sentiment = sum(value))
