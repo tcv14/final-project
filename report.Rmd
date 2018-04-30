@@ -1,0 +1,122 @@
+---
+title: "Using Text Analysis to Describe German and English Tweets and News Articles"
+author: "Tiffany Cheng"
+date: "April 27, 2018"
+output: pdf_document
+---
+
+```{r setup, include = FALSE, message = FALSE, warning = FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(gridExtra)
+source("en and de comparisons.R")
+```
+
+## Introduction
+(Include research questions)
+
+## Data Collection Methods
+(Twitter and scraping news articles)
+
+## Location of News Companies
+(Names of the five German companies)
+
+```{r fig.cap = "Map of Germany", fig.height = 4}
+load("germany.RData")
+germany.map
+```
+
+(Names of the six US companies)
+
+```{r fig.cap = "Map of the United States", fig.height = 4}
+load("us.RData")
+unitedstates.map
+```
+
+## Word Frequency Analysis for News Articles
+
+```{r fig.cap = "Top 10 Most Commonly Used Words in News Articles", fig.height = 4}
+plot_count.de.en
+```
+
+```{r fig.cap = "Word Cloud of the Top 10 Most Commonly Used Words in News Articles", fig.height = 4, message = FALSE, warning = FALSE}
+wordcloud(news_count.en$word, news_count.en$n, min.freq = 1, max.words = 50, 
+            random.order = FALSE, rot.per = 0.25, colors = brewer.pal(8, "Dark2"),
+          vfont = c("sans serif", "plain"))
+wordcloud(news_count.de$word, news_count.de$n, min.freq = 1, max.words = 50, 
+          random.order = FALSE, rot.per = 0.25, colors = brewer.pal(8, "Dark2"))
+```
+
+
+## Word Frequency Analysis for Twitter
+
+```{r fig.cap = "Top 10 Most Commonly Used Hashtags in Tweets", fig.height = 4}
+grid.arrange(plot_tweet.hashtag_count.en, plot_tweet.hashtag_count.de, nrow = 1)
+```
+
+```{r fig.cap = "Top 10 Most Commonly Used Mentions in Tweets", fig.height = 4}
+grid.arrange(plot_tweet.mention_count.en, plot_tweet.mention_count.de, nrow = 1)
+```
+
+```{r fig.cap = "Top 10 Most Commonly Used Words in Tweets", fig.height = 4}
+grid.arrange(plot_tweet_count.en, plot_tweet_count.de, nrow = 1)
+```
+
+## Comparisons Amongst the Same Language
+
+```{r fig.cap = "Comparing Word Usage Amongst English News Articles and Tweets", fig.height = 4, message = FALSE, warning = FALSE}
+plot_frequency.en
+```
+
+Correlation from the correlation test is `r correlation.en$estimate`.
+
+```{r fig.cap = "Comparing Word Usage Amongst German News Articles and Tweets", fig.height = 4, message = FALSE, warning = FALSE}
+plot_frequency.de
+```
+
+Correlation from the correlation test is `r correlation.de$estimate`.
+
+## Sentiment Analysis for News Articles
+
+For English: 
+
+Using `nrc` sentiments lexicon.
+
+```{r fig.cap = "`nrc` Sentiments Lexicon", fig.height = 4, message = FALSE, warning = FALSE}
+wordcloud(news.negative$word, news.negative$n, max.words = 15, random.order = FALSE, 
+          rot.per = 0.25, colors = brewer.pal(8, "Paired"))
+wordcloud(news.anger$word, news.anger$n, max.words = 15, random.order = FALSE, 
+          rot.per = 0.25, colors = brewer.pal(8, "Set3"))
+wordcloud(news.disgust$word, news.disgust$n, max.words = 15, random.order = FALSE, 
+          rot.per = 0.25, colors = brewer.pal(8, "Accent"))
+```
+
+Using `bing` sentiment lexicon results in following table and figure:
+
+```{r fig.cap = "`bing` Sentiments Lexicon", fig.height = 4, message = FALSE, warning = FALSE}
+knitr::kable(news.bing[1:3])
+plot_news.bing_count
+news.english.words %>% inner_join(bing) %>%
+  count(word, sentiment, sort = TRUE) %>%
+  acast(word ~ sentiment, value.var = "n", fill = 0) %>%
+  comparison.cloud(colors = c("gray80", "gray20"), max.words = 20)
+```
+
+Using `afinn` sentiment lexicon results in a sentiment score of `r news.afinn`.
+
+For German:
+
+```{r fig.cap = "Postive/Negative Sentiments Lexicon", fig.height = 4, message = FALSE, warning = FALSE}
+knitr::kable(news.posneg[1:3])
+plot_news.posneg_count
+news.german.words %>% inner_join(posneg) %>%
+  count(word, sentiment, sort = TRUE) %>%
+  acast(word ~ sentiment, value.var = "n", fill = 0) %>%
+  comparison.cloud(colors = c("gray80", "gray20"), max.words = 20)
+```
+
+Using sentiment assigned to each word results in a sentiment score of `r news.senval`.
+
+## Sentiment Analysis for Twitter Tweets
+
+For English:
+
