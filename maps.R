@@ -1,5 +1,7 @@
 library(ggmap)
 library(tidyverse)
+library(ggplot2)   
+library(grid)
 
 # map of Germany
 germany <- geocode("germany")
@@ -59,7 +61,6 @@ germany.map <- ggmap(ger.map, extent = "device") +
 save.image(file = "germany.RData")
 load("germany.RData")
 
-
 # map of United States
 us <- geocode("united states")
 la <- geocode("los angelos")
@@ -68,61 +69,36 @@ hs <- geocode("housten")
 da <- geocode("dallas")
 ch <- geocode("chicago")
 ny <- geocode("new york city")
+points.us <- bind_rows(la, sf, hs, da, ch, ny) %>%
+  mutate(city = c("Los Angelos", "San Francisco", "Housten", "Dallas", "Chicago", "New York")) %>%
+  mutate(newspaper = c("LA Times", "San Francisco Chronicle", "Housten Chronicle", "Dallas News", "Chicago Tribune", "New York Times"))
 
-us.map <- get_map(us, maptype = "roadmap", zoom = 4)
-unitedstates.map <- ggmap(us.map, extent = "device") +
-  geom_point(
-    data = la,
-    aes(x = lon, y = lat),
-    color = "red", size = 3) +
-  geom_text(
-    data = la,
-    aes(label = "Los Angelos Times"),
-    hjust = 0.5, vjust = -2, size = 3) +
-  geom_point(
-    data = sf,
-    aes(x = lon, y = lat),
-    color = "red", size = 3) +
-  geom_text(
-    data = sf,
-    aes(label = "San Francisco Chronicle"),
-    hjust = -0.1, size = 3) +
-  geom_point(
-    data = hs,
-    aes(x = lon, y = lat),
-    color = "red", size = 3) +
-  geom_text(
-    data = hs,
-    aes(label = "Housten Chronicle"),
-    hjust = 0.5, vjust = 3, size = 3) +
-  geom_point(
-    data = da,
-    aes(x = lon, y = lat),
-    color = "red", size = 3) +
-  geom_text(
-    data = da,
-    aes(label = "Dallas News"),
-    hjust = 0.5, vjust = 1.5, size = 3) +
-  geom_point(
-    data = ch,
-    aes(x = lon, y = lat),
-    color = "red", size = 3) +
-  geom_text(
-    data = ch,
-    aes(label = "Chicago Tribune"),
-    hjust = -0.05, vjust = 1.5, size = 3) +
-  geom_point(
-    data = ny,
-    aes(x = lon, y = lat),
-    color = "red", size = 3) +
-  geom_text(
-    data = ny,
-    aes(label = "New York"),
-    hjust = -0.1, size = 3) +
-  geom_text(
-    data = ny,
-    aes(label = "New York Times"),
-    hjust = 0.9, vjust = -1, size = 3)
+map.data <- map_data("state")
+
+unitedstates.map <- ggplot(map.data) + 
+  geom_map(aes(map_id = region),  
+           map = map.data,  
+           fill = "white",             
+           color = "grey20", size = 0.25) + 
+  expand_limits(x = map.data$long, y = map.data$lat) +            
+  theme(axis.line = element_blank(),  
+        axis.text = element_blank(),  
+        axis.ticks = element_blank(),                     
+        axis.title = element_blank(),  
+        panel.background = element_blank(),  
+        panel.border = element_blank(),                     
+        panel.grid.major = element_blank(), 
+        plot.background = element_blank(),                     
+        plot.margin = unit(0 * c( -1.5, -1.5, -1.5, -1.5), "lines")) +  
+  geom_point(data = points.us,             
+             aes(x = lon, y = lat), size = 3,  
+             alpha = 1/5, color = "red") +
+  geom_text(data = points.us,
+            aes(x = lon, y = lat, label = points.us$city),
+            hjust = 0.5, vjust = -1) +
+  geom_text(data = points.us,
+            aes(x = lon, y = lat, label = points.us$newspaper),
+            hjust = 0.5, vjust = 1.5)
 
 save.image(file = "us.RData")
 load("us.RData")
