@@ -1,13 +1,18 @@
 library(tidyverse)
 library(tidytext)
 library(stringr)
+library(wordcloud)
+library(reshape2)
+library(scales)
+
+# filter(n > quantile(n, 0.99))
 
 # load stop words
 data(stop_words)
 
 # create own list of stop words based on subject content
 own_stopwords.en <- tibble(
-  `word` = c("facebook", "mark", "zuckerberg", "cambridge", "analytica", "fb", "didn", "don", "doesn", "ve"))
+  `word` = c("facebook", "mark", "zuckerberg", "cambridge", "analytica", "fb", "didn", "don", "doesn", "ve", "john"))
 
 #########################
 ### For News Articles ###
@@ -30,17 +35,20 @@ news.english.words <- news.english %>%
   mutate(word = replace(word, word == "companies", "company"))
 
 # find highest frequency words
-news_count.en <- news.english.words %>% count(word, sort = TRUE)
+news_count.en <- news.english.words %>% count(word, sort = TRUE) %>%
+  mutate(language = "English")
 
-# plot highest 1% of frequently used words
+# plot top 10 words
 plot_count.en <- news_count.en %>%
-  filter(n > quantile(n, 0.99)) %>%
+  group_by(language) %>%
+  top_n(10, n) %>%
+  ungroup() %>%
   mutate(word = reorder(word, n)) %>%
   ggplot(aes(word, n)) + geom_col() + xlab(NULL) + coord_flip()
 
 # plot a wordcloud of the 50 most commonly used words
 wordcloud(news_count.en$word, news_count.en$n, min.freq = 1, max.words = 50, 
-            random.order = FALSE, rot.per = 0.35, colors = brewer.pal(8, "Dark2"),
+            random.order = FALSE, rot.per = 0.25, colors = brewer.pal(8, "Dark2"),
           vfont = c("sans serif", "plain"))
 
 ###################
@@ -70,9 +78,9 @@ tweet.hashtag_count.en <- tweet.all_english.words %>%
 
 # plot most commonly used hashtags
 plot_tweet.hashtag_count.en <- tweet.hashtag_count.en %>%
-  filter(n > quantile(n, 0.995)) %>%
+  top_n(10, n) %>%
   mutate(word = reorder(word, n)) %>%
-  ggplot(aes(word, n)) + geom_col() + xlab(NULL) + coord_flip()
+  ggplot(aes(word, n)) + geom_col(fill = "midnightblue") + xlab(NULL) + coord_flip() + ggtitle("English")
 
 # finding most commonly used mentions
 tweet.mention_count.en <- tweet.all_english.words %>% 
@@ -81,9 +89,9 @@ tweet.mention_count.en <- tweet.all_english.words %>%
 
 # plot most commonly used mentions
 plot_tweet.mention_count.en <- tweet.mention_count.en %>%
-  filter(n > quantile(n, 0.995)) %>%
+  top_n(10, n) %>%
   mutate(word = reorder(word, n)) %>%
-  ggplot(aes(word, n)) + geom_col() + xlab(NULL) + coord_flip()
+  ggplot(aes(word, n)) + geom_col(fill = "turquoise4") + xlab(NULL) + coord_flip() + ggtitle("English")
 
 # clean twitter data, but removing all links, hashtags, and mentions
 tweet.english.words <- tweet.all_english.words %>%
@@ -97,14 +105,13 @@ tweet_count.en <- tweet.english.words %>% count(word, sort = TRUE)
 
 # plot most commonly used words outside of hashtags and mentions
 plot_tweet_count.en <- tweet_count.en %>%
-  filter(n > quantile(n, 0.999)) %>%
+  top_n(10, n) %>%
   mutate(word = reorder(word, n)) %>%
-  ggplot(aes(word, n)) + geom_col() + xlab(NULL) + coord_flip()
+  ggplot(aes(word, n)) + geom_col(fill = "royalblue3") + xlab(NULL) + coord_flip() + ggtitle("English")
 
 ######################################################
 ### Comparing News Articles and Twitter Word Usage ###
 ######################################################
-library(scales)
 
 # find frequency for each word in the news articles and from twitter
 frequency.en <- bind_rows(mutate(news.english.words, type = "News Article"),
@@ -137,8 +144,6 @@ correlation.en <- cor.test(data = frequency.en[frequency.en$type == "News Articl
 ##########################
 ### Sentiment Analysis ###
 ##########################
-library(wordcloud)
-library(reshape2)
 
 # load sentiment lexicons
 # scores from -5 to 5, with negative scores indicating negative sentiment and positive scores indicating positive sentiment
@@ -168,13 +173,20 @@ news.disgust <- news.english.words %>%
   inner_join(nrc_disgust) %>%
   count(word, sort = TRUE)
 
+wordcloud(news.negative$word, news.negative$n, max.words = 15, random.order = FALSE,
+          rot.per = 0.25, colors = brewer.pal(8, "Paired"))
+wordcloud(news.anger$word, news.anger$n, max.words = 15, random.order = FALSE,
+          rot.per = 0.25, colors = brewer.pal(8, "Set3"))
+wordcloud(news.disgust$word, news.disgust$n, max.words = 15, random.order = FALSE,
+          rot.per = 0.25, colors = brewer.pal(8, "Accent"))
+
 # using the bing sentiment lexicon
 news.bing <- news.english.words %>%
   inner_join(bing) %>%
   count(sentiment) %>%
   spread(sentiment, n) %>%
   mutate(sentiment = positive - negative)
-#knitr::kable(news.bing)
+#knitr::kable(news.bing[1:3])
 news.bing_count <- news.english.words %>%
   inner_join(bing) %>%
   count(word, sentiment, sort = TRUE) %>%

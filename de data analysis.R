@@ -5,6 +5,9 @@ library(stringr)
 library(lsa)
 #install.packages("tm")
 library(tm)
+library(wordcloud)
+library(reshape2)
+library(scales)
 
 # load stop words
 data(stop_words)
@@ -18,7 +21,7 @@ own_stopwords.de <- tibble(
   `word` = c("facebook", "mark", "zuckerberg", "zuckerbergs", "cambridge", "analytica", "us",
               "nun", "dabei", "dafür", "darauf", "hätten", "deren", "ja", "eigentlich",
               "kommt", "mal", "heute", "gerade", "schon", "warum", "sagt", "beim", "gibt",
-              "gestern", "marc"))
+              "gestern", "marc", "john"))
 
 #########################
 ### For News Articles ###
@@ -46,17 +49,20 @@ news.german.words <- news.german %>%
   mutate(word = replace(word, word == "firmen", "firma"))
 
 # find highest frequency words
-news_count.de <- news.german.words %>% count(word, sort = TRUE)
+news_count.de <- news.german.words %>% count(word, sort = TRUE) %>%
+  mutate(language = "German")
 
-# plot highest frequency words
+# plot top 10 words
 plot_count.de <- news_count.de %>%
-  filter(n > quantile(n, 0.99)) %>%
+  group_by(language) %>%
+  top_n(10, n) %>%
+  ungroup() %>%
   mutate(word = reorder(word, n)) %>%
   ggplot(aes(word, n)) + geom_col() + xlab(NULL) + coord_flip()
 
 # plot a wordcloud of the 50 most commonly used words
 wordcloud(news_count.de$word, news_count.de$n, min.freq = 1, max.words = 50, 
-          random.order = FALSE, rot.per = 0.35, colors = brewer.pal(8, "Dark2"))
+          random.order = FALSE, rot.per = 0.25, colors = brewer.pal(8, "Dark2"))
 
 ###################
 ### For Twitter ###
@@ -88,9 +94,9 @@ tweet.hashtag_count.de <- tweet.all_german.words %>%
 
 # plot most commonly used hashtags
 plot_tweet.hashtag_count.de <- tweet.hashtag_count.de %>%
-  filter(n > quantile(n, 0.95)) %>%
+  top_n(10, n) %>%
   mutate(word = reorder(word, n)) %>%
-  ggplot(aes(word, n)) + geom_col() + xlab(NULL) + coord_flip()
+  ggplot(aes(word, n)) + geom_col(fill = "mediumvioletred") + xlab(NULL) + coord_flip() + ggtitle("German")
 
 # finding most commonly used mentions
 tweet.mention_count.de <- tweet.all_german.words %>% 
@@ -99,9 +105,9 @@ tweet.mention_count.de <- tweet.all_german.words %>%
 
 # plot most commonly used mentions
 plot_tweet.mention_count.de <- tweet.mention_count.de %>%
-  filter(n > quantile(n, 0.9)) %>%
+  top_n(10, n) %>%
   mutate(word = reorder(word, n)) %>%
-  ggplot(aes(word, n)) + geom_col() + xlab(NULL) + coord_flip()
+  ggplot(aes(word, n)) + geom_col(fill = "violetred4") + xlab(NULL) + coord_flip() + ggtitle("German")
 
 # clean twitter data, but removing all links, hashtags, and mentions
 tweet.german.words <- tweet.all_german.words %>%
@@ -115,15 +121,14 @@ tweet_count.de <- tweet.german.words %>% count(word, sort = TRUE)
 
 # plot most commonly used words outside of hashtags and mentions
 plot_tweet_count.de <- tweet_count.de %>%
-  filter(n > quantile(n, 0.99)) %>%
+  top_n(10, n) %>%
   mutate(word = reorder(word, n)) %>%
-  ggplot(aes(word, n)) + geom_col() + xlab(NULL) + coord_flip()
+  ggplot(aes(word, n)) + geom_col(fill = "palevioletred4") + xlab(NULL) + coord_flip() + ggtitle("German")
 
 
 ######################################################
 ### Comparing News Articles and Twitter Word Usage ###
 ######################################################
-library(scales)
 
 # find frequency for each word in the news articles and from twitter
 frequency.de <- bind_rows(mutate(news.german.words, type = "News Article"),
@@ -156,8 +161,6 @@ correlation.de <- cor.test(data = frequency.de[frequency.de$type == "News Articl
 ##########################
 ### Sentiment Analysis ###
 ##########################
-library(wordcloud)
-library(reshape2)
 
 # Wörter laden und vorbereiten
 sentiment.de <- c(
@@ -187,7 +190,7 @@ news.posneg <- news.german.words %>%
   count(sentiment) %>%
   spread(sentiment, n) %>%
   mutate(sentiment = positive - negative)
-#knitr::kable(news.posneg)
+#knitr::kable(news.posneg[1:3])
 news.posneg_count <- news.german.words %>%
   inner_join(posneg) %>%
   count(word, sentiment, sort = TRUE) %>%
