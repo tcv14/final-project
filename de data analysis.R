@@ -1,3 +1,4 @@
+detach("package:igraph")
 library(tidyverse)
 library(tidytext)
 library(stringr)
@@ -13,15 +14,15 @@ library(scales)
 data(stop_words)
 stopwords_lsa <- as_data_frame(stopwords_de)
 colnames(stopwords_lsa) <- "word"
-stopwords_quanteda <- as_data_frame(stopwords("german"))
 stopwords_tm <- as_data_frame(stopwords("german"))
 colnames(stopwords_tm) <- "word"
-colnames(stopwords_quanteda) <- "word"
 own_stopwords.de <- tibble(
   `word` = c("facebook", "mark", "zuckerberg", "zuckerbergs", "cambridge", "analytica", "us",
               "nun", "dabei", "dafür", "darauf", "hätten", "deren", "ja", "eigentlich",
               "kommt", "mal", "heute", "gerade", "schon", "warum", "sagt", "beim", "gibt",
               "gestern", "marc", "john"))
+
+library(igraph)
 
 #########################
 ### For News Articles ###
@@ -39,7 +40,6 @@ news.german.words <- news.german %>%
   mutate(word = gsub('[[:punct:] ]+', '', word)) %>%
   filter(word != '') %>%
   anti_join(stopwords_lsa) %>%
-  anti_join(stopwords_quanteda) %>%
   anti_join(stopwords_tm) %>%
   anti_join(own_stopwords.de) %>%
   anti_join(stop_words) %>%
@@ -82,7 +82,6 @@ tweet.all_german.words <- tweet.german %>%
   mutate(word = gsub('[[:digit:]]+', '', word)) %>%
   filter(word != '') %>%
   anti_join(stopwords_lsa) %>%
-  anti_join(stopwords_quanteda) %>%
   anti_join(stopwords_tm) %>%
   anti_join(own_stopwords.de) %>%
   anti_join(stop_words)
@@ -204,7 +203,8 @@ plot_news.posneg_count <- news.posneg_count %>%
   ggplot(aes(word, n, fill = sentiment)) +
   geom_col(show.legend = FALSE) +
   facet_wrap(~sentiment, scales = "free_y") +
-  labs(y = "Type of Sentiment", x = NULL) +
+  scale_fill_brewer(palette = "Set2") +
+  labs(y = "n", x = NULL) +
   coord_flip()
 # plotting a comparison word cloud
 news.german.words %>% inner_join(posneg) %>%
@@ -242,8 +242,10 @@ plot_tweet.posneg_count <- tweet.posneg_count %>%
   ggplot(aes(word, n, fill = sentiment)) +
   geom_col(show.legend = FALSE) +
   facet_wrap(~sentiment, scales = "free_y") +
-  labs(y = "Type of Sentiment", x = NULL) +
-  coord_flip()
+  scale_fill_brewer(palette = "Set1") +
+  labs(y = "n", x = NULL) +
+  coord_flip() +
+  ggtitle("German")
 # plotting a comparison word cloud
 tweet.german.words %>% inner_join(posneg) %>%
   count(word, sentiment, sort = TRUE) %>%
@@ -254,3 +256,83 @@ tweet.german.words %>% inner_join(posneg) %>%
 tweet.senval <- tweet.german.words %>%
   inner_join(senval) %>%
   summarize(sentiment = sum(value))
+
+#####################
+### Markov Chains ###
+#####################
+library(ggraph)
+
+### For news
+
+news.german.bigrams <- news.german %>%
+  unnest_tokens(bigram, value, token = "ngrams", n = 2) %>%
+  separate(bigram, c("word1", "word2"), sep = " ") %>%
+  filter(!word1 %in% stopwords_lsa$word) %>%
+  filter(!word1 %in% stopwords_tm$word) %>%
+  filter(!word1 %in% stop_words$word) %>%
+  filter(!word2 %in% stop_words$word) %>%
+  filter(!word2 %in% stopwords_lsa$word) %>%
+  filter(!word2 %in% stopwords_tm$word) %>%
+  count(word1, word2, sort = TRUE)
+
+set.seed(2)
+arrow <- grid::arrow(type = "closed", length = unit(0.15, "inches"))
+
+plot_news.german.bigrams <- news.german.bigrams %>%
+  filter(n > 5) %>%
+  graph_from_data_frame()
+
+plot_news.german.bigrams <- ggraph(plot_news.german.bigrams, layout = "fr") +
+  geom_edge_link(aes(edge_alpha = n), show.legend = FALSE, arrow = arrow, end_cap = circle(0.07, "inches")) +
+  geom_node_point(color = "pink", size = 5) +
+  geom_node_text(aes(label = name), vjust = 1, hjust = 1) +
+  theme_void()
+
+### For Twitter
+
+tweet.german.bigrams <- tweet.german %>%
+  mutate(text = str_replace_all(text, replace_reg, "")) %>%
+  mutate(text = str_replace_all(text, "#\\S+", "")) %>%
+  mutate(text = str_replace_all(text, "@\\S+", "")) %>%
+  unnest_tokens(bigram, text, token = "ngrams", n = 2) %>%
+  separate(bigram, c("word1", "word2"), sep = " ") %>%
+  filter(!word1 %in% stopwords_lsa$word) %>%
+  filter(!word1 %in% stopwords_tm$word) %>%
+  filter(!word1 %in% stop_words$word) %>%
+  filter(!word2 %in% stop_words$word) %>%
+  filter(!word2 %in% stopwords_lsa$word) %>%
+  filter(!word2 %in% stopwords_tm$word) %>%
+  count(word1, word2, sort = TRUE)
+
+set.seed(22)
+arrow <- grid::arrow(type = "closed", length = unit(0.15, "inches"))
+
+plot_tweet.german.bigrams <- tweet.german.bigrams %>%
+  filter(n > 7) %>%
+  graph_from_data_frame()
+
+plot_tweet.german.bigrams <- ggraph(plot_tweet.german.bigrams, layout = "fr") +
+  geom_edge_link(aes(edge_alpha = n), show.legend = FALSE, arrow = arrow, end_cap = circle(0.07, "inches")) +
+  geom_node_point(color = "pink", size = 5) +
+  geom_node_text(aes(label = name), vjust = 1, hjust = 1) +
+  theme_void()
+
+### Building Markov Chain
+library(markovchain)
+
+# create text file to read in
+write.table(news.german, file = "news.german.txt", row.names = FALSE, col.names = FALSE)
+# read in text file
+news.german.text <- readLines('news.german.txt')
+# delete empty lines
+news.german.text <- news.german.text[nchar(news.german.text) > 0]
+# remove all punctuation
+news.german.text <- str_replace_all(news.german.text, "[[:punct:]]", " ")
+# get a list of just the words split into tokens
+news.german.text_terms <- unlist(strsplit(news.german.text, " "))
+news.german.text_terms <- news.german.text_terms[news.german.text_terms != ""]
+# creating the model
+#news.german.text_fit <- markovchainFit(data = news.german.text_terms)
+# generate text
+#news.german.text_generate <- markovchainSequence(n = 10, markovchain = news.german.text_fit$estimate)
+
