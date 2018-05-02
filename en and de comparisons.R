@@ -2,7 +2,9 @@ source("en data analysis.R")
 source("de data analysis.R")
 
 # frequency of words used
-plot_count.de.en <- bind_rows(news_count.en, news_count.de) %>%
+count.de.en <- bind_rows(news_count.en, news_count.de)
+
+plot_count.de.en <- count.de.en %>%
   group_by(language) %>%
   top_n(10, n) %>%
   ungroup() %>%
@@ -10,5 +12,5 @@ plot_count.de.en <- bind_rows(news_count.en, news_count.de) %>%
   ggplot(aes(word, n, fill = language)) +
   geom_col(show.legend = FALSE) +
   facet_wrap(~language, scales = "free_y") +
-  labs(y = NULL, x = NULL) +
+  labs(y = "n", x = NULL) +
   coord_flip()
