@@ -48,7 +48,7 @@ germany.map <- ggmap(ger.map, extent = "device") +
   geom_text(
     data = frankfurt,
     aes(label = "Frankfurter Allgemeine Zeitung"),
-    hjust = 0.5, vjust = 2, size = 3) +
+    hjust = 0.2, vjust = 2, size = 3) +
   geom_point(
     data = munich,
     aes(x = lon, y = lat),
