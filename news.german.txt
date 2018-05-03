@@ -1,0 +1,677 @@
+"Facebook-Datenskandal: Was bisher geschah"
+"Der Skandal um Facebook und Cambridge Analytica hat sich immer mehr ausgeweitet. Was aber hat den Social-Media-Konzern derart in die Defensive gebracht?"
+"Mark Zuckerberg muss für den Datenskandal Abbitte leisten"
+"Facebook sah sich in den vergangenen Wochen massiver Kritik ausgesetzt, weil die Datenanalysefirma Cambridge Analytica mehr als 87 Millionen Nutzerdaten unrechtmäßig abschöpfen konnte. Der Datenskandal im Überblick:"
+"Brachte den Datenskandal ins Rollen: Christopher Wylie, Ex-Mitarbeiter von Cambridge Analytica"
+"Die Enthüllung"
+"Mitte März 2018: Ein ehemaliger Mitarbeiter von Cambridge Analytica lässt die Katze aus dem Sack. Der Politikberatungsfirma, die unter anderem für das Wahlkampfteam des heutigen US-Präsidenten Donald Trump gearbeitet hatte, waren Jahre zuvor Informationen mehrere Millionen Facebook-Nutzer weitergegeben worden. "
+"Ein App-Entwickler hatte sie über eine Umfrage auf Facebook eingesammelt und dann unrechtmäßig an Cambridge Analytica weitergereicht. Das Pikante für Facebook: Das Soziale Netzwerk wusste seit Ende 2015 davon, verließ sich aber auf die Zusicherung, dass die Daten vernichtet worden seien und informierte seine Nutzer damals nicht."
+"Die Empörung"
+"Politiker sowohl in Europa als auch in den USA zeigten sich aufgebracht. Schnell wurden Forderungen nach strengerer Regulierung des Datenschutzes im Internet laut. Die britische Datenschutzbehörde ließ Daten bei Cambridge Analytica beschlagnahmen. Darauf beruft sich Facebook. Man könne nicht mehr angeben, welche Informationen genau in die Hände von Cambridge Analytica gelangt seien."
+"Das Nostra Culpa "
+"Über Wochen ebbte der globale Sturm der Entrüstung über Facebook nicht ab. Firmengründer und Chef Mark Zuckerberg hatte den Orkan zunächst über sich hinwegfegen lassen und sich in den Medien kaum zu Wort gemeldet. Dann startete er eine Entschuldigungs-Kampagne: In Blog-Einträgen und einer Telefonkonferenz mit Journalisten räumte er ein: \"Das war unser Fehler.\" Facebook habe nicht genug unternommen, um seine Nutzer zu schützen. Zuckerberg versprach schärferen Datenschutz für die Zukunft."
+"Im Skandal um den gigantischen Datenmissbrauch bei Facebook hat sich der Gründer und Chef des Online-Netzwerks seiner ersten Anhörung im US-Senat gestellt - und sich dabei zu seiner persönlichen Verantwortung bekannt. (10.04.2018)"
+"In der Affäre um die unerlaubte Weitergabe von Daten werden immer pikantere Details publik. So wusste Facebook schon vor zweieinhalb Jahren von dem Datenverlust. In der EU sind bis zu 2,7 Millionen Bürger betroffen. (07.04.2018)"
+"Das Mea Culpa"
+"Auf seiner Entschuldigungstour ging Zuckerberg nun über das Eingeständnis der Verantwortung seines Unternehmens hinaus: Das \"war mein Fehler\", sagte er. Er trage am Ende die Verantwortung für alles, was bei Facebook passiere. Zugleich betonte Zuckerberg, er sei nach wie vor die richtige Person, um Facebook zu führen, da er aus Fehlern lerne."
+"Die Abbitte "
+"Das Schuldeingeständnis verwandelte Facebook in konkrete Gegenmaßnahmen. Zuckerberg versprach schärferen Datenschutz für die Zukunft. Ad hoc reduzierte Facebook nach eigener Aussage den Zugriff von App-Entwicklern auf Nutzerinformationen deutlich und Nutzer bekommen mehr Möglichkeiten zum Schutz ihrer Privatsphäre gemäß der EU-Datenschutz-Grundverordnung."
+"Auch will Facebook künftig bei der Personalisierung der Werbung nicht mehr auf die Informationen externer Datenhändler zurückgreifen. Wer Anzeigen zu politischen Themen schalten will, muss Identität und Standort bestätigen - das soll Manipulationen wie Propaganda aus Russland im US-Präsidentschaftswahlkampf 2016 verhindern."
+"EU-Datenschutzregeln - also doch?"
+"Zudem sollen ab Mai die Nutzungsbedingungen in einem seit langem geplanten Schritt an die EU-Datenschutz-Grundverordnung angepasst werden. Genau das aber, eine weltweite Anwendung der neuen EU-Datenschutzregelungen, hatte Zuckerberg noch Anfang April in einem Interview abgelehnt. Damals ließen seine Äußerungen darauf schließen, dass US-Facebook-Nutzer künftig schlechter gestellt sein könnten als Nutzer in der Europäischen Union. Die EU-Datenschutz-Grundverordnung tritt im Mai in Kraft. Ziel ist es, personenbezogene Daten besser zu schützen und die Verarbeitung der Daten durch Firmen einheitlicher zu gestalten. Sollten Unternehmen gegen die Auflagen verstoßen, drohen ihnen Strafzahlungen von bis zu 20 Millionen Euro oder bis zu vier Prozent ihres weltweiten Umsatzes."
+"Die Sache mit den Troll-Armeen und möglicher Wahlmanipulation"
+"Neben dem hohe Wellen schlagenden Datenskandal um Cambridge Analytica geriet Facebook in einer anderen Causa in die Kritik: Ganze Heerscharen von Internet-Trollen missbrauchten die Plattform im US-Wahlkampf. Unter anderem die in Russland ansässige Gruppe und mutmaßliche Troll-Farm \"Internet Research Agency\" hatte in großem Stil versucht, über gefälschte Facebook-Profile soziale Spannungen in den USA gezielt zu verschärfen und Stimmung für den schließlich siegreichen Kandidaten Donald Trump zu machen."
+"Facebook: Auch Zuckerbergs Daten gingen an Cambridge Analytica"
+"Den zweiten Tag in Folge musste Facebook-Chef Zuckerberg sich den Fragen des US-Kongresses stellen. Auch wenn es für ihn insgesamt glimpflich ausging, wurde klar: Auch seine eigenen Daten sind offenbar nicht sicher."
+"Mark Zuckerberg bei seiner zweiten Anhörung im US-Kongress"
+"\"Wie können Nutzer die Kontrolle über ihre eigenen Daten haben, wenn Facebook die Kontrolle über die Daten nicht einmal hat?\", fragte Frank Pallone, Abgeordneter aus New Jersey, zu Beginn der zweiten Anhörung. Nutzer hätten die Kontrolle über ihre eigenen Daten und könnten selbst entscheiden, was sie teilen möchten und was nicht, sagte Zuckerberg und verteidigte den Privatsphäre-Umgang seines Unternehmens zum wiederholten Male. Doch als er gefragt wurde, ob auch seine Daten unrechtmäßig genutzt wurden, sagte er: \"Ja\". Mehr Details gab es dazu allerdings nicht."
+"Nach der Anhörung vor Ausschüssen des Senats am Dienstag war dieses Mal das Abgeordnetenhaus an der Reihe. Dieses Mal wehte dem Facebook-Chef ein härterer Wind entgegen. Die Ausschussmitglieder unterbrachen öfter seine Ausführungen, Zuckerberg musste häufiger als am Vortag sagen, dass er einzelne konkrete Details nicht auf Anhieb parat habe."
+"Mehr Regeln für Social-Media Unternehmen"
+"Vor dem Repräsentantenhaus sagte Zuckerberg, es müsse Vorschriften für Social-Media-Unternehmen geben. \"Das Internet gewinnt weltweit an Bedeutung im Leben der Menschen, und ich denke, es ist unvermeidlich, dass es eine gewisse Regulierung geben muss\", so der 33-Jährige. Gleichzeitig warnte er aber davor, dass solche Regelungen das Wachstum der Branche bremsen könnten."
+"Bei dem aktuellen Datenskandal hatte Facebook vor mehr als vier Jahren Informationen von Nutzern unrechtmäßig an die Firma Cambridge Analytica weitergereicht, die später unter anderem für das Wahlkampfteam von US-Präsident Donald Trump arbeitete. Nach Einschätzung von Facebook könnten die Daten von bis zu 87 Millionen Nutzern weltweit betroffen sein. Facebook wusste seit Ende 2015 von der unerlaubten Datenweitergabe - gab sich aber mit der Zusicherung zufrieden, dass sie vernichtet worden seien und informierte die betroffenen Nutzer nicht. Das wird erst jetzt nachgeholt."
+"Zuckerberg in Bedrängnis? Fehlanzeige"
+"Auch wenn die Abgeordneten am zweiten Tag besser vorbereitet schienen, gelang es den Politikern insgesamt nicht, den Facebook-Chef mit kritischen Fragen ernsthaft in Bedrängnis zu bringen. Vor allem die Senatoren waren am Dienstag mit lückenhaftem Wissen über die konkrete Funktionsweise und das Geschäftsmodell von Facebook aufgefallen. Damit ließen sie Zuckerberg Raum für Ausweichmanöver."
+"Das Medieninteresse bei den Anhörungen war riesig"
+"Der Republikaner John Kennedy gab Zuckerberg eine klare Kritik mit auf den Weg: \"Ihre Nutzungsbedingungen sind Mist.\" Das Ziel des Textes sei, Facebook rechtlich abzusichern - und nicht die Nutzer über ihre Rechte zu informieren. \"Ich würde vorschlagen, dass Sie nach Hause gehen und das neu schreiben\", sagte der 66-jährige Senator aus Louisiana in Lehrer-Ton. Zuckerberg räumte ein, dass die meisten Facebook-Nutzer die Geschäftsbedingungen nicht komplett durchlesen."
+"Senator John Cornyn entlockte Zuckerberg allerdings einen Satz, der Facebook noch verfolgen könnte. \"Ich teile die Meinung, dass wir eine Verantwortung für die Inhalte tragen\", sagte der Facebook-Chef auf die entsprechende Frage. Später betonte Zuckerberg zwar ausdrücklich, dass Facebook als Plattform selbst keine Inhalte erstelle und daher aus seiner Sicht zuallererst eine Technologiefirma sei. Der eine Satz mit der Verantwortung dürfte in der Zukunft aber häufiger von Verfechtern der Ansicht aufgegriffen werden, dass Facebook eigentlich als Medienunternehmen agiere und sich nicht aus der Verantwortung stehlen dürfe."
+"Amtierender Chef von Cambridge Analytica geht"
+"Facebook-Datenskandal deutlich größer als angenommen"
+"Inzwischen ist davon die Rede, dass die Daten von bis zu 87 Millionen Nutzern unzulässigerweise mit der britischen Analysefirma Cambridge Analytica geteilt worden sind. Vor allem Nutzer in den USA sollen betroffen sein."
+"Das teilte der Technologiechef des Online-Netzwerks, Mike Schroepfer, mit. Bislang war von rund 50 Millionen betroffenen Nutzern ausgegangen worden. Die Daten sollen unerlaubt für den Wahlkampf des heutigen US-Präsidenten Donald Trump ausgewertet und genutzt worden sein."
+"Auch rund 310.000 Nutzer aus Deutschland könnten betroffen sein, über die Erfassung der Informationen von Freunden - auch durch Verbindungen zu Nutzern in anderen Ländern. Direkt an der Umfrage-App von Cambridge Analytica hätten sich lediglich 65 Nutzer aus Deutschland beteiligt, wie Facebook auf Anfrage erklärte."
+"\"Schnell bewegen , Dinge aufbrechen\" - eines von Facebooks Firmenmottos. Auf den Skandal um veruntreute Kundendaten scheint das genau zuzutreffen - aus Usersicht. Was wird aus dem Gechäftsmodell? (30.03.2018)"
+"Im Datenskandal um Facebook hat Unternehmenschef Mark Zuckerberg eingeräumt, dass die Lösung der Probleme beim Schutz der Nutzerdaten Jahre dauern wird. Aber Facebook werde sich aus \"diesem Loch herausgraben\". (02.04.2018)"
+"Nach dem Skandal um Datenmissbrauch durch Cambridge Analytica will Facebook es seinen Nutzern erleichtern, ihre Privatsphäre zu schützen. Die Big-Data-Unternehmerin Yvonne Hofstetter bezweifelt, dass das genügt. (29.03.2018)"
+"Nach dem Datenskandal um Cambridge-Analytica wächst der weltweite Druck auf Facebook. Immer mehr Nutzer wollen wissen, welche Daten das soziale Netzwerk speichert. Dazu gehören auch ganze Anruflisten von Android-Nutzern. (26.03.2018)"
+"Zuckerberg bemüht sich weiter um Schadensbegrenzung"
+"Facebook-Chef Mark Zuckerberg hatte sich Anfang der Woche für den Datenmissbrauch entschuldigt und eine Reihe von Reformen angekündigt. In einem Interview sagte er aber auch, es werde \"einige Jahre\" brauchen, um die Probleme mit dem Schutz von Nutzerdaten zu beheben. Jetzt legte Zuckerberg nach und gab sich erneut selbstkritisch. Facebook habe nicht genug unternommen, um seine Nutzer zu schützen, bekräftigte er. \"Das war unser Fehler, das war mein Fehler.\" Es gehe darum, aus den Fehlern zu lernen, die unweigerlich passierten."
+"Neue Datenschutzbedingungen"
+"Der Internet-Konzern teilte mit, die Datenschutz- und Nutzungsbedingungen seien neu formuliert worden. Facebook verspricht, die Bedingungen würden dabei klarer und transparenter. Die Informationen über die Datensammlung seien jetzt ausführlicher formuliert. Mit den neuen Regeln würden keine zusätzlichen Informationen erhoben, betonte das Online-Netzwerk. Aus den Bestimmungen erfährt man unter anderem, dass Facebook auf Geräten auf Informationen wie Namen von Apps und Dateien zugreift sowie auch Mausbewegungen registriert. Letzteres solle helfen, Menschen von Bots zu unterscheiden, hieß es. An der Datenverarbeitung werde sich aber nichts ändern, so das Unternehmen."
+"Die Neuerungen sollen nach Angaben von Technologiechef-Schroepfer am Montag installiert sein. Die User sollen dann auch die Möglichkeit haben, Apps zu beseitigen, die sie nicht mehr wollten. Sie würden außerdem darüber informiert, ob ihre persönlichen Daten möglicherweise unerlaubt an Cambridge Analytica gegangen seien. Neu ist zudem, dass andere Konzern-Dienste wie Instagram jetzt auch nach den Facebook-Datenschutzbedingungen agieren sollen."
+"Bereits abgeschafft hat Facebook die Möglichkeit ab, nach Nutzer-Profilen über Telefonnummer und E-Mail-Adresse zu suchen. Das Online-Netzwerk glaube, dass über diese Funktion öffentlich zugängliche Informationen der Mehrheit der Nutzer von außerhalb der Plattform abgesaugt worden seien. Das sind meist Grund-Informationen wie Profilfoto, Stadt oder Arbeitgeber."
+"Die neuen ausführlicheren Nutzerrechte gehen in Europa zu großen Teilen auf die Umsetzung der EU-Datenschutzgrundverordnung zurück, die zum 25. Mai Pflicht wird. Sie waren schon lange in Arbeit und sind keine Reaktion auf den aktuellen Datenschutz-Skandal um die Firma Cambridge Analytica."
+"Zuckerberg stellt sich Befragung"
+"Am Mittwoch kommender Woche will Zuckerberg im US-Kongress zu dem Skandal aussagen. Zuckerberg werde dann vom Handelsausschuss des Repräsentantenhauses angehört, teilten Mitglieder des Gremiums in Washington mit."
+"Facebook-Chef Mark Zuckerberg: \"Es tut mir leid\""
+"Zwei Tage lang steht Mark Zuckerberg dem US-Kongress Rede und Antwort zum Datenskandal. In einem vorbereiteten Statement bekennt sich der Facebook-Chef zu seinen Fehlern - und gelobt Besserung."
+"Facebook habe nicht genug getan, um Schaden abzuwenden, schreibt Mark Zuckerberg in einem Schuldeingeständnis an den ständigen Ausschuss des Repräsentantenhauses. Dies sei ein großer Fehler gewesen. \"Es war mein Fehler. Es tut mir leid. Ich habe Facebook gegründet, ich leite die Firma und ich bin verantwortlich für das, was hier passiert ist.\""
+"Umfangreiche Investitionen in die Sicherheit dürften die Ertragskraft seines Unternehmens in nächster Zukunft beeinträchtigen, warnt Zuckerberg in dem Schriftstück. Facebook habe zusätzlich Personal in dem Bereich eingestellt. \"Der Schutz unserer Gemeinschaft ist wichtiger als die Maximierung unserer Gewinne.\" "
+"Es werde \"einige Zeit brauchen, um all die Veränderungen abzuarbeiten, die wir vornehmen müssen\", heißt es in der Erklärung des Facebook-Chefs weiter. Er sei aber \"dem Ziel verpflichtet, es hinzubekommen\"."
+"Harte Fragen angekündigt"
+"Im Datenskandal stellt sich Mark Zuckerberg jetzt erstmals Fragen im US-Kongress. Zunächst ist er an diesem Dienstag als Zeuge bei einer gemeinsamen Sitzung des Rechts- und des Handelsausschusses im Senat geladen. Am Mittwoch steht dann eine weitere Befragung im Ausschuss für Energie und Handel des Repräsentantenhauses an."
+"Nicht nur amerikanische User sind betroffen: Auch Daten von 310.000 deutschen Facebook-Nutzern wurden gestohlen. Politiker fordern strengere Regeln. Dabei gingen die Deutschen mehr zufällig ins Netz, sagen Experten. (06.04.2018)"
+"Keine Ahnung, sagt Facebook-Managerin Sandberg auf die Frage, welche Nutzerdaten nun eigentlich genau abgefischt worden sind. In Deutschland zeigen sich immer mehr Menschen verunsichert. Und das Kartellamt macht Druck. (06.04.2018)"
+"Vom Facebook-Skandal sind auch deutsche Nutzer betroffen - und plötzlich ist das Entsetzen hierzulande groß. Wann lernt Deutschland endlich, dass das Internet kein nationales Problem ist, fragt sich Maximiliane Koschyk. (05.04.2018)"
+"Zuckerberg muss sich auf schweres Geschütz einstellen: Mehrere Senatoren und Abgeordnete kündigten in den vergangenen Tagen bereits an, dass sie den Facebook-Chef mit harten Fragen konfrontieren wollen. "
+"Versäumnisse im Datenskandal"
+"Bei dem Datenskandal hatte der Entwickler einer Umfrage-App vor über vier Jahren Informationen von Nutzern unrechtmäßig an die Analyse-Firma Cambridge Analytica weitergereicht, die später unter anderem für das Wahlkampfteam von US-Präsident Donald Trump gearbeitet hatte."
+"Dabei ging es nicht nur um die Daten der Umfrageteilnehmer, sondern auch um die ihrer Facebook-Freunde. Nach Einschätzung von Facebook könnten die Daten von bis zu 87 Millionen Nutzern weltweit betroffen sein - darunter potenziell gut 70 Millionen Amerikaner."
+"Facebook-Skandal: Datenklau kennt keine Landesgrenzen"
+"Nicht nur amerikanische User sind betroffen: Auch Daten von 310.000 deutschen Facebook-Nutzern wurden gestohlen. Politiker fordern strengere Regeln. Dabei gingen die Deutschen mehr zufällig ins Netz, sagen Experten."
+"Der Facebook Datenskandal zieht weiter seine Kreise. Nachdem es zuerst hieß, dass die Daten von 50 Millionen Nutzern des sozialen Netzwerks weitergegeben und von der Analysefirma Cambridge Analytica missbraucht wurden, sollen jetzt 87 Millionen Mitglieder betroffen sein. Die Daten vieler dieser Nutzer wurden im US-Wahlkampf genutzt, aber auch deutsche User sind betroffen – rund 310.000 von ihnen."
+"\"Es gibt bei Facebook keine Grenzen\", sagt der Kölner Social Media Experte Hendrik Unger im DW-Gespräch. \"Das ist ein globales Netzwerk.\""
+"Die hunderttausenden deutschen User haben nicht alle die Umfrage ausgefüllt, über die Cambridge Analytica an persönliche Daten von Facebook Mitgliedern gekommen ist. Das haben tatsächlich nur 65 deutsche Nutzer getan. Aber der Datenklau funktionierte wie ein Schneeballsystem. Gestohlen wurden nicht nur die Daten der Mitglieder, die auf die Umfrage klickten, sondern auch die ihrer Freunde. Unter anderem sollen die Benutzerdaten an das Wahlkampfteam von Donald Trump weitergegeben worden sein."
+"Barley fordert europaweite Regeln für Facebook"
+"Barley will Unternehmen wie Facebook bestrafen, wenn sie sich nicht an Datenschutzrichtlinien halten"
+"Facebook wusste über Datenmissbrauch von Cambridge Analytica in Grundzügen bereits seit 2015 Bescheid. Trotzdem kommen die Informationen erst jetzt scheibchenweise ans Licht. "
+"\"Facebook ist ein Netzwerk der Intransparenz\", sagte Bundesjustizministerin Katarina Barley am Donnerstag in Berlin. \"Ethische Überzeugungen fallen kommerziellen Interessen zum Opfer.\""
+"Barley fordert für das soziale Netzwerk Konsequenzen auf internationaler Ebene. \"Wir werden überprüfen, ob die Möglichkeiten der neuen europäischen Datenschutzverordnung ausreichen\", sagte sie. \"Wir müssen klare Anforderungen an die Betreiber sozialer Netzwerke auf europäischer Ebene gesetzlich festschreiben.\" Außerdem solle Facebook gegenüber Behörden in der EU die Funktionsweise seiner Algorithmen offen legen."
+"Auch das Bundeskartellamt kritisierte das soziale Netzwerk scharf. Facebook habe seine Marktmacht durch die Art und Weise missbraucht, wie Daten aus Drittquellen gesammelt und verwertet werden, sagte Kartellamtspräsident Andreas Mundt der \"Rheinischen Post\". Bleibe das Kartellamt bei diesem Befund, werde Facebook seine Praxis anpassen müssen."
+"Betroffene deutsche User ein \"Streuverlust\""
+"In Deutschland sind mit 309.815 Usern in etwa so viele Menschen betroffen, wie in Karlsruhe leben. Das klingt viel, aber im Vergleich zu den 70,6 Millionen betroffenen Mitgliedern in den USA ist es eine \"verschwindend geringe Zahl\", so der Social Media Experte Unger."
+"\"Ich gehe davon aus, dass die 310.000 deutschen Nutzer eher ein Streuverlust sind\", sagt der Inhaber einer Werbeagentur. \"Es sollten ja wahlberechtigte Amerikaner angesprochen werden.\""
+"Journalist Martin Giesler sagt, dass es trotz des Schneeballeffekts nicht allein durch die 65 Deutschen, die die Facebook-Umfrage ausfüllten, zu 310.000 Betroffenen in Deutschland kam. \"Man muss noch all jene dazurechnen, die befreundet sind mit zum Beispiel amerikanischen Facebook-Usern, die diese App genutzt haben und deren Profile dann darüber mit abgesaugt wurden\", erklärt Giesler, der hauptsächlich über Social Media Themen berichtet, der DW. \"Dann kommt man auf diese Hausnummer von 310.000 Accounts.\""
+" Versenden  Facebook   Twitter   google+   Tumblr   VZ   Mr. Wong   Xing   Webnews   Yigg   Newsvine   Digg  "
+"Permalink http://p.dw.com/p/2vYER"
+"Die Daten einer Bremerin könnten beispielsweise abgezweigt worden sein, wenn ein Freund in New York die präparierte Umfrage ausfüllte und so unwissentlich die Daten all seiner Kontakte weitergab."
+"\"Man geht bei Facebook-Nutzern von einem Mittelwert von rund 300 Freunden aus\", sagt Giesler. \"Das potenziert sich dann entsprechend.\""
+"Facebook-Nutzung hat ihren Preis"
+"In einer Telefonkonferenz mit Journalisten am Mittwoch zeigte sich Facebook-Gründer Mark Zuckerberg selbstkritisch: Facebook habe nicht genug unternommen, um seine Nutzer zu schützen. \"Das war unser Fehler. Das war mein Fehler\", sagte Zuckerberg. Bis zum heutigen Tage \"wissen wir nicht, welche Daten Cambridge Analytica hat\", gestand die für das operative Geschäft zuständige Facebook-Managerin Sheryl Sandberg gegenüber der Financial Times ein."
+"Das soziale Netzwerk hat die Suche nach Mitgliedern über Email Adressen oder Telefonnummern abgeschafft und den Zugang zu Nutzerdaten für App-Entwickler eingeschränkt. Zuckerberg wird am 11. April vor dem US-Kongress aussagen und betonte in der Telefonkonferenz, er fände die neue europäische Datenschutzverordnung, die am 25. Mai in Kraft tritt, gut: \"Die Regulierungen sind etwas sehr Positives.\""
+"Trotz dieser Aussagen glaubt Hendrik Unger nicht, dass sich in Zukunft viel an Facebooks Umgang mit Nutzerdaten ändern wird."
+"
+Zuckerberg vor US-Kongress
+Reumütig, selbstbewusst und naiv
+"
+"Facebook übernimmt Verantwortung"
+"Künstliche Intelligenz als einfache Lösung?"
+"Zuckerberg teils überraschend ahnungslos"
+"Stellungnahme von Facebook-Chef Zuckerberg vor dem US-Kongress"
+"Zuckerbergs Grenzen der Privatsphäre"
+"Warum Facebook unter Druck steht"
+"Stefan Niemann, ARD Washington, zur Befragung Zuckerbergs"
+"Seit Wochen gibt sich Facebook im Datenskandal reumütig. Bei seiner Aussage vor dem US-Kongress zeigte Chef Zuckerberg auch andere Seiten, darunter Ahnungslosigkeit bei kritischen Fragen."
+" Wenn es ernst wird, trägt Facebook-Chef Mark Zuckerberg Anzug. Und vor dem Handels- und Justizausschuss des US-Kongresses wurde es ernst: Zuckerberg stellte sich dort stundenlang den Fragen der Senatorinnen und Senatoren. Seine Strategie dabei offenbar: so viel Reue wie nötig."
+" Der US-Kongress hatte Zuckerbergs Stellungnahme für die Anhörung schon am Montag öffentlich gemacht. Sie liest sich wie alle bisherigen Statements des Unternehmens zum Datenskandal: voll mit Entschuldigungen und der Einsicht, das Unternehmen habe seine Verantwortung nicht wahrgenommen."
+"
+| US-Kongress
+"
+" Interessant war, wie sehr Zuckerberg diese Fehler an seine eigene Person band: \"Es war mein Fehler, und es tut mir leid. Ich habe Facebook gestartet. Ich leite es und bin verantwortlich.\" Die eigene Naivität in den Vordergrund zu schieben, dürfte zur Krisenstrategie gehören: Immer wieder erwähnte Zuckerberg in der Anhörung, wie er sich die Facebook-Welt vor 14 Jahren im Studentenwohnheim vorgestellt habe. Die Mission hinter Facebook sei \"idealistisch und optimistisch\"."
+"Zuckerberg vor US-Kongresstagesschau 12:00 Uhr, 11.04.2018, Claudia Buckenmaier, ARD Washington"
+" Die Fehler auf sich zu beziehen und die zweite Reihe des Unternehmens nicht zu erwähnen, könnte Facebook auch in die Karten spielen, wenn es hart auf hart käme und Mark Zuckerberg seinen Posten räumen müsste. Vor allem die bisherige Geschäftsführerin Sheryl Sandberg wäre dann unbelastet. Um sie ist es im Datenskandal verhältnismäßig ruhig."
+" Die zentrale Botschaft Zuckerbergs: Einen zweiten Fall wie den um Cambridge Analytica dürfe und werde es nicht geben. Auf die Fragen zu diesem Komplex wirkte Zuckerberg gut vorbereitet. Facebook habe schon jetzt eine Reihe von Maßnahmen getroffen und werde sie weiter durchführen."
+"Beim Teilen von privaten Daten hat Mark Zuckerberg Grenzen. In einem selten unbeschwerten Moment während seiner Befragung vor dem US-Kongress weigerte sich der Facebook-Chef, Fragen aus seinem Privatleben zu beantworten. \"Mister Zuckerberg, würden Sie sich wohl damit fühlen, uns den Namen des Hotels zu nennen, in dem Sie gestern untergekommen sind?\", fragte Senator Dick Durbin. Nach einer Pause sagte Zuckerberg: \"Ehm... nein.\" Er lächelte, als die Senatoren im Raum lachten. \"Falls Sie jemandem in dieser Woche geschrieben haben, würden Sie mit uns die Namen der Leute teilen, die Sie kontaktiert haben?\", fragte Durbin danach. Daraufhin kam die Antwort: \"Senator, nein, ich würde mich wahrscheinlich nicht entscheiden, das hier öffentlich zu tun.\" Durbin sagte anschließend, am Ende gehe es in der Debatte um Datenskandale und Wählerbeeinflussung wohl um das Recht auf Privatsphäre. \"Die Grenzen des Rechts auf Privatsphäre und wie viel man davon im modernen Amerika unter dem Begriff 'Menschen um die Welt verbinden' aufgibt.\" Facebook wirbt damit, dass über die Plattform Menschen in Verbindung blieben."
+" Eine Regulierung unterstütze er zwar \"im Prinzip\", so Zuckerberg, doch es müsse \"die richtige Regulierung sein\". Wenn es darum ging, scharfe Regeln zu vermeiden, war der Facebook-Chef selbstbewusst."
+" Das galt auch für Momente, in denen Zuckerberg leicht genervt wirkte, weil er den wesentlich älteren Senatorinnen und Senatoren technische Grundlagen erklären musste. Nicht jede Frage zeugte von einem Grundverständnis, das für eine Befragung des Chefs eines Internetkonzerns nötig wäre."
+"Simon Hegelich, Hochschule für Politik München, zum Daten-Skandal bei Facebooktagesschau24 11:00 Uhr, 11.04.2018"
+" Besonders oft ging Zuckerberg auf die Rolle künstlicher intelligenter Systeme ein. Sie sollen in Zukunft dafür sorgen, problematische Inhalte von der Plattform zu verbannen. Facebook wolle sich nicht mehr allein auf Meldungen seiner Nutzer verlassen. Dass sich das Netzwerk damit neue Probleme schafft, erwähnte Zuckerberg nicht. Denn Maschinen, die mit automatisierten Filtersystemen überprüfen, was online zu sehen sein darf, wären ebenfalls gefährlich für den demokratischen Diskurs."
+" Während der Anhörung blieb der Facebook-Chef oft im Ungefähren. Auf Fragen danach, welchen Weg die Daten nehmen, die Facebook speichert, antwortete Zuckerberg zum Beispiel, man habe über die Privatsphäre-Einstellungen die Kontrolle darüber, welche Menschen welche Inhalte sehen dürfen."
+" Dass Facebook selbst trotzdem Zugriff auf alle Daten hat und sie zur Profilbildung nutzt - egal, ob sie öffentlich oder nur für die eigenen Freunde sichtbar sind - ließ er unerwähnt."
+"FAQ zum Datenskandal"
+"
+Der Datenmissbrauch bei Facebook sorgt für Schlagzeilen - und Fehler in der Berichterstattung. Dennis Horn erklärt, was der Skandal für das soziale Netzwerk bedeutet.
+| mehr
+"
+" Bei einigen Fragen zeigte Zuckerberg eine überraschende Ahnungslosigkeit und kündigte immer wieder an, Informationen nach der Anhörung nachzuliefern. Das galt zum Beispiel für Fragen danach, welche Daten genau Cambridge Analytica in welcher Menge abgegriffen hat, oder wie Facebook seine Nutzerinnen und Nutzer über verschiedene Geräte hinweg verfolgt. Auch wie lange Daten im System bleiben, nachdem sie gelöscht wurden, konnte Zuckerberg nicht beantworten."
+" Wirklich in die Enge trieben die Senatorinnen und Senatoren Zuckerberg allerdings nicht. Richtige Zugeständnisse machte er ebenfalls nicht. Je mehr Fragen gestellt wurden, desto mehr blieben am Ende offen - dazu gehört auch jene danach, welchen Effekt die Anhörung von Mark Zuckerberg am Ende haben wird."
+"Zuckerberg stundenlang im Senat gegrilltMartin Ganslmeier, ARD Washington  11.04.2018 06:13 Uhr"
+"
+Zuckerberg vor US-Kongress
+Facebook will Verantwortung übernehmen
+"
+"App-Verbannung möglich"
+"\"Weiterhin mit der Regierung zusammenarbeiten\""
+"\"Jedem eine Stimme geben\""
+"Das Geschäft mit Nutzer-Daten"
+"\"Lösung wird Jahre dauern\""
+"Facebook-Chef Zuckerberg hat bei seiner Aussage zum Datenskandal vor dem US-Kongress eine Entschuldigung vorgebracht. Man arbeite an einer Verbesserung. Auch eine Bezahlversion des Netzwerks scheint denkbar."
+" \"Es tut mir Leid. Es war mein Fehler. Ich habe Facebook gegründet, ich leite die Firma und ich bin verantwortlich für das, was hier passiert ist\" - so klingt es, wenn Facebook-Chef Mark Zuckerberg vor dem Handels- und Justizausschuss des US-Kongresses um Entschuldigung bittet."
+" Zwei Tage lang muss er sich wegen des jüngsten Datenskandals und seine Folgen befragen lassen - dafür, dass das soziale Netzwerk seine Verantwortlichkeiten nicht breit genug definiert und Missbrauch zugelassen habe, wie Zuckerberg selbst es ausdrückte."
+"US-Kongress befragt Zuckerbergnachtmagazin 00:24 Uhr, 11.04.2018, Claudia Buckenmaier, ARD Washington"
+" Seitdem bekannt wurde, dass Facebook die Weitergabe der Profildaten von Millionen Nutzern an die Beraterfirma Cambridge Analytica nicht verhinderte, leistete der 33-Jährige mehrfach Abbitte - zuletzt in einer Erklärung, die er am Morgen vor der Anhörung veröffentlichte. Bereits am Vortag hatte er sich in Washington mit US-Politikern zu Gesprächen getroffen, um vor der Anhörung die Wogen zu glätten."
+" Vor den Abgeordneten kündigte Zuckerberg nun an, alle Facebook-Apps zu untersuchen, die Zugriff auf zahlreiche Nutzerinformationen haben. Es sei auch möglich, Apps von Facebook zu verbannen. \"Es gibt noch viel zu tun\", räumte Zuckerberg ein."
+"Stefan Niemann, ARD Washington, zur Befragung Zuckerbergsnachtmagazin 00:24 Uhr, 11.04.2018"
+" Er widersprach der Annahme, dass Audiodaten für gezielte Werbung ausgewertet würden. Dies sei eine Verschwörungstheorie, so Zuckerberg."
+" In einem kurzen Satz brachte Zuckerberg auch den Gedanken ins Spiel, dass das Netzwerk bei seinem Geschäftsmodell neue Wege gehen könnte: \"Es wird immer eine kostenlose Version von Facebook geben\", sagte er - und deutete damit einigen Beobachtern zufolge an, dass er damit über Alternativen wie kostenpflichtige Dienste nachdenkt."
+"
+Nach dem Datenskandal um Facebook steht der Internetkonzern massiv unter Druck. Sie versprechen verschärfte Regeln. Doch das Geschäftsmodell mit Nutzerdaten bleibt bestehen. Was können Deutschland und die Nutzer selbst gegen Datenmissbrauch tun?
+| mehr
+"
+" Doch davor steht die Aufarbeitung der jüngsten Vergangenheit. Die demokratische Senatorin Dianne Feinstein fragte, warum Facebook nicht schon vor drei Jahren gehandelt habe, als bekannt wurde, dass Cambridge Analytica Zugriff auf die Daten hatte."
+" Zuckerberg erklärte, Cambridge Analytica habe damals versprochen, die Daten zu löschen. Darauf habe man vertraut, so Zuckerberg. Im Nachhinein sei dies ein Fehler gewesen."
+" Auf die Nachfrage von Chuck Grassley, des Justizausschuss-Vorsitzenden im Kongress, welche Daten von Cambridge Analytica abgeschöpft wurden, wich Zuckerberg aus. Es werde einige Zeit dauern, \"all' die Veränderungen abzuarbeiten, die wir vornehmen müssen\", sagte Zuckerberg dazu. Diesem Ziel sei er verpflichtet."
+" Ein wichtiger Teilaspekt ist die Rolle Facebooks bei der Meinungsbildung von US-Bürgern im Präsidentschaftswahlkampf. Bis zu 146 Millionen Nutzer sollen in dieser Zeit Inhalte auf Facebook gesehen haben, hinter denen eine russische Agentur steckt, die Beobachter der Manipulation und Einmischung in die US-Wahl beschuldigen. Zuckerberg sagte dazu vor dem Kongress, er arbeite mit US-Sonderermittler Robert Mueller zusammen. Er sei jedoch noch nicht persönlich befragt worden und wisse nicht, ob sein Unternehmen eine Vorladung erhalten habe."
+" Zuckerberg zeigte sich zu umfangreicher Kooperation bereit: \"Wir werden weiterhin mit der Regierung zusammenarbeiten, um das volle Ausmaß der russischen Einmischung zu sehen und wir werden unseren Teil dazu beitragen, nicht nur die Integrität freier und fairer Wahlen rund um die Welt sicherzustellen, sondern auch jedem eine Stimme zu geben und überall eine zum Guten wirkende Kraft in der Demokratie zu sein.\""
+"Datenprobleme bei Facebook"
+"
+Schnelle Lösung beim Schutz von Nutzerdaten? Bei Facebook ist das wohl eher nicht in Sicht. Konzernchef Zuckerberg glaubt, dass es \"einige Jahre\" dauern könnte, alle Datenprobleme zu beheben.
+| mehr
+"
+"
+Facebook verschärft Regeln
+Ein klein bisschen transparenter
+"
+"Tausende neue Mitarbeiter"
+"\"Werden nicht alle stoppen\""
+"Betroffene sollen informiert werden"
+"Millionen betroffen"
+"Sorge vor Datenmissbrauch"
+"Facebook steht unter Druck. Nun will das Unternehmen seine Regeln für politische Werbung verschärfen. Außerdem sollen Betroffene des Datenskandals informiert werden - was mit deren Daten geschehen ist, erfahren sie aber nicht."
+" Facebook verschärft seine Regeln für Polit-Werbung. Wer künftig entsprechende Anzeigen schalten will, muss Identität und Standort bestätigen. Bereits im vergangenen Oktober hatte Facebook dieses Verfahren für eindeutige Wahlwerbung eingeführt. Jetzt wird es auf Werbung mit politischem Hintergrund insgesamt ausgeweitet."
+" Dabei kann es sich beispielsweise um als Werbung verbreitete Botschaften zu kontroversen Themen wie Einwanderung oder Spannungen zwischen politischen und sozialen Gruppen handeln. Hier soll künftig auch transparent gemacht werden, wer für sie bezahlt hat. Die Neuerungen werden zunächst in den USA eingeführt und sollen in den kommenden Monaten auf den Rest der Welt ausgeweitet werden, so das Unternehmen."
+"
+Nach dem Facebook-Skandal sorgt sich ein Großteil der Nutzer, dass ihre Daten missbraucht werden könnten. Konsequenzen ziehen aber nur wenige. Außerdem im ARD-DeutschlandTrend: Ist Merkel eine gute Kanzlerin? Von Ellen Ehni.
+| mehr
+"
+" Außerdem werden sich Betreiber von Facebook-Seiten mit vielen Fans ebenfalls bei dem Unternehmen verifizieren müssen. Für das Verfahren werde Facebook \"Tausende\" weitere Mitarbeiter einstellen, hieß es."
+" Hintergrund ist die Kontroverse um Propaganda aus Russland. Die von Russland aus agierende Gruppe Internet Research Agency hatte im US-Präsidentschaftswahlkampf 2016 in großem Stil mit Einträgen von gefälschten Profilen politische Spannungen in den USA geschürt und für den am Ende siegreichen Donald Trump agitiert."
+"Facebook-Chef Mark Zuckerberg: \"Werden nicht alle stoppen, die versuchen, das System hereinzulegen\""
+" Die neuen Schritte allein \"werden nicht alle stoppen, die versuchen, das System hereinzulegen\", schrieb Facebook-Chef Mark Zuckerberg. \"Aber sie werden es für alle stark erschweren, das zu machen, was die Russen im Wahlkampf 2016 getan haben, und gefälschte Profile und Seiten für Anzeigen zu nutzen.\""
+" Ab Montag will Facebook Betroffene zudem weltweit über die mögliche Weitergabe ihrer Daten an Dritte informieren. \"Wir werden es jedem mitteilen, dessen Daten von Cambridge Analytica betroffen sein könnten\", sagte Facebook-Geschäftsführerin Sheryl Sandberg in einem Interview mit der Nachrichtenagentur \"Bloomberg\". Die Information soll ganz oben im Newsfeed von Facebook auftauchen. Auch alle Apps, mit denen Nutzer auf Facebook verbunden sind, sollen dort in einer eigenen Mitteilung zu sehen sein. Es soll eine einfache Möglichkeit geben, diese Apps zu löschen, kündigte Sandberg an."
+" Mitte März war bekannt geworden, dass die britische Analyse-Firma Cambridge Analytica unrechtmäßig an Informationen von Millionen Facebook-Usern kam - ohne deren Wissen.  87 Millionen Nutzer könnten weltweit betroffen sein, darunter rund 310.000 Anwender aus Deutschland. Nach Angaben der EU-Kommission wurden in der Europäischen Union die Daten von bis zu 2,7 Millionen Menschen aus den Facebook-Systemen gezogen."
+" Laut Sandberg ist noch immer unklar, welche Informationen der Nutzer genau bei der umstrittenen Firma gelandet sind und was damit passiert ist."
+"Facebook-Datenskandal: Deutlich mehr Nutzer in der EU betroffen Karin Bensch,WDR Brüssel  06.04.2018 23:07 Uhr"
+"
+Datenprobleme bei Facebook
+\"Lösung wird Jahre dauern\"
+"
+"Aus den Fehlern der US-Wahl gelernt"
+"Ein wenig Selbstkritik"
+"Massiver Druck auf Facebook"
+"So kontrolliert man seine Daten"
+"Schnelle Lösung beim Schutz von Nutzerdaten? Bei Facebook ist das wohl eher nicht in Sicht. Konzernchef Zuckerberg glaubt, dass es \"einige Jahre\" dauern könnte, alle Datenprobleme zu beheben."
+" Nach dem Bekanntwerden des Skandals um Datenmissbrauch bei Facebook wird der Druck auf das Unternehmen größer, die Nutzerdaten besser zu schützen. Doch Unternehmenschef Mark Zuckerberg dämpft Hoffnungen auf schnelle Lösungen: Nach seiner Worten werde Facebook \"einige Jahre\" brauchen, um diese Probleme zu beheben."
+" Er wünschte, er könnte alle diese Probleme in drei oder sechs Monaten lösen, doch sei eine \"längere Zeitspanne\" nötig, sagte Zuckerberg in einem Interview des US-Nachrichtenportals \"Vox\". Man werde sich aus \"diesem Loch herausgraben\", doch das werde wohl einige Jahre dauern."
+" Rund 14.000 Mitarbeiter würden derzeit an der Sicherheit des sozialen Netzwerkes arbeiten. Unter anderem gehe es dabei um die mutmaßliche Einmischung Russlands bei den Präsidentschaftswahlen in den USA 2016. Aus diesen Fehler habe man aber gelernt, so Zuckerberg. Als Beispiel nannte er die Bundestagswahl in Deutschland im vergangenen Jahr."
+"FAQ zu Facebook"
+"
+Wie kann man Facebook das Datensammeln erschweren oder den eigenen Account löschen? 
+| mehr
+"
+" \"Wir haben direkt mit der deutschen Wahlkommission zusammengearbeitet. Wenn man mit der Regierung in einem Land zusammenarbeitet, hat man gemeinsam tatsächlich ein besseres Verständnis davon, was dort vor sich geht und worauf man sich konzentrieren muss.\""
+" Grundsätzlich habe man sich wohl zu sehr auf die positiven Aspekte sozialer Netzwerke konzentriert und nicht darauf, wie man sie negativ nutzen könnte, sagte Zuckerberg in dem Interview. Man sei zu idealistisch gewesen."
+" Zuckerberg reagierte auch auf die Kritik von Apple-Chef Tim Cook. Dieser hatte vor Journalisten gesagt, dass sich das größte soziale Netzwerk der Welt nichts aus seinen Kunden mache. Apple hätte aus den Daten seiner Kunden ebenfalls Geld machen können, sich aber dagegen entschieden. Zuckerberg entgegnete, dass er diese Argumente lächerlich finde."
+" \"Wenn sie einen Dienst aufbauen möchten, der hilft, jeden auf der Welt zu verbinden, dann gibt es eine Menge Menschen, die es sich nicht leisten können, zu zahlen.\" Ein werbegestütztes Modell sei das einzig vernünftige, um alle Menschen zu erreichen."
+"Der Skandal um die Abschöpfung der Daten von Facebook-Nutzern durch Cambridge Analytica setzt den Konzern massiv unter Druck."
+" Der Skandal um die mutmaßliche Abschöpfung der Daten von mehr als 50 Millionen Facebook-Nutzern setzte dem Konzern massiv zu. Die Daten sollen von der Datenanalyse-Firma Cambridge-Analytica für den Wahlkampf des US-Präsidenten Donald Trump ausgewertet und genutzt worden sein. Behörden in den USA wie Großbritannien haben Ermittlungen eingeleitet. Daraufhin zogen sich Anleger schlagartig zurück, die Facebook-Aktie stürzte zwischenzeitlich um 17 Prozent ab. Große Unternehmen kündigten an, keine Werbung mehr über das Netzwerk zu schalten. "
+" Als Reaktion auf den Skandal hatte Facebook bereits in den vergangenen Tagen eine Reihe von Änderungen in dem Online-Netzwerk angekündigt. Durch eine Neugestaltung der Facebook-Seiten sollen die Nutzer nach Angaben des Unternehmens leichteren Zugang zu Einstellungen und Funktionen erhalten, mit denen sie die Sicherheit ihrer Profile erhöhen können. "
+"Mit Informationen von Katharina Wilhelm, ARD-Studio Los Angeles"
+"Zuckerberg: es wird Jahre brauchen bis das Datenproblem gelöst istKatharina Wihelm, ARD Los Angeles  03.04.2018 07:02 Uhr"
+"
+Facebook-Datenskandal
+Razzia bei Cambridge Analytica
+"
+"Durchsuchung dauerte sieben Stunden"
+"Nur ein Teil größerer Ermittlungen"
+"Cambridge Analytica kündigt eigene Untersuchung an"
+"Daten von 50 Millionen Nutzern ausgespäht"
+"Facebook unter Druck"
+"Ermittler haben die Analysefirma Cambridge Analytica durchsucht. Das Unternehmen soll Millionen Facebook-Daten unrechtmäßig gesammelt und die US-Wahlen sowie das Brexit-Referendum beeinflusst haben."
+" Im Skandal um die unerlaubte Nutzung von Facebook-Daten für Wahlkampfzwecke ist die Londoner Zentrale der Beratungsfirma Cambridge Analytica durchsucht worden."
+" Das Unternehmen steht unter Verdacht, Millionen US-Wähler im Internet gezielt mit verbotener Wahlwerbung für Donald Trump beeinflusst zu haben. Geholfen haben sollen dabei unrechtmäßig gesammelte Facebook-Daten."
+" Am Freitagabend um kurz nach sieben Uhr Ortszeit gab Richter Leonard vom Londoner High Court grünes Licht für die Durchsuchung. Keine Stunde später standen die Ermittler vor der Tür von Cambridge Analytica in der New Oxford Street in der Londoner Innenstadt."
+" 18 Mitarbeiterinnen und Mitarbeiter der britischen Datenschutzbehörde ICO (Information Commissioner's Office) durchsuchten die Londoner Zentrale des Unternehmens. Erst nach sieben Stunden verließen sie das Gebäude unter anderem mit einem Lieferwagen, in dem britische Medien Beweismaterial vermuten."
+"Ermittler haben den Londoner Sitz von Cambridge Analytica durchsucht."
+" Insgesamt fünf Stunden Anhörung an vier Tagen waren dem Durchsuchungsbefehl im Laufe dieser Woche vorausgegangen. Der auch für Digitales zuständige britische Kulturminister Matt Hancock deutete deshalb inzwischen an, dass die Regierung über einen Ausbau der Befugnisse für die Datenschützer des ICO nachdenke, wenn es um den möglichen Missbrauch von persönlichen Daten gehe."
+" \"Das ist nur ein Teil größerer Ermittlungen zur Verwendung persönlicher Daten und Analysen für politische Zwecke\", hieß es in einer Mitteilung auf der ICO-Webseite. Man werde nun Beweise sichern, auswerten und bewerten, bevor Schlüsse gezogen würden."
+" ICO-Chefin Elizabeth Denham hatte den Durchsuchungsbeschluss beantragt, weil die Firma \"innerhalb einer gesetzten Frist nicht auf eine Anfrage geantwortet hat\"."
+" Cambridge Analytica soll mit seiner Datenauswertung zum Sieg Trumps bei der US-Präsidentschaftswahl 2016 wesentlich beigetragen haben. Auch die Rolle des Unternehmens in der Kampagne zum Brexit-Referendum im Jahr 2016 ist dem \"Guardian\" zufolge Gegenstand von Ermittlungen der britischen Wahlkommission."
+" Eine ehemalige Mitarbeiterin der Beratungsfirma sagte, Cambridge Analytica habe mit der Kampagne für den EU-Austritt des ehemaligen Ukip-Sponsors Arron Banks (\"Leave.EU\") zusammengearbeitet, das aber später abgestritten."
+"Der Ex-Vorsitzende von Cambridge Analytica, Alexander Nix, hatte sich und sein Unternehmen mit der Beschreibung illegaler Praktiken vor versteckter Kamera in Schwierigkeiten gebracht."
+" Der bisherige und langjährige Geschäftsführer des Unternehmens, Alexander Nix, war am Dienstag suspendiert worden. Nix hatte sich vor verdeckt arbeitenden Reportern zu Strategien geäußert, mit denen politische Konkurrenten diskreditiert werden können."
+" Cambridge Analytica war am vergangenen Wochenende von Facebook ausgesperrt worden. Das Unternehmen habe unrechtmäßig erhaltene Nutzerdaten entgegen früheren Zusicherungen nicht gelöscht, erklärte das Online-Netzwerk zur Begründung. Die Firma bestreitet dies. Sie kündigte eine eigene Untersuchung an, um sicherzugehen und zu belegen, dass die Daten nicht mehr in ihrem Besitz sind."
+" Zugleich entschuldigte sich Geschäftsführer Alexander Tayler in einer Mitteilung auf der Internet-Seite des Unternehmens dafür, dass eine Tochtergesellschaft im Jahre 2014 Facebook-Daten zur Nutzung freigegeben habe, für die seitens der meisten Nutzer keine Zustimmung vorlag. Cambridge Analytica habe geglaubt, dass die Daten in Übereinstimmung mit den Richtlinien von Facebook und den Datenschutzgesetzen erworben worden seien, schreibt Taylor."
+" Im folgenden Jahr seien die Daten gelöscht und später die Löschung noch einmal überprüft worden. Ausdrücklich erklärt Tayler, nichts davon sei von Cambridge Analytica bei der US-Präsidentschaftswahl 2016 verwendet worden."
+" Nach Informationen der \"New York Times\" und des \"Guardian\" sollen Informationen von rund 50 Millionen Facebook-Mitgliedern zu Cambridge Analytica gelangt sein. Um sie zu sammeln, wurde eine Umfrage zu Persönlichkeitsmerkmalen aufgesetzt, die bei Facebook als wissenschaftliche Forschung angemeldet wurde. Die Daten sollen dann ohne Wissen der Nutzer an Cambridge Analytica gegangen sein."
+" Facebook steht seit Bekanntwerden des Skandals massiv in der Kritik und hat als Reaktion Verbesserungen bei der Kontrolle der Privatsphäre versprochen. Die US-Verbraucherschutzbehörde Federal Trade Commission (FTC) leitete nach Informationen der \"Washington Post\" inzwischen eine Untersuchung gegen Facebook ein."
+" Ranghohe US-Politiker forderten unterdessen Unternehmenschef Mark Zuckerberg auf, sich vor einem Ausschuss in Washington kritischen Fragen zu stellen. Auch der Vorsitzende des britischen Parlamentsausschusses für Digitales und Medien, Damian Collins, erwartet Antworten von Zuckerberg."
+"Mit Informationen von Thomas Spickhofen, ARD-Studio London."
+"Datenskandal um Facebook: Mark Zuckerberg bleibt optimistisch"
+"
+			
+								Facebook-Gründer Zuckerberg
+				: 
+			
+			„Es wird Jahre dauern, bis wir durch dieses Loch durch sind“
+		"
+"
+									
+										Facebook unter Druck
+										: 
+									
+									Das Datenloch und seine Folgen
+								"
+"„Nicht so, als hätten wir nichts getan“"
+"„Menschliche Natur positiv“"
+"
+			Wird sich Facebook von seiner Krise erholen? Mark Zuckerberg bleibt optimistisch. Doch er beschreibt einen längeren Weg, als sich das die Nutzer wünschen dürften.
+		"
+"Das größte soziale Netzwerk der Welt steckt in seiner bislang größten Krise. Infolge des Daten-Skandals um die britische IT-Firma Cambridge Analytica hat Facebook einen hohen zweistelligen Milliardenmarktwert verloren an der Börse. Mehrfach gelobte Unternehmensgründer und Vorstandschef Mark Zuckerberg, dass die Probleme angegangen werden – der amerikanische Kongress hat ihn mittlerweile einbestellt, Politiker rund um den Globus erhöhen den Druck, in Amerika und Europa."
+"
+					
+						Alexander     Armbruster
+				   
+			   "
+"Redakteur in der Wirtschaft.
+"
+"Nicht erst infolge des jüngsten Falles ist dabei sichtbar geworden, wie sich gerade auch die Zuversicht in neue Technologien wie Soziale Netzwerke, Smartphones und das Internet selbst verändert hat in den vergangenen Jahren. „Das ist ein ernster Moment für die Zukunft des Netzes“, äußerte Tim Berners-Lee, der Erfinder des World Wide Webs, gerade, bekundete aber zugleich, warum er zuversichtlich bleibe: Die Probleme, „die wir heute sehen, sind Bugs im System. Bugs können Schaden verursache, aber Bugs sind von Menschen kreiert und können von Menschen repariert werden.“"
+"Mark Zuckerberg hat nun ebenfalls eingestanden, insgesamt zu optimistisch gewesen zu sein. „Ich denke, der wesentliche Punkt ist, dass wir wirklich idealistisch sind. Als wir begannen, dachten wir darüber nach, wie großartige es wäre, wenn sich die Menschen verbinden könnten, wenn jeder eine Stimme hätte“, sagte er in einem Gespräch mit dem Internetdienst „Vox“. Und gab zu: „Ganz offen, wir verwendeten nicht genug Zeit darauf, einige der Missbrauchsmöglichkeiten der Tools zu durchdenken. In den ersten zehn Jahren des Unternehmens war jeder einfach auf das Positive fokussiert.“"
+"Tatsächlich hat Facebook auch ein beeindruckendes Wachstum hinter sich. Mehr als zwei Milliarden Menschen nutzen das Netzwerk monatlich, die Gruppe der Facebook-Mitglieder ist größer als die Zahl der Chinesen oder Muslime auf der Welt – nur Christen und Fußballfans gibt es mehr auf der Erde. Wie sich der jüngste Skandal auswirken wird, bleibt aber abzuwarten."
+"Facebook, so wiederum Zuckerberg in dem Gespräch weiter, sei allerdings zu langsam gewesen, ausreichend Geld zu investieren, um die Risiken und den möglichen Missbrauch klein zu halten. Das habe sich jedoch bereits geändert. „Es ist nicht so, als hätten wir nichts getan“, sagte Zuckerberg. Am Ende dieses Jahres würden sich 20.000 Mitarbeiter um Sicherheitsfragen kümmern – eine Verdoppelung gegenüber dem Personal, das sich zu Beginn des vergangenen Jahres damit befasst hätte"
+"Zugleich stellte der Unternehmer jedoch in Aussicht, dass viel Zeit vergehen wird, bis er alle Probleme in den Griff bekommen hat. „Ich denke, dass wir uns durch dieses Loch graben werden, aber das wird einige Jahre dauern.“ Er wünsche sich, alle Angelegenheiten „in drei oder sechs Monaten zu lösen“. In der Realität werde es stattdessen „eine längere Zeit“ brauchen, um einige der Fragen zu beantworten. Er ließ offen, welche das sind. Er hoffe, dass er mit Facebook am Ende dieses Jahres bereits wieder begonnen habe, „die Kurve zu kriegen“ in einigen Fragen."
+"Auch wenn es um neue Technologien und das Internet gehe, zeigte sich Zuckerberg zuversichtlich. Anders als Fachleute wie der Politologe Francis Fukuyama, nach dessen Auffassung sich die anfangs gehegte Hoffnung, dadurch werde sich Demokratie und Freiheit rund um die Welt ausbreiten und festigen, nicht bestätigt habe, im Gegenteil: Autoritäre Regierungen seien besser darin gewesen, das Internet für ihre Ziele zu instrumentalisieren, etwa Russland und China, findet er. Der Unternehmer und Politikwissenschaftler Ian Bremmer hält sogar für möglich, dass sich aus der technischen Konfrontation zwischen den Vereinigten Staaten und China heraus das Internet (noch) stärker fragmentieren könne."
+"„Ich denke, die menschliche Natur ist generell positiv“, sagte wiederum Mark Zuckerberg nun. „Ich bin da ein Optimist.“ Es gehöre zu seiner Verantwortung und der Verantwortung Facebooks, „das Gute zu unterstützen, dass Menschen tun können, wenn sie sich verbinden und die schlechten Dinge zu verhindern, die sie versucht sein können, sich anzutun.“ Ob dies gelingt, ist aus seiner Sicht die langfristige „entscheidende Frage“: „Haben wir Menschen befähigt, auf neuen Wegen zueinander zu kommen – sei es, um neue Arbeitsplätze zu schaffen, neue Unternehmen zu gründen, neue Idee zu verbreiten, einen offeneren Diskurs zu fördern, es guten Ideen zu erlauben, sich schneller in der Gesellschaft zu verbreiten, als sie es sonst getan hätten?“"
+"Und gelinge es Facebook, da wurde er ganz konkret im Hinblick auf die jüngere Vergangenheit, zu vermeiden, dass Regierungen sich in die Wahlen anderer Länder einmischen? Und „eliminieren wir oder reduzieren wir wenigstens dramatisch Dinge wie Hate Speech“?"
+"Facebook befinde sich in der Mitte eines Umbaus, „und wir hätten sicherlich einen besseres Job machen können bisher“, befand Zuckerberg. Er hoffe, dass in fünf oder zehn Jahren die Nutzer seiner Erfindung zurückblicken werden und unter dem Strich den „Effekt, sich online verbinden zu können, eine Stimme zu haben und zu teilen, was für sie bedeutsam ist als eine gewaltige positive Sache auf der Welt“ bewerten werden. Er ist, so viel ist zumindest gewiss, nicht der einzige, der sich dafür interessieren wird. Und nicht erst in zehn Jahren."
+"Facebook-Datenskandal: Mark Zuckerberg gibt Fehler zu"
+"
+			
+								Facebook-Gründer vor Anhörung
+				: 
+			
+			Abgeordnete wollen Zuckerberg hart angehen
+		"
+"
+									
+										Mark Zuckerberg
+										: 
+									
+									„Man hätte mehr tun müssen“
+								"
+"Unangenehme Fragen"
+"„Eine idealistische und optimistische Firma“"
+"Mehr Transparenz bei Anzeigen"
+"
+			
+				
+					Am Dienstag will sich Facebook-Gründer Mark Zuckerberg im Rahmen der Anhörung vor dem amerikanischen Kongress entschuldigen. 				
+				Bild: AP
+			
+		"
+"
+			Facebook-Chef Mark Zuckerberg will bei der Anhörung vor dem amerikanischen Kongress zur Datenaffäre persönliches Versagen einräumen. Es könnte sein bislang schwerster Gang werden.
+		"
+"Mit einem Bekenntnis zu seinem persönlichen Versagen will sich Facebook-Chef Mark Zuckerberg in seiner Aussage vor dem amerikanischen Kongress der geballten Kritik am gigantischen Datenmissbrauch stellen. Facebook habe einen „großen Fehler“ begangen, indem es seine Verantwortlichkeiten nicht breit genug definiert und Missbrauch zugelassen habe: „Es war mein Fehler, und es tut mir leid“, hieß es in einem vorbereiteten Statement Zuckerbergs für die Anhörungen am Dienstag und Mittwoch."
+"Der Internetkonzern steckt in der bislang schwersten Krise seiner 14-jährigen Geschichte – und für seinen 33 Jahre alten Gründer wird die zweitägige Befragung durch mehrere Kongressausschüsse der wohl schwierigste Moment seiner bislang steilen Karriere. Zuckerberg kämpft um die Reputation und weiteren Entwicklungsperspektiven des Internetgiganten. Der aktuelle Skandal dreht sich um das Abschöpfen der Daten von bis zu 87 Millionen Facebook-Nutzern durch die britische Datenanalysefirma Cambridge Analytica, die dann unerlaubt für den Wahlkampf des heutigen Präsidenten Donald Trump genutzt worden sein sollen. Beiderseits des Atlantik wird der Skandal von Behörden und Parlamentsauschüssen untersucht."
+"Das Bekenntnis zu seinen persönlichen Versäumnissen wird ein Leitmotiv von Zuckerbergs Aussage vor mehreren Ausschüssen von Senat und Repräsentantenhaus sein: „Ich habe Facebook gestartet, ich leite es, und ich bin verantwortlich für das, was hier passiert“, erklärt er in seinem Statement. Zugleich will er die begonnenen und geplanten Reformen bei Facebook präsentieren."
+"Für Facebook steht viel auf dem Spiel. Im Kongress braut sich Empörung zusammen, die zu einer schärferen Regulierung im Internet unter anderem beim Datenschutz und damit zu Einschränkungen für das Geschäft des Online-Netzwerks führen könnte. Zuckerberg kann sich auf unangenehme Fragen einstellen: Abgeordnete kündigten bereits an, dass sie den Facebook-Chef hart angehen wollen."
+"Auch die Entschuldigung in der Vorab-Stellungnahme machte wenig Eindruck. „Er muss eine bessere Antwort haben als nur „Ich habe einen Fehler gemacht““, sagte der demokratische Senator Richard Blumenthal aus Connecticut dem „Wall Street Journal“. „Er hat nicht einfach Milch auf den Frühstückstisch verschüttet.“ Das grundsätzliche Problem sei das Geschäftsmodell von Facebook."
+"Trotz der Reuebekenntnisse will Zuckerberg aber keine Abstriche von der Selbstbeschreibung seines Unternehmens als Stifters zwischenmenschlicher Verbindungen machen. Dabei habe sein Konzern es aber versäumt, genügend gegen den Missbrauch seiner Onlinenetzwerke zu tun, erklärte Zuckerberg. Dies gelte für die Verbreitung von Falschnachrichten und Hassrhetorik, ausländische Einmischungen in Wahlen und den Zugriff auf Nutzerdaten: „Wir haben die Verantwortung, nicht nur Instrumente herzustellen, aber auch sicherzustellen, dass diese Instrumente für positive Zwecke verwendet werden.“"
+"Der Skandal gefährdet potenziell das Geschäftsmodell von Facebook, das auf der massiven Sammlung von Daten über seine Nutzer beruht. Das Unternehmen will unter anderem Apps strenger kontrollieren und gegebenenfalls sperren – mittels eines solchen Miniprogramms waren die von Cambridge Analytica genutzten Daten abgeschöpft worden. Ferner will Facebook seinen Nutzern den Zugriff auf Funktionen erleichtern, mit denen sie selber die Sicherheit ihrer Accounts verstärken können."
+"Der Konzern will zudem Werbeanzeigen mit politischen Inhalten strenger kontrollieren. Bei entsprechenden Beiträgen müsse künftig ausgewiesen werden, wer für die Werbung bezahlt, kündigte Zuckerberg bereits am Freitag an. Zudem würden Standort und Identität des Auftraggebers verifiziert. Das Online-Netzwerk will damit Manipulationsversuche wie die mutmaßlichen russischen Cyberinterventionen im amerikanischen Wahlkampf 2016 erschweren."
+"Die mutmaßlichen russischen Wahlkampfinterventionen werden ebenfalls ein Thema in Zuckerbergs Kongressbefragung sein. Die kalifornische Kongressabgeordnete Anna Eshoo aus dem Silicon Valley sagte der „San Jose Mercury News“: „Das wirft eine moralische Frage auf, weil die Facebook-Plattform zur Waffe gemacht wurde, um unserer Demokratie zu schaden. Ich glaube, dass ein amerikanisches Unternehmen eine Verantwortung gegenüber Amerika hat.“"
+"Zuckerberg gelobte auch auf diesem Felde Besserung: „Wir waren zu langsam darin, die russische Einmischung zu erkennen und darauf zu antworten.“ Die Zahl der für die Sicherheit sowie die Kontrolle von Inhalten zuständigen Mitarbeiter wolle sein Unternehmen bis Jahresende um weitere 5000 auf insgesamt 20.000 aufstocken."
+"Amerikanischer Senat bestellt Facebook-Chef Zuckerberg ein"
+"
+			
+								Nach Datenskandal
+				: 
+			
+			Amerikanischer Senat bestellt Facebook-Chef Zuckerberg ein
+		"
+"
+									
+										Datenskandal bei Facebook
+										: 
+									
+									Zuckerberg gesteht Fehler ein
+								"
+"
+			
+				
+					Sein Unternehmen steckt in der bislang größten Krise  seiner Geschichte – Mark Zuckerberg hat viel zu tun gerade. 				
+				Bild: Reuters
+			
+		"
+"
+			Mark Zuckerberg soll erklären, wie das Unternehmen die Daten seiner Nutzer schützt. Er ist aber nicht der einzige prominente Unternehmer, den Amerikas Politiker zum Gespräch zitiert haben.
+		"
+"Facebook-Gründer Mark Zuckerberg soll im Zuge des Datenskandals vor dem Justizausschuss des amerikanischen Senats aussagen. Der Vorsitzende des Komitees, Charles Grassley, teilte mit, er habe Zuckerberg sowie die Vorstandsvorsitzenden des Tech-Unternehmens Alphabet (Google), Larry Page, und des Kurznachrichtendienstes Twitter, Jack Dorsey, für den 10. April zu einer Anhörung eingeladen. Zuckerberg solle sich darüber auslassen, wie Facebook in der Vergangenheit und künftig mit dem Schutz und der Überwachung von Kundendaten umgehe."
+"Vor gut einer Woche war bekanntgeworden, dass die britische Analysefirma Cambridge Analytica persönliche Daten von bis zu 50 Millionen Facebook-Mitgliedern mutmaßlich auf unlautere Weise einsetzte, um den amerikanischen Präsidenten Donald Trump im Wahlkampf zu unterstützen. Die amerikanische Verbraucherschutzbehörde FTC kündigte eine Überprüfung der Facebook-Datenschutzregeln wegen des womöglich zu laxen Umgangs mit persönlichen Informationen der mehr als zwei Milliarden Nutzer auf der ganzen Welt an."
+"Sollte die FTC Facebook für schuldig befinden, nachlässig gehandelt zu haben, kann sie hohe Strafen aussprechen, die sich auf Tausende Dollar pro Tag belaufen können. Am Montag fiel der Aktienkurs des sozialen Netzwerkes abermals deutlich – er das Unternehmen hat nun innerhalb weniger Tage mehr als ein Zehntel seines Börsenwertes verloren."
+"Auch in Deutschland machen Politiker Druck auf den Konzern: Bundesjustizministerin Katarina Barley (SPD) erklärte nach einem Treffen mit Facebook-Vertretern in Berlin, das Unternehmen werde diejenigen Nutzer informieren, deren Daten missbraucht wurden. EU-Justizkommissarin Vera Jourova schrieb in einem Brief an die für das operative Geschäft von Facebook zuständige Managerin Sheryl Sandberg, dass die Erklärungen des Internetkonzerns ihre Bedenken bislang nicht ausgeräumt hätten. Sie forderte Facebook auf klarzustellen, ob Cambridge Analytica Daten von EU-Bürgern unangemessen verwendet habe."
+"Facebooks Falschheit: Mark Zuckerberg in Washington"
+"
+			
+								Zuckerberg vor Anhörung
+				: 
+			
+			Facebooks Falschheit
+		"
+"Mit seiner Verpflichtung und seinem Versprechen gescheitert"
+"Facebook als Waffe"
+"Was man so offen nennt"
+"
+			
+				
+					Unter den Augen des Gesetzes: Mark Zuckerberg am Montag im Kapitol 				
+				Bild: AFP
+			
+		"
+"
+			Wie will sich Facebook aus dem Datenmissbrauchsskandal retten? Vor dem amerikanischen Kongress gibt sich Mark Zuckerberg verantwortungsvoll und zeigt sich verständnislos.
+		"
+"„Wenn du Informationen über jemanden brauchst, frag einfach“: Die Zeilen, in denen sich Mark Zuckerberg einem Freund gegenüber irgendwann zwischen 2003 und 2005 damit brüstete, was er alles über mehr als viertausend Harvard-Kommilitonen wusste, kurz nachdem er im Studentenwohnheim das zunächst universitätsinterne Netzwerk „The Facebook“ veröffentlicht hatte, sind legendär. Die Leute hätten sie einfach geschickt, antwortet Zuckerberg auf die Frage, wie er an die Daten gekommen sei, keine Ahnung, warum. „Sie ‚vertrauen mir‘. Schwachköpfe.“"
+"
+					
+						Fridtjof Küchemann
+				   
+			   "
+"Redakteur im Feuilleton."
+"Natürlich hat sich der Chef des Unternehmens, das durch die aktuelle Vertrauenskrise zwischenzeitig knapp vierzig Milliarden Dollar Marktwert verloren hat, später vielmals für Äußerungen dieser Art entschuldigt. Und natürlich ist die Geste seiner Erklärungen und Beteuerungen, die derzeit auf ein paar erstaunliche Tage des Schweigens folgen, ebenfalls die Entschuldigung, nachdem bekannt geworden ist, dass Firmen wie Cambridge Analytica Daten von Millionen Facebook-Profilen zur politischen Einflussnahme missbraucht haben."
+"Inzwischen spricht das Unternehmen selbst von bis zu 87 Millionen Datensätzen, die ein App-Entwickler über eine Umfrage sammeln und dann unrechtmäßig an Cambridge Analytica weiterreichen konnte. Doch das ist nur die eine Seite des Problems: Die russische Internet Research Agency (IRA) habe zudem über Hunderte von Accounts etwa 126 Millionen Facebook- und weiteren zwanzig Millionen Instagram-Nutzern politische Propaganda zuspielen können. Zuckerberg musste am Dienstag zunächst dem Rechts- und Handelsausschuss im amerikanischen Senat Rede und Antwort stehen, an diesem Mittwoch folgt der Ausschuss für Energie und Handel des Abgeordnetenhauses. Bereits am Montag sprach er mit einzelnen Abgeordneten."
+"„Wir wissen, dass einige Abgeordnete an Wegen arbeiten, die Transparenz von politischer oder themenbezogener Werbung zu erhöhen“, schreibt Zuckerberg in einer auf Mittwoch datierten Stellungnahme. Man freue sich auf die weitere diesbezügliche Zusammenarbeit mit dem Kongress. „Aber wir warten nicht darauf, dass die Gesetzgeber handeln.“ Das hat Facebook tatsächlich noch nie getan. Im Jahr 2017 hat das Unternehmen mehr als 11,5 Millionen Dollar für Lobby-Arbeit ausgegeben. In diesem Jahr dürften die Kosten dafür noch deutlich steigen."
+"Die F.A.Z. stets aktuell, mit zusätzlichen Bildern, Videos, Grafiken."
+"Nicht nur vor den Gesetzgebern, sondern auch vor dem Gesetz könnte sich Facebook verantworten müssen: Am Dienstag haben amerikanische und britische Anwälte eine Sammelklage gegen das Unternehmen angekündigt. Neben Facebook und Cambridge Analytica wollen sie auch gegen die Firmen SCL Group und Global Science Research vorgehen. Steve Bannon, Donald Trumps Berater im Wahlkampf, und Aleksandr Kogan, der Entwickler der Quiz-App, bei der schon dreihunderttausend Nutzer ausreichten, um an viele Dutzend Millionen Nutzerdaten zu kommen, werden namentlich genannt. Die Angeklagten hätten das Menschenrecht auf Privatsphäre gewöhnlicher Facebook-Nutzer gebrochen und deren Daten missbraucht, um den demokratischen Prozess zu untergraben, erläutert der Londoner Anwalt Jason McCue in einem Bericht des „Guardian“. Sein amerikanischer Kollege Robert Ruyak ergänzt, Facebook sei mit seiner Verpflichtung und seinem Versprechen gescheitert, die persönlichen Informationen von Millionen von Nutzern zu sichern."
+"Mit Blick auf die kommenden Wahlen in den Vereinigten Staaten, aber auch in Ländern wie Mexiko, Brasilien, Indien und Pakistan im nächsten Jahr verspricht Zuckerberg in seiner Stellungnahme nicht nur entschlossenes und zügiges Handeln, sondern auch, sein Unternehmen für einen Wettlauf mit Propaganda-Agenturen wie der IRA zu rüsten."
+"Für die kalifornische Kongressabgeordnete Anna Eshoo aus dem Silicon Valley wirft der Missbrauch des sozialen Netzwerks zu Propagandazwecken auch eine moralische Frage auf: Facebook sei „zur Waffe gemacht“ worden, „um unserer Demokratie zu schaden“, sagte sie der „San Jose Mercury News“. Ein amerikanisches Unternehmen habe eine Verantwortung gegenüber Amerika."
+"Das Ausmaß seiner Verantwortung habe Facebook nicht erkannt, gesteht Zuckerberg in seiner Stellungnahme ein: „Es war mein Fehler, und es tut mir leid.“ Er müsse eine bessere Antwort haben, kontert der demokratische Senator Richard Blumenthal aus Connecticut im „Wall Street Journal“: Zuckerberg habe „nicht einfach Milch auf den Frühstückstisch verschüttet“, das grundsätzliche Problem sei das Geschäftsmodell von Facebook."
+"Ein grundsätzliches Problem, aber eben auch der Kern von Facebooks Geschäftsmodell ist die bewusste Doppeldeutigkeit, mit der das Unternehmen den Begriff Privatsphäre gebraucht: Bei allen Versicherungen wie „Ihr kontrolliert, wie eure Informationen geteilt werden“ ist lediglich der Umgang mit den Posts gemeint, also deren Sichtbarkeit für andere Nutzer. Wie Facebook mit all den anderen Daten verfährt, mit dem Wissen darüber, welche Art Inhalte bei welchem Nutzer besonders beliebt ist, innerhalb des sozialen Netzwerks wie auch auf allen Seiten, die ein Log-In über Facebook oder auch nur die Möglichkeit anbieten, das hier gefundene unkompliziert auf Facebook zu veröffentlichen, bleibt von diesen nur begrenzt beruhigenden Worten unberührt. Dass Facebook offenbar die Kontrolle darüber verloren hat, wer sonst noch Zugriff auf diese Daten und dieses Wissen hat, steigert die Unruhe zum aktuellen Entsetzen."
+"Eine Mission, die ihm wirklich am Herzen liege, so hat Mark Zuckerberg einmal gesagt, sei es, die Welt offener zu machen. Tatsächlich hat er sie sturmreif gemacht."
+"Facebook-Chef Mark Zuckerberg räumt Fehler im Datenskandal ein"
+"
+			
+								Netzwerk-Gründer Zuckerberg
+				: 
+			
+			„Bin dafür verantwortlich, was auf Facebook passiert“
+		"
+"
+			Mark Zuckerberg bricht sein Schweigen und äußert sich erstmals zum Datenskandal von Facebook und Cambridge Analytica. Der Chef des sozialen Netzwerkes zeigt sich selbstkritisch – aber eine Entschuldigung bleibt zunächst aus.
+		"
+"In der Affäre um missbräuchlichen Umgang mit Daten von Nutzern des sozialen Netzwerks Facebook hat sich am Mittwoch erstmals Mark Zuckerberg persönlich geäußert. Er gab zu, das von ihm geführte Unternehmen habe Fehler gemacht, ohne sich dabei aber zu entschuldigen. In einem Eintrag auf seinem Facebook-Profil gestand er, es habe einen „Vertrauensbruch zwischen Facebook und den Menschen, die ihre Daten mit uns teilen“ gegeben, und das Unternehmen müsse dies reparieren. „Wir haben eine Verantwortung, Eure Daten zu schützen, und wenn wir das nicht können, dann verdienen wir nicht, in Eurem Dienst zu stehen.“"
+"
+					
+						Roland Lindner
+				   
+			   "
+"Wirtschaftskorrespondent in New York."
+"Geschäftsführerin Sheryl Sandberg meldete sich ebenfalls zu Wort, und ihre Äußerungen kamen einer Entschuldigung etwas näher: „Ich bedaure zutiefst, dass wir nicht genug getan haben, um damit umzugehen,“ schrieb sie mit Blick auf den Datenmissbrauch. Zuckerberg wollte sich am späten Mittwoch abend auch noch in einem Interview mit dem Nachrichtensender „CNN“ äußern."
+"Lesen Sie hier die wichtigsten Fragen und Antworten zum Facebook-Skandal"
+"Die Affäre begann Ende vergangener Woche mit Medienberichten, wonach der britische Datenanalysespezialist Cambridge Analytica sich schon vor einigen Jahren auf unzulässige Weise Informationen von 50 Millionen Facebook-Nutzern beschafft hat. Das Unternehmen ist durch seine Arbeit für Donald Trump im jüngsten amerikanischen Präsidentschaftswahlkampf bekanntgeworden. An die Facebook-Daten soll es über einen Mittelsmann herangekommen sein, der sie sich zwar auf legitimem Weg über ein Persönlichkeitsquiz von den Nutzern beschafft, sie dann aber missbräuchlich weitergegeben habe."
+"Das Quiz wurde von 270.000 Nutzern heruntergeladen, aber da nicht nur deren eigene Daten, sondern auch diejenigen von ihren Freunden weitergegeben wurden, ist die Zahl der Betroffenen viel größer. Facebook hatte diese Zahl zunächst nicht beziffert, Zuckerberg gab jetzt aber zu, dass sie sich im zweistelligen Millionenbereich bewegt habe."
+"Der Facebook-Chef hatte sich in den ersten Tagen nach Bekanntwerden des Datenmissbrauchs zunächst nicht geäußert, wofür er heftig kritisiert wurde. Politiker in den Vereinigten Staaten und in Großbritannien forderten, er solle persönlich bei Anhörungen aussagen. In seinem Facebook-Eintrag sagte er jetzt weiter: „Ich habe Facebook gegründet, und am Ende des Tages bin ich dafür verantwortlich, was auf unserer Plattform passiert.“"
+"Zuckerberg wies darauf hin, dass Facebook die Weitergabe der Daten von Freunden, wie sie in dem aktuell diskutierten Fall geschah, seit 2014 nicht mehr erlaube. Er kündigte auch mehrere Schritte an, um etwaigen weiteren Datenmissbrauch zu verhindern. Das Unternehmen wolle alle Anwendungen („Apps“) untersuchen, die so wie im Fall des Persönlichkeits-Quiz bis 2014 Zugang zu großen Datenmengen hatten. Softwareentwickler, die sich dieser Überprüfung nicht stellten oder die Daten missbraucht hätten, würden von Facebook ausgeschlossen."
+"Zudem wolle Facebook den Zugang, den App-Entwickler auf Facebook-Daten haben, weiter einschränken. Beispielsweise sollen sie keinen Zugriff mehr haben, wenn Facebook-Nutzer das Programm seit drei Monaten nicht benutzt haben. Facebook wolle es außerdem für seine Mitglieder einfacher machen, zu sehen, welche Apps Zugang zu persönlichen Daten haben."
+"Datenskandal – Facebook-Chef Zuckerberg gibt sich reumütig"
+"Zuckerberg: Dank mehr Sicherheit wird Facebook noch profitabler"
+"Bei Facebook per App Daten abgegriffen"
+"Datenskandal: Hunderttausende deutsche Facebook-Nutzer betroffen"
+"So löscht man sein Facebook-Konto in 5 Schritten"
+"Facebook in der Kritik: Das sind die schwersten Vorwürfe"
+"Warum die Bordkarte auf Facebook nichts zu suchen hat"
+"Fast 90 Millionen Nutzer betroffen"
+"\"Zuckerberg hat nicht nur Milch verschüttet\""
+"Zuckerberg auf Entschuldigungs-Tour"
+"
+				Vor seinem Auftritt vor einem Kongressausschuss hat Facebook-Gründer Mark Zuckerberg Fehler eingeräumt. Doch das reicht vielen nicht.
+			"
+"
+Facebook-Chef Mark Zuckerberg geht in seine erste Anhörung im US-Kongress am Dienstag mit weiteren Eingeständnissen schwerer Fehler. Facebook habe das Ausmaß seiner Verantwortung nicht erkannt, erklärte der 33-Jährige in einer vorab veröffentlichten Stellungnahme für einen Ausschuss des US-Abgeordnetenhauses."
+"\"Es war mein Fehler und das tut mir leid\", schrieb Zuckerberg. \"Ich habe Facebook gestartet, ich führe es, und ich trage die Verantwortung dafür, was hier passiert.\" Der Schutz der Nutzer sei wichtiger als die Maximierung der Gewinne, versicherte er."
+"Zuckerberg stellt sich am Dienstag und Mittwoch Fragen im US-Kongress. Zunächst ist er als Zeuge bei einer gemeinsamen Sitzung des Rechts- und des Handelsausschusses im Senat geladen (ab 20.15 Uhr MESZ am Dienstag). Am Mittwoch folgt dann eine weitere Befragung im Ausschuss für Energie und Handel des US-Abgeordnetenhauses. "
+"Bei dem Datenskandal hatte der Entwickler einer Umfrage-App vor mehr als vier Jahren Informationen von Nutzern unrechtmäßig an die Analyse-Firma Cambridge Analytica weitergereicht, die später unter anderem für das Wahlkampfteam von US-Präsident Donald Trump arbeitete. Dabei ging es nicht nur um die Daten der Umfrage-Teilnehmer, sondern auch um die ihrer Facebook-Freunde."
+"Nach Einschätzung von Facebook könnten die Daten von bis zu 87 Millionen Nutzern weltweit betroffen sein - darunter potenziell von gut 70 Millionen Amerikanern. Cambridge Analytica selbst erklärte, man habe Informationen zu 30 Millionen Nutzern erhalten. Facebook wusste seit Ende 2015 von der unerlaubten Datenweitergabe - gab sich aber mit der Zusicherung zufrieden, dass sie vernichtet worden seien und informierte die Nutzer nicht. Das wird erst jetzt nachgeholt."
+"Zudem räumte Facebook vergangene Woche ein, dass es möglich war, massenhaft öffentlich zugängliche Informationen der Nutzer abzugreifen, wenn man deren Telefonnummer oder E-Mail-Adresse hatte. "
+"Für Facebook steht bei dem Termin viel auf dem Spiel. Im Kongress braut sich Empörung zusammen, die zu einer schärferen Regulierung im Internet unter anderem beim Datenschutz und damit zu Einschränkungen für das Geschäft des Online-Netzwerks führen könnte. Zuckerberg kann sich auf harte Fragen einstellen: Senatoren und Abgeordnete kündigten bereits an, dass sie den Facebook-Chef hart rannehmen wollen."
+"Auch seine Entschuldigung in der Vorab-Stellungnahme machte wenig Eindruck. \"Er muss eine bessere Antwort haben als nur ,Ich habe einen Fehler gemacht'\", sagte der demokratische Senator Richard Blumenthal aus Connecticut dem \"Wall Street Journal\". \"Er hat nicht einfach Milch auf den Frühstückstisch verschüttet.\" Das grundsätzliche Problem sei das Geschäftsmodell von Facebook."
+"Die kalifornische Kongressabgeordnete Anna Eshoo aus dem Silicon Valley will den Missbrauch der Facebook-Plattform durch Propaganda aus Russland im US-Präsidentschaftswahlkampf 2016 zur Sprache bringen. \"Das wirft eine moralische Frage auf, weil die Facebook-Plattform zur Waffe gemacht wurde, um unserer Demokratie zu schaden\", sagte sie der \"San Jose Mercury News\". \"Ich glaube, dass ein amerikanisches Unternehmen eine Verantwortung gegenüber Amerika hat.\""
+"Unter anderem die in Russland ansässige Gruppe Internet Research Agency hatte in großem Stil versucht, über gefälschte Facebook-Profile soziale Spannungen in den USA zu verschärfen und Stimmung für den schließlich siegreichen Kandidaten Donald Trump zu machen. Facebook ergriff zuletzt Maßnahmen, damit das nicht wieder passiert. Wer Anzeigen mit politischen Inhalten schalten will, muss künftig seine Identität bestätigen und den Aufenthaltsort offenlegen."
+"Zuckerberg ist schon seit Tagen bemüht, die Situation zu entschärfen. In Blogeinträgen und einer Telefonkonferenz mit Journalisten räumte er Fehler ein und versprach schärferen Datenschutz für die Zukunft. Zudem reduzierte Facebook bereits den Zugriff von App-Entwicklern auf Nutzerinformationen deutlich und Nutzer bekamen mehr Möglichkeiten zum Schutz ihrer Privatsphäre gemäß EU-Datenschutzgrundverordnung. (dpa)"
+"So lullte Mark Zuckerberg den US-Senat nach Datenskandal ein"
+"Facebook-Chef Zuckerberg entschuldigt sich vor US-Kongress"
+"Facebook-Kritiker sprechen von \"Marks erfolgreicher Märchenstunde\""
+"Laut Facebook bis zu 87 Mio Betroffene in Datenschutzskandal"
+"Viele Senatoren fragten relativ unbedarft"
+"Zuckerberg behauptet, Nutzer hätten Kontrolle über ihre Daten"
+"Sehr viele offene Fragen"
+"Zuckerberg blieb fast immer im Ungefähren"
+"Zuckerberg verkauft Facebook als Mittel der Völkerverständigung"
+"
+				Facebook-Chef Zuckerberg stellte sich im US-Kongress Politiker-Fragen und wich oft aus. Kritiker sprechen von „Marks Märchenstunde“.
+			"
+"
+Immer wenn es eng oder konkret wird, greift der blasse Mann mit der taubenblauen Krawatte zu seiner Allzweckwaffe: \"Wichtige Frage, Herr Senator. Ich werde mein Team gerne bitten, die Details nachzureichen.\""
+"Mark Zuckerberg, der Gründer und Chef des weltweit größten Internet-Netzwerks Facebook
+, bediente sich in seinem ersten Vernehmungs-Marathon vor den Ausschüssen des Kongresses in Washington so oft dieses einstudierten Ausweichmanövers, dass Chronisten mit dem Zählen nicht mehr nachkamen."
+"Gleichwohl überstand der 33-Jährige das im Zuge des Datenmissbrauchs-Skandals um die britische Firma Cambridge Analytica
+ anberaumte Ritual aus der Reihe \"Politiker fragen, Wirtschaftsgewaltige antworten\" ohne wirkliche Schrammen."
+"Eine von Zuckerberg in den 14 Jahren des Bestehens seiner Firma kultivierte Strategie der dosierten Reue
+ (\"Es war mein Fehler, und es tut mir leid\") gepaart mit allgemein gehaltenen Versprechungen auf Besserung (\"Es reicht nicht, Instrumente zu produzieren. Wir müssen auch sicherstellen, dass sie für Gutes genutzt werden\") reichte vorläufig aus, um dem von Politikern kanalisierten Unmut über das Geschäftsgebaren von Facebook die Spitze zu nehmen. Kritiker im Internet sprachen spöttisch von \"Marks erfolgreicher Märchenstunde\". Während der live im Fernsehen übertragenen Sitzung, so Börsen-Analysten mit Blick auf den gestiegene Aktienkurs, wurde Zuckerberg um drei Milliarden Dollar reicher."
+"Auslöser für den ersten Auftritt des einstigen Wunderkinds der Tech-Branche war, dass ein App-Entwickler bereits vor vier Jahren die Daten von rund 90 Millionen Facebook-Kunden abgesaugt und an Cambridge Analytica verkauft hatte. Mit dem Material wurden im Präsidentschaftswahlkampf 2016 gezielt positive Werbe-Botschaften für den heutigen US-Präsidenten Donald Trump platziert."
+"Begüngstigt wurde Zuckerbergs \"Sieg\" (CNN) durch den Generationen-Unterschied. Viele der 44 fragenden Senatorinnen und Senatoren sind weit über 70. Ihr Wissen über die innere Mechanik der mit 450 Milliarden Dollar notierten Firma ist überschaubar. So fragte Orin Hatch (Utah, 84) ernsthaft, wie es sein kann, dass Facebook seine Produkte kostenlos anbietet. Entgeisterte Antwort Zuckerbergs: \"Wir lassen Werbung laufen, Senator.\""
+"Darum verwunderte es auch nicht, als keiner der Senatoren reagierte, als Zuckerberg einen Ausblick auf die Zukunft gab, der um Transparenz besorgte Fachleute frösteln lässt. Danach werde bald verstärkt \"Künstliche Intelligenz\" eingesetzt, um Hass-Tiraden und vergiftete politische Propaganda von der Plattform zu tilgen. \"Und wer kontrolliert diese Algorithmen?\", fragte ein Leser in einem Forum der Washington Post und zog einen Vergleich zur George Orwell."
+"Ohne größere Widerstände konnte Mark Zuckerberg mehrfach behaupten, dass die Nutzer a) volle Kontrolle über ihre Daten und b) durch Bestätigung der Geschäftsbedingungen schließlich in deren Weitergabe eingewilligt hätten. An beiden Aussagen gibt es seit langem Zweifel. 2011 verdonnerte die zuständige Federal Trade Commission (FTC) Facebook dazu, Nutzerdaten besonders zu schützen – und das verständlich."
+"John Kennedy, Republikaner aus Louisiana, nannte die in ausgedruckter Form bibeldicken Geschäftsbedingungen \"beschissen\" und ermahnte Zuckerberg zur drastischen Vereinfachung. Kurz zuvor hatte Lindsey Graham gefragt: \"Denken Sie nicht, dass Sie ein Monopol haben?\" Zuckerberg ungerührt: \"Fühlt sich für mich nicht so an.\""
+"Bei der Vorgeschichte von Fehlern und Pannen, so sagten Experten vor der Sitzung, müsse Zuckerberg Antworten auf Kernfragen geben können. Wie viele Fake-Nutzerkonten (von russischen Trollfabriken und anderen) wurden inzwischen enttarnt und gelöscht? Wie häufig haben Drittanbieter Daten von Facebook ohne explizite vorherige Zustimmung der Betroffenen kommerziell weiterverarbeitet?"
+"Wie viele Facebook-Mitarbeiter haben Cambridge Analytica bei dem Versuch unterstützt, Donald Trump ins Amt zu bringen? Aus welchen Bundesstaaten kommen die Facebook-Kunden, deren Daten gezielt von Cambridge Analytica genutzt wurden? Warum dauert die Löschung persönlicher Daten im Falle einer Konto-Auflösung bis zu 90 Tage – und was passiert in dieser Zeit mit den Informationen? Kontrolliert Facebook das Gebaren seiner Kunden, auch wenn sie sich aus dem sozialen Netzwerk abgemeldet haben? Und: Welche Art staatlicher Regulierung hält der Mann für nötig, der Facebook 2004 in seinem Studentenzimmer gegründet hat?"
+"In fast allen Punkten blieb Zuckerberg, dem Mitarbeiter ein langes Papier mit Gedächtnisstützen vorbereitet hatten, im Ungefähren. Beispiel staatliche Regulierung. Ist er dafür? \"Ja, wenn es die richtige Regulierung ist.\" Allein der Demokrat Richard Blumenthal winkte erkennbar säuerlich ab. Ohne spezifische Regeln, die von einer unabhängigen Instanz durchgesetzt werden müssten, können er \"vagen Versprechen\" auf Besserung keinen Glauben schenken."
+"Dass die politischen Konsequenzen nach dem Schaulaufen für Facebook \"wohl milde\" ausfallen werden, steht für einige US-Medien bereits fest. Eine politische Mehrheit, die Facebook ans staatliche Gängelband legen möchte, sei im Altherren-Gremium des Senats nicht vorhanden. Bis auf wenige Ausnahmen hoffe man dort, dass der Konzern \"die Probleme selbst in den Griff kriegt\", sagte ein Analyst im Sender MSNBC."
+"Nicht nur dort wurde kritisiert, dass Zuckerberg Facebook immer noch vor allem als idealistische Veranstaltung zur Völkerverständigung verkauft. Dass die Firma 40 Milliarden Dollar Jahresumsatz mit Werbung macht, die allein auf den riesigen Datenschatz zielt, gehe unter. An jedem US-Nutzer verdiente Facebook 2017 statistisch gesehen 80 Dollar."
+"In der amerikanischen Öffentlichkeit ist die Debatte schon weiter. Nur 25 Prozent der Jüngeren unter 30 Jahren halten Facebook noch für eine vertrauenswürdige Geschichte. In einer andere Umfrage sagen 56 Prozent der Amerikaner, dass sie Facebook am wenigsten trauen, wenn es um die sichere Handhabung ihrer privaten Informationen geht. Google, Amazon, Netflix und Uber schneiden deutlich besser ab."
+"Facebook-Skandal: EU verlangt Kooperation von Zuckerberg"
+"Katarina Barley: So will die Justizministerin bei Facebook durchgreifen"
+"Tajani will Online-Plattformen stärker in Verantwortung nehmen"
+"
+    Schönefeld
+		Das erwartet die Besucher auf der ILA in Berlin
+"
+"
+				EU-Parlamentschef Tajani duldet bei der Aufklärung des Facebook-Skandals keine Mätzchen. Zuckerberg solle uneingeschränkt kooperieren.
+			"
+"
+EU-Parlamentspräsident Antonio Tajani hat eine gründliche Aufklärung des Datenskandals um Cambridge Analytica
+ gefordert und Facebook-Chef Mark Zuckerberg
+ zur uneingeschränkten Zusammenarbeit mit dem EU-Parlament ermahnt. "
+"\"Wir müssen darauf bestehen, dass die mutmaßliche Verwendung von Daten europäischer Bürger zur Manipulation von Wahlergebnissen – wie beim Brexit-Referendum – lückenlos aufgeklärt wird\", schreibt Tajani in einem Gastbeitrag für unsere Redaktion. Daher habe er Zuckerberg eingeladen, persönlich vor dem Parlament zu erscheinen \"und den 500 Millionen Europäern Rede und Antwort zu stehen\". Er erwarte Zuckerbergs uneingeschränkte Zusammenarbeit, damit das Vertrauen wiederhergestellt werden könne."
+"Hintergrund sind Vorwürfe, dass Informationen von bis zu 87 Millionen Facebook-Mitgliedern
+ durch Cambridge Analytica auf unlautere Weise genutzt wurden, etwa für gezielte Wahlwerbung. In Europa sind bis zu 2,7 Millionen Nutzer betroffen. "
+"Tajani erklärte, der Skandal um das Unternehmen Cambridge Analytica zeige, wie dringend klare Regeln für digitale Plattformen benötigt würden. \"Es ist nicht hinnehmbar, dass wir für den Zugang zu Online-Anwendungen mit der Aufgabe unserer Privatsphäre bezahlen müssen\", betonte der Parlamentspräsident. Bisher gehe in diesem Bereich die unternehmerische Freiheit nicht immer mit entsprechender Verantwortung einher: Das liege auch am Irrglauben, dass jedwedes regulierendes Eingreifen dem Fortschritt im Weg stehe."
+"Tajani forderte, digitale Plattformen dürften nicht mehr straflos zulassen, dass kinderpornografisches Material in Umlauf gebracht werde, illegal Waffen verkauft oder radikale und zu Terrorismus und Rassenhass aufrufende Botschaften und offensichtliche Falschmeldungen verbreitet würden. Der Parlamentspräsident verlangte auch, Internetkonzerne künftig dort zu besteuern, wo sie Gewinne erwirtschafteten. Tajani äußerte sich im Vorfeld einer Konferenz zur digitalen Zukunft Europas am kommenden Dienstag im EU-Parlament. "
+"Zuckerberg entschuldigt sich mit riesiger Zeitungsanzeige"
+"Wahlkampfhilfe für Trump"
+"EU-Kommissarin ist nicht überzeugt"
+"Sie haben sich erfolgreich abgemeldet!
+		Wenn Sie die bezahlpflichtigen Artikel wieder lesen wollen, können Sie sich jederzeit mit Ihrem Benutzernamen und Passwort erneut anmelden."
+"Berlin. 
+Facebook-Chef Mark Zuckerberg hat sich nun auch bei deutschen Nutzern mit Zeitungsanzeigen für den Datenmissbrauch durch Cambridge Analytica 
+entschuldigt. \"Du hast vermutlich gehört, dass die Quiz-App eines Wissenschaftlers im Jahr 2014 unerlaubt die Facebook-Daten von Millionen von Menschen weitergegeben hat\", hieß es am Dienstag in der ganzseitigen Anzeige. "
+"Die von Zuckerberg unterzeichneten Annonce erschien unter anderem in der \"Süddeutschen Zeitung\" und der \"Frankfurter Allgemeinen Zeitung\". Weiter heißt es darin: \"Das war ein Vertrauensbruch, und ich möchte mich dafür entschuldigen, dass wir damals nicht mehr dagegen getan haben.\" Facebook unternehme nun die notwendigen Schritte um sicherzustellen, dass so etwas nicht noch einmal passiere. "
+"Zuckerberg hatte sich am Sonntag bereits in mehreren britischen Zeitungen für den Datenskandal entschuldigt. Am Montag hatte sich Bundesjustizministerin Katarina Barley (SPD)
+ mit europäischen Facebook-Vertretern in Berlin getroffen."
+"Vor rund einer Woche war bekanntgeworden, dass sich die britische Datenanalyse-Firma Cambridge Analytica
+ unerlaubt Zugang zu Daten von Millionen Facebook-Profilen verschafft hat. Mit Hilfe dieser Daten sollen Wähler im US-Präsidentschaftswahlkampf zugunsten von Donald Trump gezielt mit unerlaubter Wahlwerbung beeinflusst worden sein."
+"EU-Kommissarin Vera Jourová warnte in einem Schreiben an Facebook vor negativen Auswirkungen durch Datenmissbrauch auf demokratische Wahlen. Das soziale Netzwerk sei seit vielen Jahren eine Plattform für Politmarketing, schreibt Jourová in einem Brief an Geschäftsführerin Sheryl Sandberg, der der Deutschen Presse-Agentur in Brüssel vorliegt. Die offiziellen Äußerungen des Konzerns und ihres Chefs Mark Zuckerberg hätten ihre Bedenken nicht ausräumen können. Der Brief wurde am Montagabend versandt. (dpa/küp)"
+"
+						Durch Nutzung dieser Website stimmen Sie der Verwendung von Cookies für Analysen, personalisierte Inhalte und Werbung zu. Weitere Informationen über Cookies finden Sie in unserer Datenschutzerklärung
+				"
+"Facebook-Chef Zuckerberg räumt nach Daten-Skandal Fehler ein"
+"
+				Tagelang schwieg Mark Zuckerberg im Datenskandal um die Firma Cambridge Analytica. Jetzt verspricht der Facebook-Chef, Informationen der Nutzer besser zu schützen. Eine ausdrückliche Entschuldigung bekommen sie nicht.
+			"
+"Facebook-Gründer Mark Zuckerberg: \"Wir haben die Verantwortung, Ihre Daten zu schützen - und wenn wir dies nicht können, verdienen wir es nicht, Ihnen zu dienen.\"
+		"
+"
+            Foto: dpa"
+"Menlo Park. Facebook-Chef Mark Zuckerberg hat im Skandal um den Missbrauch von Nutzerdaten durch die Firma Cambridge Analytica Fehler eingeräumt. "
+"Das Vertrauen der Nutzer, die ihre Daten dem Online-Netzwerk anvertrauen und erwarten, dass sie sicher sind, sei verletzt worden, schrieb Zuckerberg in einer ersten Reaktion auf die seit dem Wochenende bekannten Enthüllungen. \"Ich habe Facebook gestartet und am Ende des Tages trage ich die Verantwortung dafür, was auf unserer Plattform geschieht.\" Zugleich enthielt der lange Beitrag des Facebook-Chefs keine ausdrückliche Entschuldigung."
+"Zuckerberg verwies darauf, dass die Analyse-Firma Cambridge Analytica, 
+ die unter anderem für das Wahlkampfteam von Donald Trump arbeitete , unrechtmäßig an die Daten gekommen sei. Ein britischer Professor hatte eine Facebook-App mit einer Umfrage zu Persönlichkeits-Typen auf die Plattform gebracht - und dann Daten daraus heimlich an Cambridge Analytica weitergegeben. Besonders brisant ist, dass er auch an einige Informationen von Facebook-Freunden der Umfrage-Teilnehmer kam - ohne deren Wissen.
+ "
+"Medienberichten zufolge waren Informationen von rund 50 Millionen Nutzern betroffen.  Zuckerberg nannte keine genaue Zahl, sondern sprach lediglich von mehreren Dutzend Millionen Nutzern.
+ "
+"Der Facebook-Chef versprach, die Nutzerdaten besser zu schützen. Ein Großteil der von ihm dafür angekündigten Maßnahmen zielt darauf, den Zugriff von App-Entwicklern einzuschränken. So sollen Facebook-Apps, die man drei Monate lang nicht genutzt hat, automatisch die Zugangsberechtigung verlieren."
+"Das Netzwerk habe die Software-Schnittstellen, über die der britische Professor auch an Informationen wie die Interessen der Facebook-Freunde von Umfrage-Teilnehmern gekommen war, eigentlich bereits 2014 gekappt. Das sei der wichtigste Schritt gewesen, um eine Wiederholung des Datenmissbrauchs zu verhindern. Nun sollen aber unter anderem besonders datenhungrige Apps aus dieser Zeit darauf durchleuchtet werden, ob sie sich an die Datenschutz-Bestimmungen halten. Entwickler, die keiner Überprüfung zustimmen, sollen von der Plattform verbannt werden. Cambridge Analytica hatte Facebook bereits am Wochenende rausgeworfen."
+"Insgesamt schlug Zuckerberg einen demütigen Ton an: \"Wir haben die Verantwortung, Ihre Daten zu schützen - und wenn wir dies nicht können, verdienen wir es nicht, Ihnen zu dienen.\" Die Kontroverse hatte Facebook die heftigste Kritik seit Jahren gebracht. Politiker in den USA und Europa fordern härtere Regeln für den Datenschutz bei Online-Plattformen, auf Twitter macht der Hashtag \"#deletefacebook\" (lösche Facebook) die Runde. Das tagelange Schweigen Zuckerbergs in dieser Krise stieß auf viel Unverständnis."
+"Rund 87 Millionen Nutzer von Facebook-Skandal betroffen"
+"
+        
+                        Cambridge Analytica
+        
+        Etwa 87 Millionen Nutzer von Facebook-Datenskandal betroffen
+        "
+"
+        
+            Datenschutzskandal
+        
+        Etwa 87 Millionen Nutzer von Facebook-Datenskandal betroffen
+        Zum Video Artikel
+        
+    "
+"So füttert man Facebook mit möglichst wenig Daten"
+"Bislang keine Folgen für das Werbegeschäft"
+"
+                    Der blaue Riese wankt
+                "
+"
+            
+                            
+                
+                        
+            
+            
+                
+            
+            
+                Feedback
+            
+        "
+"Der Datenskandal bei Facebook hat deutlich größere Dimensionen als bislang angenommen.
+ Das Unternehmen hat mitgeteilt, die Daten von bis zu 87 Millionen Usern mit der britischen Firma Cambridge Analytica geteilt zu haben. In Medienberichten war zunächst von 50 Millionen die Rede gewesen.
+ Aus Deutschland sind bis zu 310 000 Nutzerprofile betroffen.
+ Facebook will die Nutzer US-Medienberichten zufolge ab dem 9. April darüber informieren, ob sie betroffen sind.
+"
+"Facebook will die Nutzer US-Medienberichten zufolge vom 9. April an darüber informieren, ob sie betroffen sind. Als erster Post im News Feed jedes Nutzers soll ein Link erscheinen, der erklärt, an welche Drittanbieter ihre Informationen weitergegeben wurden und ob Cambridge Analytica unter diesen Nutzern ist. Zwei Tage später sagt Facebook-Chef Mark Zuckerberg im US-Kongress aus."
+"Zuckerbergs Firma hat inzwischen die Datenschutz- und Nutzungsbedingungen umformuliert. Drittanbieter erhalten weniger Daten-Zugriffe, auch die Nutzersuche über Telefonnummern und E-Mail Adressen. Theoretisch hätten dadurch die öffentlichen Profilinformationen der \"meisten\" Facebook-Nutzer gesammelt werden können."
+"In einer Telefonkonferenz mit Reportern erklärte Firmenchef Mark Zuckerberg am Mittwoch erneut, die Firma habe in der Vergangenheit \"nicht das Ausmaß der eigenen Verantwortung erkannt\". Dies sei ein großer Fehler gewesen."
+"Fragen zu einem möglichen Rücktritt als Chef oder einer entsprechenden Forderung aus dem Aufsichtsrat verneinte er. Die jetzt angekündigten Schritte setzten einschneidende Änderungsprozesse in Gang, die ungefähr drei Jahre dauern würden. Bislang habe die Daten-Kontroverse noch \"keine nennenswerte Folgen\" für das Werbegeschäft der Plattform gehabt."
+"Die neuen Beschränkungen für Drittanbieter-Apps sorgten am Mittwoch für Probleme. So berichteten zahlreiche Nutzer, sich mit ihren Facebook-Logins nicht mehr auf dem Smartphone für die Dating-Plattform Tinder anmelden zu können und zwischen Partnersuche- und Facebook-App hin- und hergeleitet zu werden. In der Nacht behob Tinder das Problem."
+"VERLAGSANGEBOTE"
+"
+             Stellenmarkt"
+"Alle Angebote "
+"
+    
+        Copyright © Süddeutsche Zeitung Digitale Medien GmbH / Süddeutsche Zeitung GmbH
+    
+  "
+"Zuckerberg spricht zu Skandal bei Cambridge Analytica"
+"
+        
+                        Datenskandal 
+        
+        \"Es war mein Fehler\"
+        "
+"Facebook verschärft Regeln"
+"Mark Zuckerberg sieht sich selbst in der Verantwortung für den Datenskandal um Cambridge Analytica.
+ Dies geht aus einer siebenseitigen Erklärung hervor, die der Facebook-Chef Dienstag und Mittwoch vor mehreren Ausschüssen des US-Kongresses vortragen will.
+ Ende März war bekannt geworden, dass sich ein Drittanbieter einer Facebook-App Zugriff auf die persönlichen Daten von 50 Millionen Nutzern des Netzwerks verschafft und diese an Cambridge Analytica weiterverkauft hatte.
+"
+"Cambridge Analytica brüstete sich damit, weltweit Politiker beraten und Wahlen in deren Sinne beeinflusst zu haben, auch über Facebook. Auch bei der US-Wahl hatte die Firma ihre Hände im Spiel. Unabhängig davon sollen russische Firmen vor zwei Jahren mit Falschmeldungen und gezielten Anzeigen bei Facebook Stimmung für den damaligen Kandidaten und heutigen Präsidenten Donald Trump gemacht haben."
+"Zuckerberg mit Senator Bill Nelson"
+"Zuckerberg hatte viele Fehler zunächst bestritten und dann eher halbherzig Versäumnisse eingeräumt. Damit brachte er nicht nur zahlreiche Nutzer, sondern auch Politiker in aller Welt gegen sich auf. Erst in den vergangenen Tagen und nach immer lauter werdenden Rücktrittsforderungen änderte der Firmengründer seine Strategie."
+"Es sei nun klar, dass man nicht genug getan habe, um zu verhindern, dass die eigene Plattform für Propaganda zweckentfremdet und missbraucht wird, heißt es in der Eingangserklärung, die Zuckerberg an diesem Dienstag zunächst vor einem Ausschuss des Senats vortragen will. \"Das gilt für Falschmeldungen, die ausländische Einmischung in Wahlen und Hasskommentare, aber auch für die Rolle von Programmentwicklern und des Datenschutzes\", so Zuckerberg laut Redetext. Facebook werde alle notwendigen Veränderungen in die Wege leiten, die vollständigen Umsetzung der Maßnahmen werde allerdings einige Zeit in Anspruch nehmen."
+"Das Netzwerk begann am Montag damit, alle Mitglieder zu informieren, die von der Datenweitergabe an Cambridge Analytica betroffen sind. Ob Facebook fahrlässig mit den Daten der Nutzer umgegangen ist, wird derzeit weltweit von Behörden untersucht, unter anderem von der US-Handelskommission."
+"Facebook bedingt zur Regulierung bereit"
+"
+        
+                        Facebook-Chef Zuckerberg
+        
+        \"Schwer zu sagen, was wir finden werden\"
+        "
+"Mea Culpa, aber ...:"
+"Barley bestellt Facebook ins Justizministerium ein"
+"Wie viele Cambridge Analyticas gibt es?"
+"Informationen für Nutzer:"
+"Offenheit für Regulierung, aber ...:"
+"Zuckerberg bereit zur Aussage:"
+"Kritik am Netzwerkdurchsetzungsgesetz:"
+"Fazit: Was Zuckerberg erreichen will ..."
+"... und wo die größte Gefahr für die Firma liegt:"
+"Facebook-Chef Zuckerberg bricht sein Schweigen und gibt gleich mehreren US-Medien Interviews.
+ Er entschuldigt sich dabei für den Datenmissbrauch, sieht aber Cambridge Analytica als Hauptverantwortlichen.
+ Der Konzern will nun prüfen, ob weitere App-Entwickler Daten im großen Stil absaugten und weitergaben.
+"
+"\"Wir müssen sicherstellen, dass es keine weiteren Cambridge Analyticas da draußen gibt\", erklärte Zuckerberg Wired. Dafür will der Konzern nun jede App prüfen, die von 2010 bis zur Rücknahme der Funktion 2015 im großen Maßstab auf detaillierte Informationen über Freunde von Nutzern zugegriffen hat."
+"Allerdings könnte dies nicht so einfach sein, gab er zu: Die Daten sind nicht auf Facebook-Servern, sondern bei den Produzenten der Apps - wenn sie überhaupt noch existieren. Facebook will auch Datenhändler genauer unter die Lupe nehmen, die möglicherweise mit Kopien von weitergegebenen Datensätzen handeln. \"Es ist schwer zu sagen, was wir finden werden.\""
+"Jeder der bis zu 50 Millionen Nutzer, deren Daten mit Cambridge Analytica geteilt wurden, soll darüber informiert werden - allerdings offenbar nur, wenn er es selbst über eine Facebook-Funktion prüft. Bereits am Nachmittag hatte Zuckerberg angekündigt, dass Entwickler von Drittanbieter-Apps künftig nur noch eingeschränkten Zugriff auf persönliche Daten von Facebook-Nutzern erhalten und diesen auch verlieren, sobald ein Mitglied die Anwendung drei Monate lang nicht nutzt. Das Facebook-Login auf Webseiten oder in Apps übermittelt künftig nur noch Name, Profilfoto und E-Mail-Adresse."
+"\"Ich bin mir ehrlich gesagt nicht sicher, ob wir nicht reguliert werden sollten\", sagte der 33-Jährige auf CNN. Diese Aussage ist neu, aber sagt nichts Neues: Auf Nachfrage erklärte Zuckerberg bereits, dass er damit größere Transparenz bei Werbung meint. Hier hatte Facebook bereits im vergangenen Jahr ein Programm angekündigt, das einem Gesetzentwurf für digitale Politikwerbung (\"Honest Ads Act\") nahekommt, den mehrere Senatoren befürworten. In anderen Medien wie TV, Radio und Zeitungen muss politische Werbung samt Auftraggeber gemeldet und in bestimmten Fällen auch gekennzeichnet werden. Facebook wehrte sich jahrelang erfolgreich dagegen."
+"Eine Unterstützung der Transparenzinitiative könnte nun auch andere Technologie-Firmen unter Zugzwang setzen. Am eigenen Geschäftsmodell ändert sich damit nichts."
+"Der Facebook-Chef erklärte sich bereit, wie von mehreren US-Politikern gefordert, vor dem amerikanischen Kongress auszusagen. Er machte jedoch eine Einschränkung: \"... wenn ich die richtige Person bin.\" Bislang hatte Facebook zu Anhörungen stets Manager aus der zweiten Reihe geschickt."
+"Zuckerberg sprach mit Wired auch über den Umgang mit \"Hate Speech\" und warb für einen \"flexiblen Umgang\". Das deutsche Modell - also das Netzwerkdurchsetzungsgesetz - sei auf \"Micromanagement\" ausgelegt und \"in einigen Punkten nach hinten losgegangen\". Er bevorzuge Richtlinien statt Gesetze, weil man ständig intern bessere Prozesse entwickle."
+"So verwies er in einem anderen Zusammenhang darauf, dass Facebook für die Identifikation von Falschnachrichten inzwischen künstliche Intelligenz einsetze. Damit habe das Unternehmen rund um eine Senatswahl in Alabama Produzenten solcher \"Fake News\" aus Mazedonien dingfest machen können."
+"Für den Facebook-Chef geht es in der aktuellen Debatte um mehrere Dinge: Einerseits benötigt Facebook das Vertrauen von Nutzern und Politikern. Andererseits will es im Hinblick auf die Erwartungen der Aktionäre keine Änderungen an seinem Geschäftsmodell vornehmen, das auf der intensiven Auswertung des Verhaltens und der Vorlieben der Nutzer in Facebook-Produkten (kurz: Überwachung) basiert, um zielgenaue Werbung schalten zu können."
+"Größtes Ungemach droht derzeit wohl von der US-Handelsbehörde FTC. Ihr gegenüber hatte sich Facebook 2011 verpflichtet, Nutzer zu informieren und sie explizit um Einwilligung zu bitten, wenn Daten jenseits der eigenen Privatsphäre-Einstellungen geteilt werden."
+"Die Freunde, deren Profile nun über eine App in die Datenbank von Cambridge Analytica wanderten, wurden aber offenbar nicht informiert - womöglich wussten nicht einmal die Nutzer der App, die für den Download bezahlt worden waren, welche Daten sie freigaben. Die FTC wird deshalb prüfen, wie die Weitergabe der Daten genau ablief und ob sie sich mit den Nutzungsbedingungen und Privatsphäre-Einstellungen von damals verträgt. Sollte Facebook gegen seine Verpflichtung verstoßen haben, drohen Milliardenstrafen und aussichtsreiche Sammelklagen von Betroffenen."
+"Obwohl Facebook in den vergangenen Monaten rund um Wahlbeeinflussung und Hass-Inhalte bereits häufiger in der Kritik stand, entwickelt sich der aktuelle Fall zur größten Krise in der Geschichte des Konzerns. Für den Gründer, Chef und Hauptaktionär Zuckerberg ist es die bislang größte Bewährungsprobe."
+"Facebook-Chef Zuckerberg vor dem US-Kongress"
+"
+        
+                        Facebook-Chef vor US-Kongress
+        
+        Zuckerberg präsentiert sich als erfahrener Entschuldiger
+        "
+"
+        
+            Facebook-Chef 
+        
+        Mark Zuckerberg entschuldigt sich vor US-Kongress
+        Zum Video Artikel
+        
+    "
+"\"Würden Sie uns einweihen, wo Sie die vergangene Nacht verbracht haben?\""
+"Das Problem mit den Wissenslücken"
+"Selbstregulierung statt Regulierung"
+"
+                    Facebook-Chef auf dem heißen Stuhl
+                "
+"Mark Zuckerberg, nach kurzem Nachdenken: \"Hmm, nein.\" (leises Gelächter)"
+"Durbin: \"Wenn Sie jemandem diese Woche eine Nachricht geschrieben haben, würden Sie uns teilhaben lassen, wie die Personen heißen?\""
+"Zuckerberg, lächelnd: \"Senator, das würde ich wahrscheinlich nicht hier öffentlich tun wollen.\""
+"Durbin, milde lächelnd: \"Ich denke, das könnte es sein, worum es hier geht: Ihr Recht auf Privatsphäre.\""
+"Einerseits bringt dieser \"Erwischt\"-Moment die Facebook-Debatte auf den Punkt. Andererseits symbolisiert er auch das Problem: Wenn Firmenchefs nach Skandalen vor dem Kongress antanzen müssen, geht es an erster Stelle nicht um Aufklärung, sondern um die TV-gerechte Kanalisierung des Volkszorns durch Volksvertreter."
+"Dennoch bot die Anhörung einige Erkenntnisse, wie es nach dem Facebook-Datenabfluss an Cambridge Analytica weitergeht und was politisch zu erwarten ist."
+"Wäre die Börse ein Maßstab, war Zuckerbergs Auftritt ein Erfolg für Facebook: 4,5 Prozent legte der zuletzt gebeutelte Aktienkurs des Konzerns während der Anhörung zu. Zyniker errechneten daraus eine Vermögenssteigerung von 2,8 Milliarden US-Dollar für den Firmengründer."
+"Zwar musste sich der 33-Jährige auch harte Kritik anhören (\"absichtliche Blindheit\"), doch insgesamt zahlte sich die Vorarbeit des Konzerns aus: Zuckerberg, inzwischen einer der erfahrensten Entschuldiger der Branche, übernahm mit ruhiger Stimme erneut die Verantwortung für den Datenabfluss und bedauerte, die russische Wahl-Beeinflussung 2016 zu spät erkannt zu haben."
+"Zugleich konnte er routiniert darauf verweisen, mit diversen Daten-Zugangsbeschränkungen für App-Entwickler und der Fahndung nach politischen Clickbait-Fabriken bereits reagiert zu haben. Zuckerberg führte außerdem an, dass \"Werkzeuge und Lösungen\" wie künstliche Intelligenz die Probleme in absehbarer Zeit besser lösen könnten."
+"Während seines Auftritts profitierte der Facebook-Chef auch vom hohen Altersdurchschnitt im Senat: Die meisten der 44 Senatoren hatten ihre Fragen offensichtlich von Assistenten erhalten, wussten aber zu wenig über IT-Systeme oder das Facebook-Geschäftsmodell, um die richtigen Nachfragen zu stellen."
+"So musste Zuckerberg mehrmals wiederholen, dass Facebook keine Nutzerdaten verkauft, konnte aber gleichzeitig Fragen über die Datenlöschung und Details des Nutzertrackings ausweichen oder angeben, die Informationen nicht parat zu haben."
+"Zwar fühlte sich der 84-jährige Senator Orin Hatch (Rep., Utah) an die berühmten Microsoft-Anhörungen in den späten neunziger Jahren erinnert, die den Fokus auf die Marktmacht des Windows-Konzern lenkten. Doch in ähnlicher Bedrängnis steckt Facebook noch nicht: Kartellfragen spielten kaum eine Rolle und auch die Drohungen zur Regulierung verbanden fast alle Politiker mit der Aufforderung, das Problem selbst zu lösen."
+"Das Unternehmen hat bereits Bereitschaft zu größerer Transparenz bei politischer Werbung angekündigt, ein entsprechender Entwurf liegt derzeit im Kongress. Ein weiterer Punkt könnten verständlichere Geschäftsbedingungen sein. \"Ich sage es freundlich: Ihre Nutzungsbedingungen stinken\", sagte der als Zitatfabrik bekannte Republikaner John Kennedy (Louisiana) zum Facebook-Chef. Dieses ellenlange Vertragswerk \"soll Facebook den Hintern retten, nicht die Nutzer über Rechte informieren. Sie wissen das, ich weiß das.\" Zuckerberg zeigte sich offen für einen gesetzlichen Rahmen - während der marktliberale Kennedy einzig forderte, dass Facebook selbst eine Lösung suchen müsse."
+"Schmallippiger zeigte sich Zuckerberg bei einer Annäherung an die europäischen Datenschutz-Standards wie einer expliziten Zustimmung zur Datenweitergabe. Er unterstütze dies als \"generelles Prinzip\", erklärte er - allerdings betrachtet Zuckerberg auch die Blanko-Zustimmung für den Kontaktdaten-Zugriff bei der Installation des Messengers als \"Opt-in\". Hat der Nutzer also einmal sein Häkchen gesetzt, hat Facebook in Sachen Daten quasi freie Hand."
+"Sorry #zuckerberg I don't call this an opt-in \"option\" to sync my contacts. Messenger wants access and I don’t see the choices. pic.twitter.com/TvB8pnsQcG"
+"Ein entsprechender Gesetzentwurf zur Datenweitergabe-Zustimmung befindet sich in einer Frühphase, hat aber derzeit schlechte Chancen auf Umsetzung, da die Republikaner grundsätzlich gegen Regulierung von Unternehmen sind. Größere Nutzerrechte im Heimatmarkt dürften bei Facebook, Google und Co. auf heftigen Widerstand stoßen, da sie das auf massiver Datenauswertung basierende Geschäftsmodell der Konzerne gefährden könnten. Andere Stimmen glauben, dass die Plattformen so beliebt sind, dass die meisten Nutzer die Erlaubnis zum Datensammeln ohnehin ohne Zögern erteilen."
+"Mehrere Senatoren fragten Zuckerberg, warum die Firma nach Bekanntwerden des Datenabflusses 2014 weder die Millionen betroffenen Nutzer, noch die Handelsbehörde FTC informierte, die seit 2011 die Privatsphären-Politik des Konzerns überwacht."
+"Auch hier zog sich Zuckerberg auf die Geschäftsbedingungen zurück: In diesen sei eine Datenweitergabe an Drittparteien erwähnt gewesen. Als die Nutzer sich bei Facebook angemeldet hätten, \"haben sie sich auch dafür angemeldet\". Ob die Nutzungsbedingungen wirklich die ungefragte Datenweitergabe an Apps von Freunden deckten, ist derzeit Gegenstand von FTC-Ermittlungen, die eine Milliardenstrafe zur Folge haben könnten."
+"Einerseits vermittelte Mark Zuckerberg vor dem Senat den Eindruck, dass jeder Facebook-Nutzer weiß, welche Daten er mit wem teilt (eine Ansicht, der wohl viele Mitglieder widersprechen würden). Zugleich aber stellte er den Datenmissbrauch als etwas dar, was die Facebook-Verantwortlichen damals nicht vorhersehen konnten, obwohl die Plattform das Sammeln detaillierter Datenpunkte perfektioniert hat."
+"Genau diesen Kern des Geschäftsmodells (kostenloser Dienst für kostenlose Nutzerdaten) möchte Facebook nicht ändern, auch wenn Zuckerberg erstmals ein alternatives Bezahlmodell andeutete (\"eine Version von Facebook wird immer kostenlos bleiben\"). Die durchaus milde Anhörung lässt vermuten, dass die Firma und ihre Lobbyisten bei allen Gesetzen ein gewaltiges Wort mitzureden haben werden - doch derzeit ist zweifelhaft, ob im zerstrittenen Kongress überhaupt etwas passieren wird."
+"Am Mittwoch wird Zuckerberg den letzten Tag seines Auftrittsmarathons absolvieren und vor einem Ausschuss des Repräsentantenhauses aussagen."
+"Mark Zuckerberg vor dem US-Kongress"
+"
+        
+                        Zuckerberg vor dem US-Kongress
+        
+        Facebook-Chef auf dem heißen Stuhl
+        "
+"Der Bürger muss mehr sein als Facebooks Produkt"
+"Warum haben Nutzer nicht viel früher erfahren, was mit ihren Informationen passiert ist?"
+"
+                    Wie Facebook private Nachrichten durchleuchtet
+                "
+"Facebook-Chef Mark Zuckerberg hat vor dem US-Kongress ausgesagt.
+ Dabei räumte er erneut ein, Fehler gemacht zu haben.
+ Er habe Facebook gegründet und betreibe es, also sei auch er dafür verantwortlich, sagte Zuckerberg.
+"
+"Tatsächlich will der Kongress nach Jahren der Lippenbekenntnisse endlich einen Plan sehen, der sicherstellt, dass Facebook die Privatsphäre seiner mehr als zwei Milliarden Nutzer besser schützt und energischer gegen Versuche ausländischer Geheimdienste und Trolle vorgeht, die Plattform zu missbrauchen - etwa zur Beeinflussung von Wahlen."
+"Zuckerberg hört den Senatoren äußerlich unbewegt zu, nur die Augenlider, die beinahe im Sekundenrhythmus auf- und zuklappen, verraten die Anspannung, unter der er steht. Jeder Mensch auf der Welt habe ein Recht auf den Schutz seiner Daten, sagt der 33-Jährige, und das hat tatsächlich nur noch wenig mit seiner Aussage von vor ein paar Jahren zu tun, die Zeit der Privatsphäre sei vorbei. Facebook sei auch nicht einfach eine neutrale Plattform, sondern für die Inhalte, die über das Netzwerk verbreitet würden, verantwortlich. Auch das hatte früher anders geklungen. Knapp zwei Stunden lang gelingt es Zuckerberg, die Fragen der Senatoren recht souverän zu beantworten."
+"Dann schlägt Sitzungsleiter Chuck Grassley vor, eine Pause zu machen. \"Ein paar Runden gehen schon noch\", sagt Zuckerberg, der jetzt offensichtlich Oberwasser hat. Ein Fehler, denn als nächster ist der demokratische Senator Richard Blumenthal aus Connecticut dran, der den Facebook-Chef als erster so richtig in die Mangel nimmt. Er weist ihm nicht nur nach, dass das Unternehmen den Verkauf von Nutzerdaten an Dritte - und damit auch an Cambridge Analytica - widerrechtlich gestattet hatte. Er stellt Zuckerbergs Arbeit vielmehr grundsätzlich in Frage: \"Ihr Geschäftsmodell ist es, die Privatsphäre bis zum größtmöglichen Gewinn auszubeuten\", sagt Blumenthal. Zuckerberg druckst herum. Kurz darauf bietet Grassley erneut eine Pause an. Niemand widerspricht."
