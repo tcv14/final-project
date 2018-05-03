@@ -1,7 +1,6 @@
-detach("package:igraph")
+detach("package:igraph") # only run if running this R script after the "en data analysis.R" script
 library(tidyverse)
 library(tidytext)
-library(stringr)
 #install.packages("lsa")
 library(lsa)
 #install.packages("tm")
@@ -9,6 +8,8 @@ library(tm)
 library(wordcloud)
 library(reshape2)
 library(scales)
+library(ggraph)
+library(markovchain)
 
 # load stop words
 data(stop_words)
@@ -22,6 +23,7 @@ own_stopwords.de <- tibble(
               "kommt", "mal", "heute", "gerade", "schon", "warum", "sagt", "beim", "gibt",
               "gestern", "marc", "john"))
 
+# load library(igraph) now because it masks as_data_frame, which was used above
 library(igraph)
 
 #########################
@@ -117,6 +119,7 @@ tweet.german.words <- tweet.all_german.words %>%
 
 # finding most commonly used words outside of hashtags and mentions
 tweet_count.de <- tweet.german.words %>% count(word, sort = TRUE)
+write_csv(tweet_count.de, "./Shiny/tweet_count.de.csv")
 
 # plot most commonly used words outside of hashtags and mentions
 plot_tweet_count.de <- tweet_count.de %>%
@@ -194,6 +197,8 @@ news.posneg_count <- news.german.words %>%
   inner_join(posneg) %>%
   count(word, sentiment, sort = TRUE) %>%
   ungroup()
+# for shiny app
+write_csv(news.posneg_count, "./Shiny/news.posneg_count.csv")
 # plotting negative and positive words side-by-side to compare
 plot_news.posneg_count <- news.posneg_count %>%
   group_by(sentiment) %>%
@@ -233,6 +238,8 @@ tweet.posneg_count <- tweet.german.words %>%
   inner_join(posneg) %>%
   count(word, sentiment, sort = TRUE) %>%
   ungroup()
+# for shiny app
+write_csv(tweet.posneg_count, "./Shiny/tweet.posneg_count.csv")
 # plotting negative and positive words side-by-side to compare
 plot_tweet.posneg_count <- tweet.posneg_count %>%
   group_by(sentiment) %>%
@@ -260,7 +267,6 @@ tweet.senval <- tweet.german.words %>%
 #####################
 ### Markov Chains ###
 #####################
-library(ggraph)
 
 ### For news
 
@@ -318,7 +324,6 @@ plot_tweet.german.bigrams <- ggraph(plot_tweet.german.bigrams, layout = "fr") +
   theme_void()
 
 ### Building Markov Chain
-library(markovchain)
 
 # create text file to read in
 write.table(news.german, file = "news.german.txt", row.names = FALSE, col.names = FALSE)
@@ -331,8 +336,14 @@ news.german.text <- str_replace_all(news.german.text, "[[:punct:]]", " ")
 # get a list of just the words split into tokens
 news.german.text_terms <- unlist(strsplit(news.german.text, " "))
 news.german.text_terms <- news.german.text_terms[news.german.text_terms != ""]
-# creating the model
-#news.german.text_fit <- markovchainFit(data = news.german.text_terms)
-# generate text
-#news.german.text_generate <- markovchainSequence(n = 10, markovchain = news.german.text_fit$estimate)
+# creating the model, this takes a couple minutes
+news.german.text_fit <- markovchainFit(data = news.german.text_terms)
+mcfit_de <- news.german.text_fit$estimate
+save(mcfit_de, file = "mcfit_de.RData")
 
+# generate text directly after running previous line of code
+news.german.text_generate <- markovchainSequence(n = 10, markovchain = news.german.text_fit$estimate)
+
+# generate text from the .RData file
+load("mcfit_de.RData")
+news.german.text_generate <- markovchainSequence(n = 10, markovchain = mcfit_de)

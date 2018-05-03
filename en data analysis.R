@@ -1,10 +1,11 @@
 library(igraph)
 library(tidyverse)
 library(tidytext)
-library(stringr)
 library(wordcloud)
 library(reshape2)
 library(scales)
+library(ggraph)
+library(markovchain)
 
 # filter(n > quantile(n, 0.99))
 
@@ -103,6 +104,7 @@ tweet.english.words <- tweet.all_english.words %>%
 
 # finding most commonly used words outside of hashtags and mentions
 tweet_count.en <- tweet.english.words %>% count(word, sort = TRUE)
+write_csv(tweet_count.en, "./Shiny/tweet_count.en.csv")
 
 # plot most commonly used words outside of hashtags and mentions
 plot_tweet_count.en <- tweet_count.en %>%
@@ -192,6 +194,8 @@ news.bing_count <- news.english.words %>%
   inner_join(bing) %>%
   count(word, sentiment, sort = TRUE) %>%
   ungroup()
+# for shiny app
+write_csv(news.bing_count, "./Shiny/news.bing_count.csv")
 # plotting negative and positive words side-by-side to compare
 plot_news.bing_count <- news.bing_count %>%
   group_by(sentiment) %>%
@@ -244,6 +248,8 @@ tweet.bing_count <- tweet.english.words %>%
   inner_join(bing) %>%
   count(word, sentiment, sort = TRUE) %>%
   ungroup()
+# for shiny app
+write_csv(tweet.bing_count, "./Shiny/tweet.bing_count.csv")
 # plotting negative and positive words side-by-side to compare
 plot_tweet.bing_count <- tweet.bing_count %>%
   group_by(sentiment) %>%
@@ -272,7 +278,6 @@ tweet.afinn <- tweet.english.words %>%
 #####################
 ### Markov Chains ###
 #####################
-library(ggraph)
 
 ### For news
 
@@ -322,7 +327,6 @@ plot_tweet.english.bigrams <- ggraph(plot_tweet.english.bigrams, layout = "fr") 
   theme_void()
 
 ### Building Markov Chain
-library(markovchain)
 
 # create text file to read in
 write.table(news.english, file = "news.english.txt", row.names = FALSE, col.names = FALSE)
@@ -334,7 +338,14 @@ news.english.text <- news.english.text[nchar(news.english.text) > 0]
 news.english.text <- str_replace_all(news.english.text, "[[:punct:]]", "")
 # get a list of just the words split into tokens
 news.english.text_terms <- unlist(strsplit(news.english.text, " "))
-# creating the model
-#news.english.text_fit <- markovchainFit(data = news.english.text_terms)
-# generate text
-#news.english.text_generate <- markovchainSequence(n = 10, markovchain = news.english.text_fit$estimate)
+# creating the model, this takes a few minutes
+news.english.text_fit <- markovchainFit(data = news.english.text_terms)
+mcfit <- news.english.text_fit$estimate
+save(mcfit, file = "mcfit.RData")
+
+# generate text directly after running previous line of code
+news.english.text_generate <- markovchainSequence(n = 10, markovchain = news.english.text_fit$estimate)
+
+# generate text from the .RData file
+load("mcfit.RData")
+news.english.text_generate <- markovchainSequence(n = 10, markovchain = mcfit)
