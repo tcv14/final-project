@@ -2,7 +2,10 @@
 title: "Using Text Analysis to Describe German and English Tweets and News Articles"
 author: "Tiffany Cheng"
 date: "April 27, 2018"
-output: pdf_document
+output: html_document
+out.width: 5
+out.height: 4
+fig.align: 'center'
 ---
 
 ```{r setup, include = FALSE, message = FALSE, warning = FALSE}
@@ -20,56 +23,56 @@ source("en and de comparisons.R")
 ## Location of News Companies
 (Names of the five German companies)
 
-```{r fig.cap = "Map of Germany", fig.height = 4}
+```{r fig.cap = "Map of Germany"}
 load("germany.RData")
 germany.map
 ```
 
 (Names of the six US companies)
 
-```{r fig.cap = "Map of the United States", fig.height = 4}
+```{r fig.cap = "Map of the United States"}
 load("us.RData")
 unitedstates.map
 ```
 
 ## Word Frequency Analysis for News Articles
 
-```{r fig.cap = "Top 10 Most Commonly Used Words in News Articles", fig.height = 4}
+```{r fig.cap = "Top 10 Most Commonly Used Words in News Articles"}
 plot_count.de.en
 ```
 
-```{r fig.cap = "Word Cloud of the Top 10 Most Commonly Used Words in News Articles", fig.height = 4, message = FALSE, warning = FALSE}
+```{r fig.cap = "Word Cloud of the Top 10 Most Commonly Used Words in News Articles", message = FALSE, warning = FALSE}
 wordcloud(news_count.en$word, news_count.en$n, min.freq = 1, max.words = 50, 
             random.order = FALSE, rot.per = 0.25, colors = brewer.pal(8, "Dark2"),
-          vfont = c("sans serif", "plain"))
+          vfont = c("sans serif", "plain"), scale=c(4,.5))
 wordcloud(news_count.de$word, news_count.de$n, min.freq = 1, max.words = 50, 
-          random.order = FALSE, rot.per = 0.25, colors = brewer.pal(8, "Dark2"))
+          random.order = FALSE, rot.per = 0.25, colors = brewer.pal(8, "Dark2"), scale=c(4,.5))
 ```
 
 
 ## Word Frequency Analysis for Twitter
 
-```{r fig.cap = "Top 10 Most Commonly Used Hashtags in Tweets", fig.height = 4}
+```{r fig.cap = "Top 10 Most Commonly Used Hashtags in Tweets"}
 grid.arrange(plot_tweet.hashtag_count.en, plot_tweet.hashtag_count.de, nrow = 1)
 ```
 
-```{r fig.cap = "Top 10 Most Commonly Used Mentions in Tweets", fig.height = 4}
+```{r fig.cap = "Top 10 Most Commonly Used Mentions in Tweets"}
 grid.arrange(plot_tweet.mention_count.en, plot_tweet.mention_count.de, nrow = 1)
 ```
 
-```{r fig.cap = "Top 10 Most Commonly Used Words in Tweets", fig.height = 4}
+```{r fig.cap = "Top 10 Most Commonly Used Words in Tweets"}
 grid.arrange(plot_tweet_count.en, plot_tweet_count.de, nrow = 1)
 ```
 
 ## Comparisons Amongst the Same Language
 
-```{r fig.cap = "Comparing Word Usage Amongst English News Articles and Tweets", fig.height = 4, message = FALSE, warning = FALSE}
+```{r fig.cap = "Comparing Word Usage Amongst English News Articles and Tweets", message = FALSE, warning = FALSE}
 plot_frequency.en
 ```
 
 Correlation from the correlation test is `r correlation.en$estimate`.
 
-```{r fig.cap = "Comparing Word Usage Amongst German News Articles and Tweets", fig.height = 4, message = FALSE, warning = FALSE}
+```{r fig.cap = "Comparing Word Usage Amongst German News Articles and Tweets", message = FALSE, warning = FALSE}
 plot_frequency.de
 ```
 
@@ -77,46 +80,112 @@ Correlation from the correlation test is `r correlation.de$estimate`.
 
 ## Sentiment Analysis for News Articles
 
-For English: 
+### For English: 
 
-Using `nrc` sentiments lexicon.
+Using `nrc` sentiments lexicon for negative, then anger, then disgust.
 
-```{r fig.cap = "`nrc` Sentiments Lexicon", fig.height = 4, message = FALSE, warning = FALSE}
+```{r fig.cap = "`nrc` Sentiments Lexicon", message = FALSE, warning = FALSE}
 wordcloud(news.negative$word, news.negative$n, max.words = 15, random.order = FALSE, 
-          rot.per = 0.25, colors = brewer.pal(8, "Paired"))
+          rot.per = 0.25, colors = brewer.pal(8, "Paired"), scale=c(4,.5))
 wordcloud(news.anger$word, news.anger$n, max.words = 15, random.order = FALSE, 
-          rot.per = 0.25, colors = brewer.pal(8, "Set3"))
+          rot.per = 0.25, colors = brewer.pal(8, "Set3"), scale=c(4,.5))
 wordcloud(news.disgust$word, news.disgust$n, max.words = 15, random.order = FALSE, 
-          rot.per = 0.25, colors = brewer.pal(8, "Accent"))
+          rot.per = 0.25, colors = brewer.pal(8, "Accent"), scale=c(4,.5))
 ```
 
-Using `bing` sentiment lexicon results in following table and figure:
+Using `bing` sentiment lexicon results in following table and figure of top 10 most commonly used negative and positive words.
 
-```{r fig.cap = "`bing` Sentiments Lexicon", fig.height = 4, message = FALSE, warning = FALSE}
+```{r fig.cap = "`bing` Sentiments Lexicon", message = FALSE, warning = FALSE}
 knitr::kable(news.bing[1:3])
-plot_news.bing_count
+plot_news.bing_count + scale_fill_brewer(palette = "Set3")
 news.english.words %>% inner_join(bing) %>%
   count(word, sentiment, sort = TRUE) %>%
   acast(word ~ sentiment, value.var = "n", fill = 0) %>%
-  comparison.cloud(colors = c("gray80", "gray20"), max.words = 20)
+  comparison.cloud(colors = c("gray80", "gray20"), max.words = 20, scale=c(4,.5))
 ```
 
 Using `afinn` sentiment lexicon results in a sentiment score of `r news.afinn`.
 
-For German:
 
-```{r fig.cap = "Postive/Negative Sentiments Lexicon", fig.height = 4, message = FALSE, warning = FALSE}
+### For German:
+
+```{r fig.cap = "Postive/Negative Sentiments Lexicon", message = FALSE, warning = FALSE}
 knitr::kable(news.posneg[1:3])
-plot_news.posneg_count
+plot_news.posneg_count + scale_fill_brewer(palette = "Set2")
 news.german.words %>% inner_join(posneg) %>%
   count(word, sentiment, sort = TRUE) %>%
   acast(word ~ sentiment, value.var = "n", fill = 0) %>%
-  comparison.cloud(colors = c("gray80", "gray20"), max.words = 20)
+  comparison.cloud(colors = c("gray80", "gray20"), max.words = 20, scale=c(4,.5))
 ```
 
 Using sentiment assigned to each word results in a sentiment score of `r news.senval`.
 
 ## Sentiment Analysis for Twitter Tweets
 
-For English:
+### For English:
+
+```{r fig.cap = "`nrc` Sentiments Lexicon", message = FALSE, warning = FALSE}
+wordcloud(tweet.negative$word, tweet.negative$n, max.words = 15, random.order = FALSE, 
+          rot.per = 0.25, colors = brewer.pal(8, "Paired"),  vfont = c("serif", "plain"), scale=c(4,.5))
+wordcloud(tweet.anger$word, tweet.anger$n, max.words = 15, random.order = FALSE, 
+          rot.per = 0.25, colors = brewer.pal(8, "Set2"), vfont = c("serif", "plain"), scale=c(4,.5))
+wordcloud(tweet.disgust$word, tweet.disgust$n, max.words = 15, random.order = FALSE, 
+          rot.per = 0.25, colors = brewer.pal(8, "Accent"), vfont = c("serif", "plain"), scale=c(4,.5))
+```
+
+`bing` sentiment lexicon and plot.
+
+```{r fig.cap = "`nrc` Sentiments Lexicon", message = FALSE, warning = FALSE}
+knitr::kable(tweet.bing[1:3])
+plot_tweet.bing_count + scale_fill_brewer(palette = "Paired")
+tweet.english.words %>% inner_join(bing) %>%
+  count(word, sentiment, sort = TRUE) %>%
+  acast(word ~ sentiment, value.var = "n", fill = 0) %>%
+  comparison.cloud(colors = c("gray80", "gray20"), max.words = 20, scale=c(4,.5))
+```
+
+Using the `afinn` sentiment lexicon results in a sentiment score of `r tweet.afinn`.
+
+### For German:
+
+```{r fig.cap = "Postive/Negative Sentiments Lexicon", message = FALSE, warning = FALSE}
+knitr::kable(news.posneg[1:3])
+plot_tweet.posneg_count + scale_fill_brewer(palette = "Set1")
+tweet.german.words %>% inner_join(posneg) %>%
+  count(word, sentiment, sort = TRUE) %>%
+  acast(word ~ sentiment, value.var = "n", fill = 0) %>%
+  comparison.cloud(colors = c("gray80", "gray20"), max.words = 20, scale=c(4,.5))
+```
+
+Using sentiment assigned to each word results in a sentiment score of `r tweet.senval`.
+
+## Markov Chains
+
+### For English
+
+Bigrams for English news articles.
+
+```{r}
+plot_news.english.bigrams
+```
+
+Bigrams for English tweets.
+
+```{r}
+plot_tweet.english.bigrams
+```
+
+### For German
+
+Bigrams for German news articles.
+
+```{r}
+plot_news.german.bigrams
+```
+
+Bigrams for German tweets.
+
+```{r}
+plot_tweet.german.bigrams
+```
 
