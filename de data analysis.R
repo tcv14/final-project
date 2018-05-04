@@ -48,7 +48,8 @@ news.german.words <- news.german %>%
   mutate(word = replace(word, word == "nutzern", "nutzer")) %>%
   mutate(word = replace(word, word == "fragen", "frage")) %>%
   mutate(word = replace(word, word == "informationen", "information")) %>%
-  mutate(word = replace(word, word == "firmen", "firma"))
+  mutate(word = replace(word, word == "firmen", "firma")) %>%
+  mutate(word = replace(word, word == "senatoren", "senator"))
 
 # find highest frequency words
 news_count.de <- news.german.words %>% count(word, sort = TRUE) %>%
@@ -86,7 +87,12 @@ tweet.all_german.words <- tweet.german %>%
   anti_join(stopwords_lsa) %>%
   anti_join(stopwords_tm) %>%
   anti_join(own_stopwords.de) %>%
-  anti_join(stop_words)
+  anti_join(stop_words) %>%
+  mutate(word = replace(word, word == "nutzern", "nutzer")) %>%
+  mutate(word = replace(word, word == "fragen", "frage")) %>%
+  mutate(word = replace(word, word == "informationen", "information")) %>%
+  mutate(word = replace(word, word == "firmen", "firma")) %>%
+  mutate(word = replace(word, word == "senatoren", "senator"))
 
 # finding most commonly used hashtags
 tweet.hashtag_count.de <- tweet.all_german.words %>% 
