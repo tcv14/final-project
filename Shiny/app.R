@@ -2,7 +2,6 @@
 library(shiny)
 library(shinydashboard)
 library(tidyverse)
-library(twitteR)
 library(markovchain)
 
 data <- suppressMessages(read_csv("count.de.en.csv"))
@@ -12,13 +11,6 @@ data3 <- suppressMessages(read_csv("tweet_count.en.csv"))
 data4 <- suppressMessages(read_csv("tweet_count.de.csv"))
 data5 <- suppressMessages(read_csv("tweet.bing_count.csv"))
 data6 <- suppressMessages(read_csv("tweet.posneg_count.csv"))
-consumerKey <- "aJNOJTkWVtVeHpg6j1aClFIDr"
-consumerSecret <- "cXoHnFrryqmfjS0uB13x66HhODPhfFO5gRQWCE5KBMI5wbeyGm"
-api_key <- "aJNOJTkWVtVeHpg6j1aClFIDr"
-api_secret <- "cXoHnFrryqmfjS0uB13x66HhODPhfFO5gRQWCE5KBMI5wbeyGm"
-access_token <- "975190164925485056-kcPzJmWbOKe8K2XSPiRolaHj6mdKjAp"
-access_token_secret <- "JCTKEegnNogKQxTyxndhrfVQip6EPrjHZzJXOEVcnTU2E"
-my_oauth <- setup_twitter_oauth(api_key, api_secret, access_token, access_token_secret)
 load("mcfit.RData")
 load("mcfit_de.RData")
 
@@ -29,17 +21,16 @@ ui <- dashboardPage(
       menuItem("News Articles", 
                tabName = "news_articles", 
                icon = icon("list-alt", lib = "glyphicon"),
-               menuSubItem("Overview", tabName = "overview_na"),
+               menuSubItem("Top Word Counts", tabName = "overview_na"),
                menuSubItem("Sentiment Analysis", tabName = "sen_analysis_na")),
       menuItem("Twitter", 
                tabName = "twitter", 
                icon = icon("twitter", lib = "font-awesome"),
-               menuSubItem("Overview", tabName = "overview_tw"),
+               menuSubItem("Top Word Counts", tabName = "overview_tw"),
                menuSubItem("Sentiment Analysis", tabName = "sen_analysis_tw")),
       menuItem("For Fun!", 
                tabName = "for_fun", 
                icon = icon("gift", lib = "glyphicon"),
-               menuSubItem("Real-Time Data Generator", tabName = "realtimedata"),
                menuSubItem("Text Generator", tabName = "textgen"))
     )
   ),
@@ -48,7 +39,7 @@ ui <- dashboardPage(
     tabItems(
       # First tab content
       tabItem(tabName = "overview_na",
-              h2("Overview"),
+              h2("Top Word Counts"),
               fluidRow(
                 # Create a box for the slider
                 box(title = "Select Top Number of Words to Display:",
@@ -60,7 +51,8 @@ ui <- dashboardPage(
                                    div(img(src = 'https://icons8.com/preloaders/svg-preview.php?preloader_id=30'),
                                        style = "text-align: center;"
                                      )), 
-                  plotOutput("plot1"), width = 12)
+                  plotOutput("plot1"), width = 12),
+                box(tableOutput("text1"), width = 12)
               )
       ),
       
@@ -78,12 +70,14 @@ ui <- dashboardPage(
                                    div(img(src = 'https://icons8.com/preloaders/svg-preview.php?preloader_id=30'),
                                        style = "text-align: center;"
                                    )),
-                  plotOutput("plot2", height = 1000), width = 12)
+                  plotOutput("plot2", height = 1000), width = 12),
+                box(tableOutput("text2"), width = 12),
+                box(tableOutput("text3"), width = 12)
               )
       ),
       # Third tab content
       tabItem(tabName = "overview_tw",
-              h2("Overview"),
+              h2("Top Word Counts"),
               fluidRow(
                 # Create a box for the slider
                 box(title = "Select Top Number of Words to Display:",
@@ -95,7 +89,8 @@ ui <- dashboardPage(
                                    div(img(src = 'https://icons8.com/preloaders/svg-preview.php?preloader_id=30'),
                                        style = "text-align: center;"
                                    )),
-                  plotOutput("plot3"), width = 12)
+                  plotOutput("plot3"), width = 12),
+                box(tableOutput("text4"), width = 12)
               )
       ),
       # Fourth tab content
@@ -112,37 +107,25 @@ ui <- dashboardPage(
                                    div(img(src = 'https://icons8.com/preloaders/svg-preview.php?preloader_id=30'),
                                        style = "text-align: center;"
                                    )),
-                  plotOutput("plot4", height = 1000), width = 12)
+                  plotOutput("plot4", height = 1000), width = 12),
+                box(tableOutput("text5"), width = 12),
+                box(tableOutput("text6"), width = 12)
               )
       ),
       # Fifth tab content
-      tabItem(tabName = "realtimedata",
-              h2("Real-Time Data Generator"),
-              fluidRow(
-                # create buttons to select language
-                box(radioButtons("radio1", label = h3("Select Language:"),
-                             choices = list("English" = 1, "German" = 2), selected = 1), width = 6),
-                # create a slider to select how many data points to gather
-                box(title = "Select Number of Tweets to Gather:",
-                    sliderInput("slider5", "Tweets:", min = 1, max = 5,
-                                value = 1), width = 6),
-                # create a table to print out text and time stamp 
-                box(h3("Data"), tableOutput("table1"), width = 12)
-              )
-      ),
-      # Sixth tab content
       tabItem(tabName = "textgen",
               h2("Markov Chain Text Generator"),
               fluidRow(
                 # create buttons to select language
-                box(radioButtons("radio2", label = h3("Select Language:"),
+                box(radioButtons("radio1", label = h3("Select Language:"),
                                  choices = list("English" = 1, "German" = 2), selected = 1), width = 6),
                 # create a slider to select how many words to generate
                 box(title = "Select Number of Words to Generate:",
-                    sliderInput("slider6", "Words:", min = 1, max = 100,
+                    sliderInput("slider5", "Words:", min = 1, max = 100,
                                 value = 1), width = 6),
                 # create a table to print out text and time stamp 
-                box(h3("Text"), tableOutput("table2"), width = 12)
+                box(h3("Text"), tableOutput("table1"), width = 12),
+                box(tableOutput("text7"), width = 12)
               )
       )
     )
@@ -159,6 +142,15 @@ server <- function(input, output) {
             facet_wrap(~language, scales = "free_y") + labs(y = "n", x = NULL) + coord_flip())
   })
   
+  # English translation of top german news article word counts
+  output$text1 <- renderText({
+    paste('English Translation:', 
+          "user, data, boss, millions, information, company, congress, 
+          data scandal, question, mistake, company, app, network, responsibility, affected, 
+          become, should, scandal, already, EU, hearing, trump, platform, years, donald, 
+          user data, internet, privacy, people, advertisement, about, apps.")
+  })
+  
   # Plots of count for positive and negative sentiment for english and german news articles
   output$plot2 <- renderPlot({
     data1 <- data1 %>% group_by(sentiment) %>% top_n(input$slider2, n) %>% ungroup() %>% mutate(word = reorder(word, n))
@@ -166,12 +158,30 @@ server <- function(input, output) {
     
     gridExtra::grid.arrange(
       ggplot(data1, aes(word, n, fill = sentiment)) + geom_col(show.legend = FALSE) + 
-        facet_wrap(~sentiment, scales = "free_y") + scale_fill_brewer(palette = "Set3") + 
+        facet_wrap(~sentiment, scales = "free_y") + scale_fill_brewer(palette = "Set2") + 
         labs(y = "n", x = NULL) + coord_flip() + ggtitle("English"),
       ggplot(data2, aes(word, n, fill = sentiment)) + geom_col(show.legend = FALSE) + 
         facet_wrap(~sentiment, scales = "free_y") + scale_fill_brewer(palette = "Set2") +
         labs(y = "n", x = NULL) + coord_flip() + ggtitle("German"), 
       nrow = 2)
+  })
+  
+  # English translation of top german negative word counts
+  output$text2 <- renderText({
+    paste('English Translation for negative sentiments:', 
+          "mistake, scandal, end, critic, missuse, sorrow, propoganda, crisis, not allowed, damage, short,
+          hard, adjust, delete, critics, controversy, exacerbate, outrage, affaire, offend, fail,
+          avoid, lose, banish, heavy, manipulation, deletion, show, close, small, hate, threaten.")
+    
+  })
+  
+  # English translation of top german positive word counts
+  output$text3 <- renderText({
+    paste('English Translation for positive sentiments:',
+          "responsibility, knowledge, protect, better, responsible, exactly, easy, solution, safety,
+          obtain, well-known, consent, connect, aimed, explain, especially, goal, way, trust, promise,
+          style, right, optimistic, new, possibility, possible, massive, solve, intelligence, to make better,
+          ready, correct.")
   })
   
   # Plots of count for english and german tweets
@@ -186,6 +196,15 @@ server <- function(input, output) {
       nrow = 1)
   })
   
+  # English translation of top german tweet word conts
+  output$text4 <- renderText({
+    paste('English Translation:',
+          "data, hearing, congress, europe, signed, boss, question, senate, senator, data scandal,
+          users, questioning, EU, parliament, live, internet, years, data protection, appearance,
+          billions, topic, apologize, asked, world, online, advertisement, a lot, responsibility,
+          user, pay.")
+  })
+  
   # Plots of count for positive and negative sentiment for english and german tweets
   output$plot4 <- renderPlot({
     data5 <- data5 %>% group_by(sentiment) %>% top_n(input$slider4, n) %>% ungroup() %>% mutate(word = reorder(word, n))
@@ -195,33 +214,41 @@ server <- function(input, output) {
         facet_wrap(~sentiment, scales = "free_y") + scale_fill_brewer(palette = "Accent") + 
         labs(y = "n", x = NULL) + coord_flip() + ggtitle("English"),
       ggplot(data6, aes(word, n, fill = sentiment)) + geom_col(show.legend = FALSE) +
-        facet_wrap(~sentiment, scales = "free_y") + scale_fill_brewer(palette = "Set1") +
+        facet_wrap(~sentiment, scales = "free_y") + scale_fill_brewer(palette = "Accent") +
         labs(y = "n", x = NULL) + coord_flip() + ggtitle("German"),
       nrow = 2)
   })
   
-  output$table1 <- renderTable({
-      if (input$radio1 == 1) {
-        rt_en <- searchTwitter('#Facebook + Zuckerberg -filter:retweets', n=input$slider5, lang="en")
-        rt_en <- twListToDF(rt_en)
-        rt_en <- rt_en %>% select(text, created)
-        rt_en[,2] <- as.character(rt_en[,2])
-        rt_en }
-      else {
-        rt_de <- searchTwitter('#Facebook + Zuckerberg -filter:retweets', n=input$slider5, lang="de")
-        rt_de <- twListToDF(rt_de)
-        rt_de <- rt_de %>% select(text, created)
-        rt_de[,2] <- as.character(rt_de[,2])
-        rt_de }
-    })
+  # English translation for top german negative word counts
+  output$text5 <- renderText({
+    paste('English Translation for negative sentiments:', 
+          "scandal, mistake, naive, at fault, censor, end, doubt, delete, farce, betray, incredibility,
+          propoganda, critic, crazy, vague, bad, short, hard, shattered, madness, ignorance, fault,
+          nervous, deprivation, lie, mad, negligence, disappointed, outrage, restrict, vicious.")
+  })
   
-  output$table2 <- renderText({
-    if (input$radio2 == 1) {
-      markovchainSequence(n = input$slider6, markovchain = mcfit)
+  # English translation for top german positive word counts
+  output$text6 <- renderText({
+    paste('English Translation for positive sentiments:', 
+          "responsibility, easy, explain, better, knowledge, love, right, protect, intelligence, exactly,
+          safety, earned, rights, laugh, clear, important, fast, possibility, believe, asked, free, interest,
+          to make better, well-known, worth, understand, surprised, to be happy, firm, best.")
+  })
+  
+  # generating Markov Chain text for each language and selected length
+  output$table1 <- renderText({
+    if (input$radio1 == 1) {
+      markovchainSequence(n = input$slider5, markovchain = mcfit)
     }
     else {
-      markovchainSequence(n = input$slider6, markovchain = mcfit_de)
+      markovchainSequence(n = input$slider5, markovchain = mcfit_de)
     }
+  })
+  
+  # note of caution about text generated
+  output$text7 <- renderText({
+    paste("Please note, this is not actual text from any news article or tweet gathered throughout this study;
+          this is purely for demonstration purposes and is used to illustrate an application of n-grams.")
   })
 }
 
