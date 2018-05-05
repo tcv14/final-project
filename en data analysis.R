@@ -1,3 +1,4 @@
+#detach("package:igraph") # only run if running this R script after the "de data analysis.R" script
 library(igraph)
 library(tidyverse)
 library(tidytext)
@@ -6,8 +7,6 @@ library(reshape2)
 library(scales)
 library(ggraph)
 library(markovchain)
-
-# filter(n > quantile(n, 0.99))
 
 # load stop words
 data(stop_words)
@@ -339,13 +338,13 @@ news.english.text <- str_replace_all(news.english.text, "[[:punct:]]", "")
 # get a list of just the words split into tokens
 news.english.text_terms <- unlist(strsplit(news.english.text, " "))
 # creating the model, this takes a few minutes
-news.english.text_fit <- markovchainFit(data = news.english.text_terms)
-mcfit <- news.english.text_fit$estimate
-save(mcfit, file = "mcfit.RData")
+#news.english.text_fit <- markovchainFit(data = news.english.text_terms)
+#mcfit <- news.english.text_fit$estimate
+#save(mcfit, file = "./Shiny/mcfit.RData")
 
 # generate text directly after running previous line of code
-news.english.text_generate <- markovchainSequence(n = 10, markovchain = news.english.text_fit$estimate)
+#news.english.text_generate <- markovchainSequence(n = 10, markovchain = news.english.text_fit$estimate)
 
 # generate text from the .RData file
-load("mcfit.RData")
+load("./Shiny/mcfit.RData")
 news.english.text_generate <- markovchainSequence(n = 10, markovchain = mcfit)

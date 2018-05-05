@@ -1,4 +1,4 @@
-detach("package:igraph") # only run if running this R script after the "en data analysis.R" script
+#detach("package:igraph") # only run if running this R script after the "en data analysis.R" script
 library(tidyverse)
 library(tidytext)
 #install.packages("lsa")
@@ -343,13 +343,13 @@ news.german.text <- str_replace_all(news.german.text, "[[:punct:]]", " ")
 news.german.text_terms <- unlist(strsplit(news.german.text, " "))
 news.german.text_terms <- news.german.text_terms[news.german.text_terms != ""]
 # creating the model, this takes a couple minutes
-news.german.text_fit <- markovchainFit(data = news.german.text_terms)
-mcfit_de <- news.german.text_fit$estimate
-save(mcfit_de, file = "mcfit_de.RData")
+#news.german.text_fit <- markovchainFit(data = news.german.text_terms)
+#mcfit_de <- news.german.text_fit$estimate
+#save(mcfit_de, file = "./Shiny/mcfit_de.RData")
 
 # generate text directly after running previous line of code
-news.german.text_generate <- markovchainSequence(n = 10, markovchain = news.german.text_fit$estimate)
+#news.german.text_generate <- markovchainSequence(n = 10, markovchain = news.german.text_fit$estimate)
 
 # generate text from the .RData file
-load("mcfit_de.RData")
+load("./Shiny/mcfit_de.RData")
 news.german.text_generate <- markovchainSequence(n = 10, markovchain = mcfit_de)
