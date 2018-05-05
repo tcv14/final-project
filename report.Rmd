@@ -3,8 +3,6 @@ title: "Facebook Data Scandal: English and German Text Analysis"
 author: "Tiffany Cheng"
 date: "May 5, 2018"
 output: html_document
-out.width: 5
-out.height: 4
 fig.align: 'center'
 ---
 
@@ -16,15 +14,15 @@ source("en and de comparisons.R")
 
 ## Introduction
 
-Inspired by my study abroad adventures in Germany, I decided that I wanted to apply my English text analysis skills to the German language. From my experience, I found that Germans are very conscious of their personal data and take great precautions to keep it as secure as possible. The Facebook/Cambridge Analytica data scandal of late March to early April 2018 provided the perfect opportunity to investigate and compare reactions between English and German texts.
+Inspired by the two times I've studied abroad in Germany, I decided that I wanted to apply and extend my English text analysis skills to the German language. From my experience, I found that Germans are very conscious of their personal data and take great precautions to keep it as secure as possible. The Facebook/Cambridge Analytica data scandal of late March to early April 2018 provided the perfect opportunity to investigate and compare reactions between English and German texts.
 
 ## Data Collection Methods
 
-This study includes the use of Twitter tweets as well as text from news articles found online. The Twitter API was used to search for tweets both in English and in German with the following hastags: `#MarkZuckerberg`, `#Zuckerberg`, `#FacebookDataBreach`, and `#Facebook` plus the word `Zuckerberg`. There was an additional hashtag used for German, which was `#Datenskandal` or data scandal due to the small sample of German tweets. Retweets were filtered out during the search process. These tweets were used as real-time data and were collected in the time frame from April 10, 2018 to April 21, 2018. For news articles, a selection of five news companies were chosen throughout the United States and Germany to get a range of different journalistic styles and opinions. In total, five articles were chosen from each company. There was a sixth news company chosen in the United States because one company (The Housten Chronicle) only published three articles. Therefore, the Dallas News was chosen to provide the remaining two articles. The news articles serve as "historical data" and they were published between the dates of March 23, 2018 and April 11, 2018.
+This study includes the use of Twitter tweets as well as text from news articles found online. The Twitter API was used to search for tweets both in English and in German with the following hashtags: `#MarkZuckerberg`, `#Zuckerberg`, `#FacebookDataBreach`, and `#Facebook` plus the word `Zuckerberg`. There was an additional hashtag used for German, which was `#Datenskandal` (meaning data scandal) due to the small sample of German tweets. Retweets were filtered out during the search process. These tweets were used as real-time data and were collected in the time frame from April 10, 2018 to April 21, 2018. For news articles, a selection of five news companies were chosen throughout the United States and Germany to get a range of different journalistic styles and opinions. In total, five articles were chosen from each company. There was a sixth news company chosen in the United States because one company (The Houston Chronicle) only published three articles. Therefore, the Dallas News was chosen to provide the remaining two articles. The news articles serve as "historical data" and they were published between the dates of March 23, 2018 and April 11, 2018.
 
 ## Location of News Companies
 
-The names of the six US news companies are as follows: New York Times, Chicago Tribune, Dallas News, Housten Chronicle, LA Times, and San Francisco Chronicle. Their locations on the map are seen below.
+The names of the six US news companies are as follows: New York Times, Chicago Tribune, Dallas News, Houston Chronicle, LA Times, and San Francisco Chronicle. Their locations on the map are seen below.
 
 ```{r}
 load("us.RData")
@@ -40,7 +38,7 @@ germany.map
 
 ## Word Frequency Analysis for News Articles
 
-To get acquainted with the data, the most frequently used words in US news were counted and can be seen in the wordcloud below. As a note, words of the same color appear roughly the same amount of times and bigger words appear more often than smaller words do. From this wordcloud, it is evident that the words data, company, and user appear the most. This is followed by words related to the upcoming testimony in front of Congress (tuesday, wednesday, senate, testify, house) as well as the broader implication of the data breach (million, protect, information, personal, russian).
+To get acquainted with the data, the most frequently used words in US news were counted and can be seen in the word cloud below. As a note, words of the same color appear roughly the same amount of times and bigger words appear more often than smaller words do. From this word cloud, it is evident that the words "data", "company", and "user" appear the most. This is followed by words related to the upcoming testimony in front of Congress ("tuesday", "wednesday", "senate", "testify", "house") as well as the broader implication of the data breach ("million", "protect", "information", "personal", "russian").
 
 ```{r message = FALSE, warning = FALSE}
 wordcloud(news_count.en$word, news_count.en$n, min.freq = 1, max.words = 50, 
@@ -48,37 +46,57 @@ wordcloud(news_count.en$word, news_count.en$n, min.freq = 1, max.words = 50,
           vfont = c("sans serif", "bold"), scale=c(4,.6))
 ```
 
-Next, the most frequently used words in German news were counted and reproduced below.
+Similarly, the most frequently used words in German news were counted and reproduced below. There is a decent among of overlap in the words used and their frequency. Words like "nutzer", "daten", and "unternehmen" ("user", "data", "company") appear the most, which matches with the English news. Interesting to note is that words such as "privatsphäre", "datenmissbrauch", "skandal", and "regeln" ("privacy", "data misuse", "scandal", "rules") are used to discuss the implication of this event, which are stronger and more negative than the words used in English news articles.
 
 ```{r message = FALSE, warning = FALSE}
+news_count.de <- readRDS("news_count.de.rds")
 wordcloud(news_count.de$word, news_count.de$n, min.freq = 1, max.words = 50, 
           random.order = FALSE, rot.per = 0.25, colors = brewer.pal(8, "Dark2"), scale=c(4,.5))
 ```
 
-
 ## Word Frequency Analysis for Twitter
 
-```{r fig.cap = "Top 10 Most Commonly Used Hashtags in Tweets"}
+Since Twitter tweets were used as real-time data, most of the words pertain to the testimony, such as "hearing", "watch", and "question." This differs from the words used in the news articles because words like "regulation", "campaign", and "russian" have disappeared. Interesting to note is that "zuck" has appeared in tweets due to the informal manner in which tweets are written.
+ 
+```{r}
+wordcloud(tweet_count.en$word, tweet_count.en$n, min.freq = 1, max.words = 50, 
+            random.order = FALSE, rot.per = 0.25, colors = brewer.pal(8, "Dark2"),
+          vfont = c("sans serif", "bold"), scale=c(4,.6))
+```
+
+The German tweets include more verbs in the subjunctive tense, such as "hätte" and "wäre", meaning "would have" and "would be." In addition, "fehler", "entschuldigt", and "datenschutz" come up, meaning "mistake", "apologizes", and "data privacy". These words did not appear in the English tweets, which may suggest that Germans could be more wary of their data released ("veröffentlicht", or "released" appears in this word cloud).
+
+```{r}
+tweet_count.de <- readRDS("tweet_count.de.rds")
+wordcloud(tweet_count.de$word, tweet_count.de$n, min.freq = 1, max.words = 50, 
+          random.order = FALSE, rot.per = 0.25, colors = brewer.pal(8, "Dark2"), scale=c(4,.5))
+```
+
+The two following graphs were made to compare hashtags and mentions used between English and German tweets. There is not a significant difference in hashtags used, except some German tweets included the hashtag `#eu`, possibly referring to the European Parliament also wanting Mark Zuckerberg to testify in Europe. However, there is a significant difference in mentions. German tweets overwhelmingly mention Twitter pages of news companies such as `@tagesschau`, `@spiegelonline`, and `@welt`. English tweets, on the other hand, mention the Twitter pages of politicians such as the President (`@potus` and `realdonaldtrump`) and Senator Ted Cruz (`tedcruz` and `sentedcruz`).
+
+```{r}
 grid.arrange(plot_tweet.hashtag_count.en, plot_tweet.hashtag_count.de, nrow = 1)
 ```
 
-```{r fig.cap = "Top 10 Most Commonly Used Mentions in Tweets"}
+```{r}
 grid.arrange(plot_tweet.mention_count.en, plot_tweet.mention_count.de, nrow = 1)
 ```
 
 ## Comparisons Amongst the Same Language
 
-```{r fig.cap = "Comparing Word Usage Amongst English News Articles and Tweets", message = FALSE, warning = FALSE}
-plot_frequency.en
+The relative frequency of words used in tweets and news articles are plotted together to compare usage. Words close to the dashed line indicate that similar proportions of the word was used, while those farther away from the line and that have a pinkish color represent words that differ more in usage.
+
+For English, words like "improperly", "presidential", and "executive" appear more in news articles than in tweets. On Twitter, words such as "europe", "watch", and "admits" are used more frequently. To assess correlation between the two types of text, a correlation t-test can be carried out. The resulting correlation is `r correlation.en$estimate` with a p-value of `r correlation.en$p.value`. This leads to the conclusion that there is a moderately high correlation between the words used.
+
+```{r message = FALSE, warning = FALSE}
+plot_frequency.en + theme(legend.position = "none")
 ```
 
-Correlation from the correlation test is `r correlation.en$estimate`.
+For German, words like "amerikanischen", "datenmissbrauch", and "information" ("american", "data misuse", "information") appear more in news articles than in tweets. On Twitter, words such as "live", "aktie", and "befragung" ("live", "stock", "questioning") appear more. This makes sense because people tweeting at the same time they are watching the testimony and sharing their thoughts. Once again, a correlation t-test can be carried out and the resulting correlation is `r correlation.de$estimate` with a p-value of `r correlation.en$p.value`. The conclusion is that there is a moderate correlation between the words used in news articles and in tweets.
 
-```{r fig.cap = "Comparing Word Usage Amongst German News Articles and Tweets", message = FALSE, warning = FALSE}
-plot_frequency.de
+```{r message = FALSE, warning = FALSE}
+plot_frequency.de + theme(legend.position = "none")
 ```
-
-Correlation from the correlation test is `r correlation.de$estimate`.
 
 ## Sentiment Analysis for News Articles
 
