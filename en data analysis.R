@@ -1,4 +1,3 @@
-#detach("package:igraph") # only run if running this R script after the "de data analysis.R" script
 library(igraph)
 library(tidyverse)
 library(tidytext)

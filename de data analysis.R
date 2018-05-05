@@ -1,4 +1,4 @@
-#detach("package:igraph") # only run if running this R script after the "en data analysis.R" script
+detach("package:igraph")
 library(tidyverse)
 library(tidytext)
 #install.packages("lsa")
@@ -9,6 +9,7 @@ library(wordcloud)
 library(reshape2)
 library(scales)
 library(ggraph)
+#install.packages("markovchain")
 library(markovchain)
 
 # load stop words
