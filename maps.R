@@ -98,7 +98,7 @@ unitedstates.map <- ggplot(map.data) +
             hjust = 0.5, vjust = -1) +
   geom_text(data = points.us,
             aes(x = lon, y = lat, label = points.us$newspaper),
-            hjust = 0.5, vjust = 1.5)
+            hjust = 0.2, vjust = 1.5)
 
 save.image(file = "us.RData")
 load("us.RData")
