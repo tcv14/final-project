@@ -8,11 +8,6 @@ api_secret <- "cXoHnFrryqmfjS0uB13x66HhODPhfFO5gRQWCE5KBMI5wbeyGm"
 access_token <- "975190164925485056-kcPzJmWbOKe8K2XSPiRolaHj6mdKjAp"
 access_token_secret <- "JCTKEegnNogKQxTyxndhrfVQip6EPrjHZzJXOEVcnTU2E"
 my_oauth <- setup_twitter_oauth(api_key, api_secret, access_token, access_token_secret)
-save.image(file = "./Twitter Data/oauth.RData")
-# for shiny app
-save(my_oauth, file = "./Shiny/oauth.RData")
-load("./Shiny/oauth.RData")
-load("./Twitter Data/oauth.RData")
 
 # search English tweets with the hashtag "MarkZuckerberg"
 #facebook_en <- searchTwitter('#MarkZuckerberg -filter:retweets', n=10000, lang="en")
