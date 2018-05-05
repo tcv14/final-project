@@ -146,9 +146,9 @@ server <- function(input, output) {
   output$text1 <- renderText({
     paste('English Translation:', 
           "user, data, boss, millions, information, company, congress, 
-          data scandal, question, mistake, company, app, network, responsibility, affected, 
+          data scandal, question, mistake, company, app, senator, network, responsibility, affected, 
           become, should, scandal, already, EU, hearing, trump, platform, years, donald, 
-          user data, internet, privacy, people, advertisement, about, apps.")
+          user data, internet, privacy, people.")
   })
   
   # Plots of count for positive and negative sentiment for english and german news articles
@@ -171,7 +171,7 @@ server <- function(input, output) {
     paste('English Translation for negative sentiments:', 
           "mistake, scandal, end, critic, missuse, sorrow, propoganda, crisis, not allowed, damage, short,
           hard, adjust, delete, critics, controversy, exacerbate, outrage, affaire, offend, fail,
-          avoid, lose, banish, heavy, manipulation, deletion, show, close, small, hate, threaten.")
+          avoid, lose, banish, heavy, manipulation, deletion, slow, close, small, hate, threaten.")
     
   })
   
@@ -231,7 +231,7 @@ server <- function(input, output) {
   output$text6 <- renderText({
     paste('English Translation for positive sentiments:', 
           "responsibility, easy, explain, better, knowledge, love, right, protect, intelligence, exactly,
-          safety, earned, rights, laugh, clear, important, fast, possibility, believe, asked, free, interest,
+          safety, earned, rights, laugh, clear, important, fast, possibility, believe, asked, free, interested in,
           to make better, well-known, worth, understand, surprised, to be happy, firm, best.")
   })
   
