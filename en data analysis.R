@@ -134,7 +134,7 @@ plot_frequency.en <- ggplot(frequency.en, aes(x = proportion, y = `Twitter`, col
   scale_y_log10(labels = percent_format()) +
   scale_color_gradient(limits = c(0, 0.003), low = "darkslategray4", high = "hotpink2") +
   facet_wrap(~type, ncol = 1) +
-  theme(legend.position = "right") +
+  theme(legend.position = "none") +
   labs(x = NULL, y = "Twitter") +
   ggtitle("Comparing Word Usage Between Twitter and News Articles (English)")
 

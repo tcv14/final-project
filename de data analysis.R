@@ -50,11 +50,15 @@ news.german.words <- news.german %>%
   mutate(word = replace(word, word == "fragen", "frage")) %>%
   mutate(word = replace(word, word == "informationen", "information")) %>%
   mutate(word = replace(word, word == "firmen", "firma")) %>%
-  mutate(word = replace(word, word == "senatoren", "senator"))
+  mutate(word = replace(word, word == "senatoren", "senator")) %>%
+  mutate(word = replace(word, word == "unternehmens", "unternehmen")) %>%
+  mutate(word = replace(word, word == "apps", "app")) %>%
+  mutate(word = replace(word, word == "jahren", "jahre"))
 
 # find highest frequency words
 news_count.de <- news.german.words %>% count(word, sort = TRUE) %>%
   mutate(language = "German")
+saveRDS(news_count.de, file = "news_count.de.rds")
 
 # plot top 10 words
 plot_count.de <- news_count.de %>%
@@ -93,7 +97,10 @@ tweet.all_german.words <- tweet.german %>%
   mutate(word = replace(word, word == "fragen", "frage")) %>%
   mutate(word = replace(word, word == "informationen", "information")) %>%
   mutate(word = replace(word, word == "firmen", "firma")) %>%
-  mutate(word = replace(word, word == "senatoren", "senator"))
+  mutate(word = replace(word, word == "senatoren", "senator")) %>%
+  mutate(word = replace(word, word == "unternehmens", "unternehmen")) %>%
+  mutate(word = replace(word, word == "apps", "app")) %>%
+  mutate(word = replace(word, word == "jahren", "jahre"))
 
 # finding most commonly used hashtags
 tweet.hashtag_count.de <- tweet.all_german.words %>% 
@@ -127,6 +134,7 @@ tweet.german.words <- tweet.all_german.words %>%
 # finding most commonly used words outside of hashtags and mentions
 tweet_count.de <- tweet.german.words %>% count(word, sort = TRUE)
 write_csv(tweet_count.de, "./Shiny/tweet_count.de.csv")
+saveRDS(tweet_count.de, file = "tweet_count.de.rds")
 
 # plot most commonly used words outside of hashtags and mentions
 plot_tweet_count.de <- tweet_count.de %>%
@@ -159,7 +167,7 @@ plot_frequency.de <- ggplot(frequency.de, aes(x = proportion, y = `Twitter`, col
   scale_y_log10(labels = percent_format()) +
   scale_color_gradient(limits = c(0, 0.003), low = "darkslategray4", high = "hotpink2") +
   facet_wrap(~type, ncol = 1) +
-  theme(legend.position = "right") +
+  theme(legend.position = "none") +
   labs(y = "Twitter", x = NULL) +
   ggtitle("Comparing Word Usage Between Twitter and News Articles (German)")
 
