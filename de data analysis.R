@@ -306,7 +306,7 @@ plot_news.german.bigrams <- news.german.bigrams %>%
 plot_news.german.bigrams <- ggraph(plot_news.german.bigrams, layout = "fr") +
   geom_edge_link(aes(edge_alpha = n), show.legend = FALSE, arrow = arrow, end_cap = circle(0.07, "inches")) +
   geom_node_point(color = "pink", size = 5) +
-  geom_node_text(aes(label = name), vjust = 1, hjust = 1) +
+  geom_node_text(aes(label = name), vjust = 1, hjust = 0.4) +
   theme_void()
 
 ### For Twitter
@@ -315,6 +315,7 @@ tweet.german.bigrams <- tweet.german %>%
   mutate(text = str_replace_all(text, replace_reg, "")) %>%
   mutate(text = str_replace_all(text, "#\\S+", "")) %>%
   mutate(text = str_replace_all(text, "@\\S+", "")) %>%
+  filter(!str_detect(text, 'movie')) %>%
   unnest_tokens(bigram, text, token = "ngrams", n = 2) %>%
   separate(bigram, c("word1", "word2"), sep = " ") %>%
   filter(!word1 %in% stopwords_lsa$word) %>%
@@ -335,7 +336,7 @@ plot_tweet.german.bigrams <- tweet.german.bigrams %>%
 plot_tweet.german.bigrams <- ggraph(plot_tweet.german.bigrams, layout = "fr") +
   geom_edge_link(aes(edge_alpha = n), show.legend = FALSE, arrow = arrow, end_cap = circle(0.07, "inches")) +
   geom_node_point(color = "pink", size = 5) +
-  geom_node_text(aes(label = name), vjust = 1, hjust = 1) +
+  geom_node_text(aes(label = name), vjust = 1, hjust = 0.4) +
   theme_void()
 
 ### Building Markov Chain
