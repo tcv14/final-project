@@ -72,7 +72,7 @@ wordcloud(tweet_count.de$word, tweet_count.de$n, min.freq = 1, max.words = 50,
           random.order = FALSE, rot.per = 0.25, colors = brewer.pal(8, "Dark2"), scale=c(4,.5))
 ```
 
-The two following graphs were made to compare hashtags and mentions used between English and German tweets. There is not a significant difference in hashtags used, except some German tweets included the hashtag `#eu`, possibly referring to the European Parliament also wanting Mark Zuckerberg to testify in Europe. However, there is a significant difference in mentions. German tweets overwhelmingly mention Twitter pages of news companies such as `@tagesschau`, `@spiegelonline`, and `@welt`. English tweets, on the other hand, mention the Twitter pages of politicians such as the President (`@potus` and `realdonaldtrump`) and Senator Ted Cruz (`tedcruz` and `sentedcruz`).
+The two following graphs were made to compare hashtags and mentions used between English and German tweets. There is not a significant difference in hashtags used, except some German tweets included the hashtag `#eu`, possibly referring to the European Parliament also wanting Mark Zuckerberg to testify in Europe. However, there is a significant difference in mentions. German tweets overwhelmingly mention Twitter pages of news companies such as `@tagesschau`, `@spiegelonline`, and `@welt`. English tweets, on the other hand, mention the Twitter pages of politicians such as the President (`@potus` and `@realdonaldtrump`) and Senator Ted Cruz (`@tedcruz` and `@sentedcruz`).
 
 ```{r}
 grid.arrange(plot_tweet.hashtag_count.en, plot_tweet.hashtag_count.de, nrow = 1)
@@ -100,94 +100,71 @@ plot_frequency.de + theme(legend.position = "none")
 
 ## Sentiment Analysis for News Articles
 
-### For English: 
+For English, the `bing` sentiments lexicon was used as well as the `afinn` sentiments lexicon. The `bing` lexicon groups words into binary categories of positive and negative and the `afinn` sentiments lexicon assigns a score to each word between -5 to 5 with negative scores representing negative sentiments and positive scores represending positive sentiments.
 
-Using `nrc` sentiments lexicon for negative, then anger, then disgust.
+Using the `bing` sentiment lexicon results in the following table and the next figure representing the top 30 most commonly used negative and positive words. The table indicates that the overall sentiment is negative for English news articles. It is important to note that the `bing` sentiment lexicon categorizes "trump" as a positive sentiment, however, that word takes on a different meaning in this context, so it was anti-joined out of this particular data set. The `afinn` sentiment lexicon results in a sentiment score of `r news.afinn`, which is similar to the `bing` sentiment score.
 
-```{r fig.cap = "`nrc` Sentiments Lexicon", message = FALSE, warning = FALSE}
-wordcloud(news.negative$word, news.negative$n, max.words = 15, random.order = FALSE, 
-          rot.per = 0.25, colors = brewer.pal(8, "Paired"), scale=c(4,.5))
-wordcloud(news.anger$word, news.anger$n, max.words = 15, random.order = FALSE, 
-          rot.per = 0.25, colors = brewer.pal(8, "Set3"), scale=c(4,.5))
-wordcloud(news.disgust$word, news.disgust$n, max.words = 15, random.order = FALSE, 
-          rot.per = 0.25, colors = brewer.pal(8, "Accent"), scale=c(4,.5))
-```
-
-Using `bing` sentiment lexicon results in following table and figure of top 10 most commonly used negative and positive words.
-
-```{r fig.cap = "`bing` Sentiments Lexicon", message = FALSE, warning = FALSE}
+```{r message = FALSE, warning = FALSE}
 knitr::kable(news.bing[1:3])
 news.english.words %>% inner_join(bing) %>%
+  mutate(word = replace(word, word == "mistakes", "mistake")) %>%
   count(word, sentiment, sort = TRUE) %>%
+  anti_join(tibble(`word`="trump")) %>%
   acast(word ~ sentiment, value.var = "n", fill = 0) %>%
-  comparison.cloud(colors = c("gray80", "gray20"), max.words = 20, scale=c(4,.5))
+  comparison.cloud(colors = c("mediumpurple1", "mediumpurple4"), max.words = 30, scale=c(4,.5))
 ```
 
-Using `afinn` sentiment lexicon results in a sentiment score of `r news.afinn`.
+For German, neither the `bing` sentiment lexicon nor the `afinn` sentiment lexicon are available. Therefore, the SentimentWortschatz (or SentiWS) from the University of Leipzig was used. Words in this sentiment collection are scored from -1 to 1 with negative scores representing negative sentiment and positive scores representing positive sentiment. What is particularly helpful about this collection is that it includes inflected words next to their original stem words and scores them as well, which is incredibly useful when doing text analysis on a heavily inflected language like German. Lastly, the original collection did not sort the words into binary groups of positive and negative. That part was coded in when the sentiments were read into R.
 
+The following table summarizes the count for negative and positive words found and the overall sentiment is positive, unlike the English news, which was negative. The graphic that follows plots the top 30 positive and negative sentiments. Using sentiment assigned to each word results in a sentiment score of `r news.senval`.
 
-### For German:
-
-```{r fig.cap = "Postive/Negative Sentiments Lexicon", message = FALSE, warning = FALSE}
+```{r message = FALSE, warning = FALSE}
 knitr::kable(news.posneg[1:3])
 news.german.words %>% inner_join(posneg) %>%
   count(word, sentiment, sort = TRUE) %>%
   acast(word ~ sentiment, value.var = "n", fill = 0) %>%
-  comparison.cloud(colors = c("gray80", "gray20"), max.words = 20, scale=c(4,.5))
+  comparison.cloud(colors = c("cadetblue2", "cadetblue4"), max.words = 30, scale=c(4,.5))
 ```
 
-Using sentiment assigned to each word results in a sentiment score of `r news.senval`.
+In comparing the two graphs for positive and negative sentiments, the languages have some overlap in words used. For negative words, "mistake"/"fehler", "misuse"/"missbrauch", "scandal"/"skandal", "criticism"/"kritik", and "crisis"/"krise" are common between the languages. For positive words, only "protect"/"schutz" are the same and German news write more about "responsibility", "solution", and "safety" ("verantwortung", "lösung", "sicherheit").
 
 ## Sentiment Analysis for Twitter Tweets
 
-### For English:
+For English, the `bing` sentiments lexicon was used as well as the `afinn` sentiments lexicon once again for the following tweet analysis. The `bing` sentiment lexicon resutls in the following table and following graph of top 30 words for tweets. Overall, the sentiment for the tweets is very negative. Sometimes people post on social media when they want to complain about something and express their thoughts in uncensored ways and this may just be reflective of those actions. Using the `afinn` sentiment lexicon results in a sentiment score of `r tweet.afinn`, which is also very negative and reflects the results of the `bing` lexicon.
 
-```{r fig.cap = "`nrc` Sentiments Lexicon", message = FALSE, warning = FALSE}
-wordcloud(tweet.negative$word, tweet.negative$n, max.words = 15, random.order = FALSE, 
-          rot.per = 0.25, colors = brewer.pal(8, "Paired"),  vfont = c("serif", "plain"), scale=c(4,.5))
-wordcloud(tweet.anger$word, tweet.anger$n, max.words = 15, random.order = FALSE, 
-          rot.per = 0.25, colors = brewer.pal(8, "Set2"), vfont = c("serif", "plain"), scale=c(4,.5))
-wordcloud(tweet.disgust$word, tweet.disgust$n, max.words = 15, random.order = FALSE, 
-          rot.per = 0.25, colors = brewer.pal(8, "Accent"), vfont = c("serif", "plain"), scale=c(4,.5))
-```
-
-`bing` sentiment lexicon and plot.
-
-```{r fig.cap = "`nrc` Sentiments Lexicon", message = FALSE, warning = FALSE}
+```{r message = FALSE, warning = FALSE}
 knitr::kable(tweet.bing[1:3])
 tweet.english.words %>% inner_join(bing) %>%
   count(word, sentiment, sort = TRUE) %>%
   acast(word ~ sentiment, value.var = "n", fill = 0) %>%
-  comparison.cloud(colors = c("gray80", "gray20"), max.words = 20, scale=c(4,.5))
+  comparison.cloud(colors = c("slateblue2", "slateblue4"), max.words = 30, scale=c(4,.5))
 ```
 
-Using the `afinn` sentiment lexicon results in a sentiment score of `r tweet.afinn`.
+For German, the SentiWS was used again. German tweets were a little harder to gather than English tweets. However, the sentiment is still generally positive. Lastly, using the sentiment score assigned to each word results in a score of `r tweet.senval`.
 
-### For German:
-
-```{r fig.cap = "Postive/Negative Sentiments Lexicon", message = FALSE, warning = FALSE}
+```{r message = FALSE, warning = FALSE}
 knitr::kable(news.posneg[1:3])
 tweet.german.words %>% inner_join(posneg) %>%
   count(word, sentiment, sort = TRUE) %>%
   acast(word ~ sentiment, value.var = "n", fill = 0) %>%
-  comparison.cloud(colors = c("gray80", "gray20"), max.words = 20, scale=c(4,.5))
+  comparison.cloud(colors = c("deepskyblue2", "deepskyblue4"), max.words = 30, scale=c(4,.5))
 ```
 
-Using sentiment assigned to each word results in a sentiment score of `r tweet.senval`.
+There is not as much overlap of words used amongst the tweets as used in the news articles. The overlapping negative words are, "mistake"/"fehler", "scandal"/"skandal", and "bad"/"schlecht", adn teh overlapping positive words are, "protect"/"schutz" and "love"/"liebe". Some other German negative words include "zweifel", "verraten", and "at fault" ("doubt", "betray", "schuldig") and some German positive words include "verantwortung", "einfach", and "erklärt" ("responsibility", "easy", "explains").
 
-## Markov Chains
+## n-grams
 
 ### For English
 
 Bigrams for English news articles.
 
-```{r}
+```{r message = FALSE, warning = FALSE}
 plot_news.english.bigrams
 ```
 
 Bigrams for English tweets.
 
-```{r}
+```{r message = FALSE, warning = FALSE}
 plot_tweet.english.bigrams
 ```
 
@@ -195,13 +172,16 @@ plot_tweet.english.bigrams
 
 Bigrams for German news articles.
 
-```{r}
+```{r message = FALSE, warning = FALSE}
 plot_news.german.bigrams
 ```
 
 Bigrams for German tweets.
 
-```{r}
+```{r message = FALSE, warning = FALSE}
 plot_tweet.german.bigrams
 ```
 
+## Conclusion
+
+In conclusion, it appears from the sentiment analysis that the English texts are more negative than the German texts. I, honestly, thought it would be the other way around since I had my hypothesis that Germans would have stronger opinions about their data being spread around without their consent.
