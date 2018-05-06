@@ -179,21 +179,21 @@ correlation.de <- cor.test(data = frequency.de[frequency.de$type == "News Articl
 ### Sentiment Analysis ###
 ##########################
 
-# Wörter laden und vorbereiten
 sentiment.de <- c(
-  # positive Wörter
+  # read in positive words
   readLines(paste0("SentiWS_v1.8c_Positive.txt"), encoding = "UTF-8"),
-  # negative Wörter
+  # read in negative words
   readLines(paste0("SentiWS_v1.8c_Negative.txt"), encoding = "UTF-8")) %>% 
   lapply(function(x) {
-    # Extrahieren der einzelnen Spalten
+    # split up the individual words
     res <- strsplit(x, "\t", fixed = TRUE)[[1]]
     return(data.frame(words = res[1], value = res[2], stringsAsFactors = FALSE))}) %>%
   bind_rows() %>% 
   mutate(word = gsub("\\|.*", "", words) %>% tolower, value = as.numeric(value)) %>% 
-  # manche Wörter kommen doppelt vor, hier nehmen wir den mittleren Wert
+  # some words appear twice in the file, so take the mean
   group_by(word) %>% summarise(value = mean(value)) %>% 
   ungroup() %>%
+  # add a column indicating whether the word is positive or negative
   mutate(sentiment = ifelse(value > 0, "positive", "negative"))
 
 ### Looking at news articles ###
