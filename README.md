@@ -1,4 +1,4 @@
-<b>final-project<b>
+final-project
 
 Please run the files in the following order to ensure that everything runs smoothly:
 1.
