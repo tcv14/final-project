@@ -156,31 +156,6 @@ nrc <- get_sentiments("nrc")
 
 ### Looking at news articles ###
 
-# starting with the nrc sentiment for negative
-nrc_negative <- nrc %>% filter(sentiment == "negative")
-news.negative <- news.english.words %>%
-  inner_join(nrc_negative) %>%
-  count(word, sort = TRUE)
-
-# then moving to the nrc sentiment for anger
-nrc_anger <- nrc %>% filter(sentiment == "anger")
-news.anger <- news.english.words %>%
-  inner_join(nrc_anger) %>%
-  count(word, sort = TRUE)
-
-# finally examining the nrc sentiment for disgust
-nrc_disgust <- nrc %>% filter(sentiment == "disgust")
-news.disgust <- news.english.words %>%
-  inner_join(nrc_disgust) %>%
-  count(word, sort = TRUE)
-
-wordcloud(news.negative$word, news.negative$n, max.words = 15, random.order = FALSE,
-          rot.per = 0.25, colors = brewer.pal(8, "Paired"))
-wordcloud(news.anger$word, news.anger$n, max.words = 15, random.order = FALSE,
-          rot.per = 0.25, colors = brewer.pal(8, "Set3"))
-wordcloud(news.disgust$word, news.disgust$n, max.words = 15, random.order = FALSE,
-          rot.per = 0.25, colors = brewer.pal(8, "Accent"))
-
 # using the bing sentiment lexicon
 news.bing <- news.english.words %>%
   inner_join(bing) %>%
@@ -209,8 +184,9 @@ plot_news.bing_count <- news.bing_count %>%
 # plotting a comparison word cloud
 news.english.words %>% inner_join(bing) %>%
   count(word, sentiment, sort = TRUE) %>%
+  anti_join(tibble(`word`="trump")) %>%
   acast(word ~ sentiment, value.var = "n", fill = 0) %>%
-  comparison.cloud(colors = c("gray80", "gray20"), max.words = 20)
+  comparison.cloud(colors = c("gray80", "gray20"), max.words = 30)
 
 # using the afinn sentiment lexicon
 news.afinn <- news.english.words %>%
@@ -219,21 +195,6 @@ news.afinn <- news.english.words %>%
 # divide -262 by 5 gives -52.4 (used to compare with German)
 
 ### Looking at tweets ###
-
-# starting with the nrc sentiment for negative
-tweet.negative <- tweet.english.words %>%
-  inner_join(nrc_negative) %>%
-  count(word, sort = TRUE)
-
-# then moving to the nrc sentiment for anger
-tweet.anger <- tweet.english.words %>%
-  inner_join(nrc_anger) %>%
-  count(word, sort = TRUE)
-
-# finally examining the nrc sentiment for disgust
-tweet.disgust <- tweet.english.words %>%
-  inner_join(nrc_disgust) %>%
-  count(word, sort = TRUE)
 
 # using the bing sentiment lexicon
 tweet.bing <- tweet.english.words %>%
