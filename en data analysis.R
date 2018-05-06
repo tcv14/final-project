@@ -257,7 +257,7 @@ plot_news.english.bigrams <- news.english.bigrams %>%
 plot_news.english.bigrams <- ggraph(plot_news.english.bigrams, layout = "fr") +
   geom_edge_link(aes(edge_alpha = n), show.legend = FALSE, arrow = arrow, end_cap = circle(0.07, "inches")) +
   geom_node_point(color = "lightblue", size = 5) +
-  geom_node_text(aes(label = name), vjust = 1, hjust = 1) +
+  geom_node_text(aes(label = name), vjust = 1, hjust = 0.45) +
   theme_void()
 
 ### For Twitter
@@ -282,7 +282,7 @@ plot_tweet.english.bigrams <- tweet.english.bigrams %>%
 plot_tweet.english.bigrams <- ggraph(plot_tweet.english.bigrams, layout = "fr") +
   geom_edge_link(aes(edge_alpha = n), show.legend = FALSE, arrow = arrow, end_cap = circle(0.07, "inches")) +
   geom_node_point(color = "lightblue", size = 5) +
-  geom_node_text(aes(label = name), vjust = 1, hjust = 1) +
+  geom_node_text(aes(label = name), vjust = 1, hjust = 0.4) +
   theme_void()
 
 ### Building Markov Chain
