@@ -92,7 +92,7 @@ unitedstates.map <- ggplot(map.data) +
         plot.margin = unit(0 * c( -1.5, -1.5, -1.5, -1.5), "lines")) +  
   geom_point(data = points.us,             
              aes(x = lon, y = lat), size = 3,  
-             alpha = 1/5, color = "red") +
+             color = "red") +
   geom_text(data = points.us,
             aes(x = lon, y = lat, label = points.us$city),
             hjust = 0.5, vjust = -1) +
