@@ -1,3 +1,6 @@
+### Please run "en data analysis.R" prior to running this file ###
+
+# load required libraries
 detach("package:igraph")
 library(tidyverse)
 library(tidytext)
@@ -12,12 +15,18 @@ library(ggraph)
 #install.packages("markovchain")
 library(markovchain)
 
-# load stop words
+# load english stop words, some tweets are in english
 data(stop_words)
+
+# load stop words from lsa package
 stopwords_lsa <- as_data_frame(stopwords_de)
 colnames(stopwords_lsa) <- "word"
+
+# load stop words from tm package
 stopwords_tm <- as_data_frame(stopwords("german"))
 colnames(stopwords_tm) <- "word"
+
+# create own list of stop words based on subject content and what the packages do not have
 own_stopwords.de <- tibble(
   `word` = c("facebook", "mark", "zuckerberg", "zuckerbergs", "cambridge", "analytica", "us",
               "nun", "dabei", "dafür", "darauf", "hätten", "deren", "ja", "eigentlich",
@@ -142,7 +151,6 @@ plot_tweet_count.de <- tweet_count.de %>%
   mutate(word = reorder(word, n)) %>%
   ggplot(aes(word, n)) + geom_col(fill = "palevioletred4") + xlab(NULL) + coord_flip() + ggtitle("German")
 
-
 ######################################################
 ### Comparing News Articles and Twitter Word Usage ###
 ######################################################
@@ -179,6 +187,7 @@ correlation.de <- cor.test(data = frequency.de[frequency.de$type == "News Articl
 ### Sentiment Analysis ###
 ##########################
 
+# read in SentiWS positive and negative text files
 sentiment.de <- c(
   # read in positive words
   readLines(paste0("SentiWS_v1.8c_Positive.txt"), encoding = "UTF-8"),
@@ -198,6 +207,7 @@ sentiment.de <- c(
 
 ### Looking at news articles ###
 
+# select only the word and its sentiment without the score to create a bing-like sentiment lexicon
 posneg <- sentiment.de %>%
   select(word, sentiment)
 
@@ -207,13 +217,17 @@ news.posneg <- news.german.words %>%
   count(sentiment) %>%
   spread(sentiment, n) %>%
   mutate(sentiment = positive - negative)
-#knitr::kable(news.posneg[1:3])
+#knitr::kable(news.posneg[1:3]) # for report
+
+# find counts and sort of positive and negative words
 news.posneg_count <- news.german.words %>%
   inner_join(posneg) %>%
   count(word, sentiment, sort = TRUE) %>%
   ungroup()
+
 # for shiny app
 write_csv(news.posneg_count, "./Shiny/news.posneg_count.csv")
+
 # plotting negative and positive words side-by-side to compare
 plot_news.posneg_count <- news.posneg_count %>%
   group_by(sentiment) %>%
@@ -226,6 +240,7 @@ plot_news.posneg_count <- news.posneg_count %>%
   scale_fill_brewer(palette = "Set2") +
   labs(y = "n", x = NULL) +
   coord_flip()
+
 # plotting a comparison word cloud
 news.german.words %>% inner_join(posneg) %>%
   count(word, sentiment, sort = TRUE) %>%
@@ -236,6 +251,7 @@ news.german.words %>% inner_join(posneg) %>%
 senval <- sentiment.de %>%
   select(word, value)
 
+# finding overall sentiment score, much like the afinn sentiment lexicon
 news.senval <- news.german.words %>%
   inner_join(senval) %>%
   summarize(sentiment = sum(value))
@@ -253,8 +269,10 @@ tweet.posneg_count <- tweet.german.words %>%
   inner_join(posneg) %>%
   count(word, sentiment, sort = TRUE) %>%
   ungroup()
+
 # for shiny app
 write_csv(tweet.posneg_count, "./Shiny/tweet.posneg_count.csv")
+
 # plotting negative and positive words side-by-side to compare
 plot_tweet.posneg_count <- tweet.posneg_count %>%
   group_by(sentiment) %>%
@@ -268,6 +286,7 @@ plot_tweet.posneg_count <- tweet.posneg_count %>%
   labs(y = "n", x = NULL) +
   coord_flip() +
   ggtitle("German")
+
 # plotting a comparison word cloud
 tweet.german.words %>% inner_join(posneg) %>%
   count(word, sentiment, sort = TRUE) %>%
@@ -283,8 +302,9 @@ tweet.senval <- tweet.german.words %>%
 ### Markov Chains ###
 #####################
 
-### For news
+### For news ###
 
+# finding bigrams for news words
 news.german.bigrams <- news.german %>%
   unnest_tokens(bigram, value, token = "ngrams", n = 2) %>%
   separate(bigram, c("word1", "word2"), sep = " ") %>%
@@ -296,21 +316,27 @@ news.german.bigrams <- news.german %>%
   filter(!word2 %in% stopwords_tm$word) %>%
   count(word1, word2, sort = TRUE)
 
+# set seed to ensure graph plots the same each time
 set.seed(2)
+
+# define the arrow to point to words
 arrow <- grid::arrow(type = "closed", length = unit(0.15, "inches"))
 
+# set up plot of bigrams that appear over 5 times
 plot_news.german.bigrams <- news.german.bigrams %>%
   filter(n > 5) %>%
   graph_from_data_frame()
 
+# plot bigrams
 plot_news.german.bigrams <- ggraph(plot_news.german.bigrams, layout = "fr") +
   geom_edge_link(aes(edge_alpha = n), show.legend = FALSE, arrow = arrow, end_cap = circle(0.07, "inches")) +
   geom_node_point(color = "pink", size = 5) +
   geom_node_text(aes(label = name), vjust = 1, hjust = 0.4) +
   theme_void()
 
-### For Twitter
+### For Twitter ###
 
+# finding bigrams for twitter words
 tweet.german.bigrams <- tweet.german %>%
   mutate(text = str_replace_all(text, replace_reg, "")) %>%
   mutate(text = str_replace_all(text, "#\\S+", "")) %>%
@@ -326,33 +352,43 @@ tweet.german.bigrams <- tweet.german %>%
   filter(!word2 %in% stopwords_tm$word) %>%
   count(word1, word2, sort = TRUE)
 
+# set seed
 set.seed(22)
+
+# define arrow
 arrow <- grid::arrow(type = "closed", length = unit(0.15, "inches"))
 
+# set up plot to graph bigrams that appear over 7 times
 plot_tweet.german.bigrams <- tweet.german.bigrams %>%
   filter(n > 7) %>%
   graph_from_data_frame()
 
+# plot bigrams
 plot_tweet.german.bigrams <- ggraph(plot_tweet.german.bigrams, layout = "fr") +
   geom_edge_link(aes(edge_alpha = n), show.legend = FALSE, arrow = arrow, end_cap = circle(0.07, "inches")) +
   geom_node_point(color = "pink", size = 5) +
   geom_node_text(aes(label = name), vjust = 1, hjust = 0.4) +
   theme_void()
 
-### Building Markov Chain
+### Building Markov Chain ###
 
 # create text file to read in
 write.table(news.german, file = "news.german.txt", row.names = FALSE, col.names = FALSE)
+
 # read in text file
 news.german.text <- readLines('news.german.txt')
+
 # delete empty lines
 news.german.text <- news.german.text[nchar(news.german.text) > 0]
+
 # remove all punctuation
 news.german.text <- str_replace_all(news.german.text, "[[:punct:]]", " ")
 # get a list of just the words split into tokens
 news.german.text_terms <- unlist(strsplit(news.german.text, " "))
 news.german.text_terms <- news.german.text_terms[news.german.text_terms != ""]
-# creating the model, this takes a couple minutes
+
+# creating the model, this takes a couple minutes, uncomment if you want to run
+# model fit is already saved in .RData file, so not necessary to run
 #news.german.text_fit <- markovchainFit(data = news.german.text_terms)
 #mcfit_de <- news.german.text_fit$estimate
 #save(mcfit_de, file = "./Shiny/mcfit_de.RData")
