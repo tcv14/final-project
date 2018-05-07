@@ -28,10 +28,10 @@ ui <- dashboardPage(
                icon = icon("twitter", lib = "font-awesome"),
                menuSubItem("Top Word Counts", tabName = "overview_tw"),
                menuSubItem("Sentiment Analysis", tabName = "sen_analysis_tw")),
-      menuItem("For Fun!", 
+      menuItem("Application of n-grams", 
                tabName = "for_fun", 
-               icon = icon("gift", lib = "glyphicon"),
-               menuSubItem("Text Generator", tabName = "textgen"))
+               icon = icon("menu-hamburger", lib = "glyphicon"),
+               menuSubItem("Markov Chain Text Generator", tabName = "textgen"))
     )
   ),
   dashboardBody(
@@ -145,9 +145,9 @@ server <- function(input, output) {
   # English translation of top german news article word counts
   output$text1 <- renderText({
     paste('English Translation:', 
-          "user, data, boss, millions, information, company, congress, 
-          data scandal, question, mistake, company, app, senator, network, responsibility, affected, 
-          become, should, scandal, already, EU, hearing, trump, platform, years, donald, 
+          "user, data, boss, company, millions, information, congress, 
+          data scandal, question, app, mistake, year, company, senator, network, responsibility, affected, 
+          become, should, scandal, already, EU, hearing, trump, platform, donald, 
           user data, internet, privacy, people.")
   })
   
@@ -169,7 +169,7 @@ server <- function(input, output) {
   # English translation of top german negative word counts
   output$text2 <- renderText({
     paste('English Translation for negative sentiments:', 
-          "mistake, scandal, end, critic, missuse, sorrow, propoganda, crisis, not allowed, damage, short,
+          "mistake, scandal, end, criticism, missuse, sorrow, propoganda, crisis, not allowed, damage, short,
           hard, adjust, delete, critics, controversy, exacerbate, outrage, affaire, offend, fail,
           avoid, lose, banish, heavy, manipulation, deletion, slow, close, small, hate, threaten.")
     
@@ -180,7 +180,7 @@ server <- function(input, output) {
     paste('English Translation for positive sentiments:',
           "responsibility, knowledge, protect, better, responsible, exactly, easy, solution, safety,
           obtain, well-known, consent, connect, aimed, explain, especially, goal, way, trust, promise,
-          style, right, optimistic, new, possibility, possible, massive, solve, intelligence, to make better,
+          style, rights, optimistic, new, possibility, possible, massive, solve, intelligence, to make better,
           ready, correct.")
   })
   
@@ -200,7 +200,7 @@ server <- function(input, output) {
   output$text4 <- renderText({
     paste('English Translation:',
           "data, hearing, congress, europe, signed, boss, question, senate, senator, data scandal,
-          users, questioning, EU, parliament, live, internet, years, data protection, appearance,
+          users, questioning, EU, year, parliament, live, internet, data protection, appearance,
           billions, topic, apologize, asked, world, online, advertisement, a lot, responsibility,
           user, pay.")
   })
@@ -223,7 +223,7 @@ server <- function(input, output) {
   output$text5 <- renderText({
     paste('English Translation for negative sentiments:', 
           "scandal, mistake, naive, at fault, censor, end, doubt, delete, farce, betray, incredibility,
-          propoganda, critic, crazy, vague, bad, short, hard, shattered, madness, ignorance, fault,
+          propoganda, criticism, crazy, vague, bad, short, hard, shattered, madness, ignorance, fault,
           nervous, deprivation, lie, mad, negligence, disappointed, outrage, restrict, vicious.")
   })
   
@@ -231,7 +231,7 @@ server <- function(input, output) {
   output$text6 <- renderText({
     paste('English Translation for positive sentiments:', 
           "responsibility, easy, explain, better, knowledge, love, right, protect, intelligence, exactly,
-          safety, earned, rights, laugh, clear, important, fast, possibility, believe, asked, free, interested in,
+          safety, earned, rights, laugh, clear, important, fast, possibility, believe, asked, free, interested,
           to make better, well-known, worth, understand, surprised, to be happy, firm, best.")
   })
   
