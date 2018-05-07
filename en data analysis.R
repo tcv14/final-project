@@ -1,3 +1,4 @@
+# load required libraries
 library(igraph)
 library(tidyverse)
 library(tidytext)
@@ -140,7 +141,7 @@ plot_frequency.en <- ggplot(frequency.en, aes(x = proportion, y = `Twitter`, col
 
 # correlation test
 correlation.en <- cor.test(data = frequency.en[frequency.en$type == "News Article",], ~ proportion + `Twitter`)
-#knitr::kable(correlation.en)
+#knitr::kable(correlation.en) # for report
 
 ##########################
 ### Sentiment Analysis ###
@@ -162,13 +163,17 @@ news.bing <- news.english.words %>%
   count(sentiment) %>%
   spread(sentiment, n) %>%
   mutate(sentiment = positive - negative)
-#knitr::kable(news.bing[1:3])
+#knitr::kable(news.bing[1:3]) # for report
+
+# finding counts of positive and negative words
 news.bing_count <- news.english.words %>%
   inner_join(bing) %>%
   count(word, sentiment, sort = TRUE) %>%
   ungroup()
+
 # for shiny app
 write_csv(news.bing_count, "./Shiny/news.bing_count.csv")
+
 # plotting negative and positive words side-by-side to compare
 plot_news.bing_count <- news.bing_count %>%
   group_by(sentiment) %>%
@@ -181,6 +186,7 @@ plot_news.bing_count <- news.bing_count %>%
   scale_fill_brewer(palette = "Set3") +
   labs(y = "n", x = NULL) +
   coord_flip()
+
 # plotting a comparison word cloud
 news.english.words %>% inner_join(bing) %>%
   count(word, sentiment, sort = TRUE) %>%
@@ -192,7 +198,6 @@ news.english.words %>% inner_join(bing) %>%
 news.afinn <- news.english.words %>%
   inner_join(afinn) %>%
   summarize(sentiment = sum(score))
-# divide -262 by 5 gives -52.4 (used to compare with German)
 
 ### Looking at tweets ###
 
@@ -202,13 +207,17 @@ tweet.bing <- tweet.english.words %>%
   count(sentiment) %>%
   spread(sentiment, n) %>%
   mutate(sentiment = positive - negative)
-#knitr::kable(tweet.bing)
+#knitr::kable(tweet.bing) # for report
+
+# finding counts of positive and negative words
 tweet.bing_count <- tweet.english.words %>%
   inner_join(bing) %>%
   count(word, sentiment, sort = TRUE) %>%
   ungroup()
+
 # for shiny app
 write_csv(tweet.bing_count, "./Shiny/tweet.bing_count.csv")
+
 # plotting negative and positive words side-by-side to compare
 plot_tweet.bing_count <- tweet.bing_count %>%
   group_by(sentiment) %>%
@@ -222,6 +231,7 @@ plot_tweet.bing_count <- tweet.bing_count %>%
   labs(y = "n", x = NULL) +
   coord_flip() +
   ggtitle("English")
+
 # plotting a comparison word cloud
 tweet.english.words %>% inner_join(bing) %>%
   count(word, sentiment, sort = TRUE) %>%
@@ -232,14 +242,14 @@ tweet.english.words %>% inner_join(bing) %>%
 tweet.afinn <- tweet.english.words %>%
   inner_join(afinn) %>%
   summarize(sentiment = sum(score))
-# divide -8176 by 5 gives -1635.2 (used to compare with German)
 
 #####################
 ### Markov Chains ###
 #####################
 
-### For news
+### For news ###
 
+# find bigrams (two words together) by unnesting the words by twos and sort them by count
 news.english.bigrams <- news.english %>%
   unnest_tokens(bigram, value, token = "ngrams", n = 2) %>%
   separate(bigram, c("word1", "word2"), sep = " ") %>%
@@ -247,21 +257,27 @@ news.english.bigrams <- news.english %>%
   filter(!word2 %in% stop_words$word) %>%
   count(word1, word2, sort = TRUE)
 
+# to ensure the plot stays the same
 set.seed(1)
+
+# define the arrow pointing to the direction of words
 arrow <- grid::arrow(type = "closed", length = unit(0.15, "inches"))
 
+# setting up the plot of bigrams that appeared mroe than seven times
 plot_news.english.bigrams <- news.english.bigrams %>%
   filter(n > 7) %>%
   graph_from_data_frame()
 
+# plotting bigrams that appeared more than seven times
 plot_news.english.bigrams <- ggraph(plot_news.english.bigrams, layout = "fr") +
   geom_edge_link(aes(edge_alpha = n), show.legend = FALSE, arrow = arrow, end_cap = circle(0.07, "inches")) +
   geom_node_point(color = "lightblue", size = 5) +
   geom_node_text(aes(label = name), vjust = 1, hjust = 0.45) +
   theme_void()
 
-### For Twitter
+### For Twitter ###
 
+# find groups of two words in tweets and sort them by count
 tweet.english.bigrams <- tweet.english %>%
   mutate(text = str_replace_all(text, replace_reg, "")) %>%
   mutate(text = str_replace_all(text, "#\\S+", "")) %>%
@@ -272,37 +288,48 @@ tweet.english.bigrams <- tweet.english %>%
   filter(!word2 %in% stop_words$word) %>%
   count(word1, word2, sort = TRUE)
 
+# set seed to ensure plot stays the same each time
 set.seed(12)
+
+# define the arrow pointing from one word to the next in order
 arrow <- grid::arrow(type = "closed", length = unit(0.15, "inches"))
 
+# set up the plot to plot bigrams that appeared more than 50 times
 plot_tweet.english.bigrams <- tweet.english.bigrams %>%
   filter(n > 50) %>%
   graph_from_data_frame()
 
+# plotting bigrams
 plot_tweet.english.bigrams <- ggraph(plot_tweet.english.bigrams, layout = "fr") +
   geom_edge_link(aes(edge_alpha = n), show.legend = FALSE, arrow = arrow, end_cap = circle(0.07, "inches")) +
   geom_node_point(color = "lightblue", size = 5) +
   geom_node_text(aes(label = name), vjust = 1, hjust = 0.4) +
   theme_void()
 
-### Building Markov Chain
+### Building Markov Chain ###
 
 # create text file to read in
 write.table(news.english, file = "news.english.txt", row.names = FALSE, col.names = FALSE)
+
 # read in text file
 news.english.text <- readLines('news.english.txt')
+
 # delete empty lines
 news.english.text <- news.english.text[nchar(news.english.text) > 0]
+
 # remove all punctuation
 news.english.text <- str_replace_all(news.english.text, "[[:punct:]]", "")
+
 # get a list of just the words split into tokens
 news.english.text_terms <- unlist(strsplit(news.english.text, " "))
-# creating the model, this takes a few minutes
+
+# creating the model, this takes a few minutes, uncomment if you want to run
+# model fit is already saved in .RData file, so not necessary to run again
 #news.english.text_fit <- markovchainFit(data = news.english.text_terms)
-#mcfit <- news.english.text_fit$estimate
+#mcfit <- news.english.text_fit$estimate # only need the estimate portion to generate text
 #save(mcfit, file = "./Shiny/mcfit.RData")
 
-# generate text directly after running previous line of code
+# generate text directly after running markovchainFit()
 #news.english.text_generate <- markovchainSequence(n = 10, markovchain = news.english.text_fit$estimate)
 
 # generate text from the .RData file
