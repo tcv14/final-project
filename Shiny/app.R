@@ -4,6 +4,7 @@ library(shinydashboard)
 library(tidyverse)
 library(markovchain)
 
+# read in data needed to make plots
 data <- suppressMessages(read_csv("count.de.en.csv"))
 data1 <- suppressMessages(read_csv("news.bing_count.csv"))
 data2 <- suppressMessages(read_csv("news.posneg_count.csv"))
@@ -11,9 +12,12 @@ data3 <- suppressMessages(read_csv("tweet_count.en.csv"))
 data4 <- suppressMessages(read_csv("tweet_count.de.csv"))
 data5 <- suppressMessages(read_csv("tweet.bing_count.csv"))
 data6 <- suppressMessages(read_csv("tweet.posneg_count.csv"))
+
+# read in saved Markov Chain model fits
 load("mcfit.RData")
 load("mcfit_de.RData")
 
+# define the ui
 ui <- dashboardPage(
   dashboardHeader(title = "English and German Text Analysis", titleWidth = 500),
   dashboardSidebar(
@@ -132,7 +136,7 @@ ui <- dashboardPage(
   )
 )
 
-
+# define the server
 server <- function(input, output) {
   
   # Plots of count for english and german news articles
@@ -252,4 +256,5 @@ server <- function(input, output) {
   })
 }
 
+# run app
 shinyApp(ui, server)
