@@ -1,3 +1,4 @@
+# source necessary files
 source("en data analysis.R")
 source("de data analysis.R")
 
@@ -5,6 +6,7 @@ source("de data analysis.R")
 count.de.en <- bind_rows(news_count.en, news_count.de)
 write_csv(count.de.en, "./Shiny/count.de.en.csv")
 
+# plot english and german frequency together
 plot_count.de.en <- count.de.en %>%
   group_by(language) %>%
   top_n(10, n) %>%
