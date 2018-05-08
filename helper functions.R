@@ -3,6 +3,13 @@ library(tidyverse)
 #install.packages("rvest")
 library(rvest)
 
+# These functions scrape news articles online by taking in the URL for the article
+# the html_node is next matched based on the html encoding give in ""
+# after the node is matched, it reads the corresponding text between the nodes
+# the function binds all text by row and returns a data frame
+# these functions are sourced in the file "en news data.R" and "de news data.R"
+
+# article with header 1
 read_article.h1 <- function(newsurl) {
   read <- read_html(newsurl)
   read.h1 <- read %>% html_nodes("h1") %>% html_text()
@@ -11,6 +18,7 @@ read_article.h1 <- function(newsurl) {
   return(as_data_frame(read.out))
 }
 
+# article with header 1 and 2
 read_article.h12 <- function(newsurl) {
   read <- read_html(newsurl)
   read.h1 <- read %>% html_nodes("h1") %>% html_text()
@@ -20,6 +28,7 @@ read_article.h12 <- function(newsurl) {
   return(as_data_frame(read.out))
 }
 
+# article with header 2 and 3
 read_article.h23 <- function(newsurl) {
   read <- read_html(newsurl)
   read.h2 <- read %>% html_nodes("h2") %>% html_text()
@@ -29,6 +38,7 @@ read_article.h23 <- function(newsurl) {
   return(as_data_frame(read.out))
 }
 
+# article with header 1, 2, 4
 read_article.h124 <- function(newsurl) {
   read <- read_html(newsurl)
   read.h1 <- read %>% html_nodes("h1") %>% html_text()
@@ -39,6 +49,7 @@ read_article.h124 <- function(newsurl) {
   return(as_data_frame(read.out))
 }
 
+# article with header 1, 2, 3
 read_article.h123 <- function(newsurl) {
   read <- read_html(newsurl)
   read.h1 <- read %>% html_nodes("h1") %>% html_text()
@@ -49,6 +60,7 @@ read_article.h123 <- function(newsurl) {
   return(as_data_frame(read.out))
 }
 
+# article with header 1 and unordered list
 read_article.h1ul <- function(newsurl) {
   read <- read_html(newsurl)
   read.h1 <- read %>% html_nodes("h1") %>% html_text()
@@ -58,6 +70,7 @@ read_article.h1ul <- function(newsurl) {
   return(as_data_frame(read.out))
 }
 
+# article with header 1, 2, 3, and unordered list
 read_article.h123ul <- function(newsurl) {
   read <- read_html(newsurl)
   read.h1 <- read %>% html_nodes("h1") %>% html_text()
