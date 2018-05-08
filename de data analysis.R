@@ -43,7 +43,7 @@ library(igraph)
 # load news article data
 load("./News Article Data/news.german.RData")
 
-# clean news article words
+# clean news article words and change plural forms of words into singular form
 news.german.words <- news.german %>%
   unnest_tokens(word, value, token = "regex", pattern = "’") %>%
   unnest_tokens(word, word, token = "regex", pattern = "'") %>%

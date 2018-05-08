@@ -22,7 +22,7 @@ own_stopwords.en <- tibble(
 # load news article data
 load("./News Article Data/news.english.RData")
 
-# clean news article words
+# clean news article words and change plural forms of words to singular forms
 news.english.words <- news.english %>%
   unnest_tokens(word, value, token = "regex", pattern = "’") %>%
   unnest_tokens(word, word, token = "regex", pattern = "'") %>%
@@ -68,6 +68,10 @@ tweet.all_english.words <- tweet.english %>%
   unnest_tokens(word, word, token = "regex", pattern = "'") %>%
   unnest_tokens(word, word, token = "regex", pattern = unnest_reg) %>%
   mutate(word = gsub('[[:digit:]]+', '', word)) %>%
+  mutate(word = replace(word, word == "senators", "senator")) %>%
+  mutate(word = replace(word, word == "hearings", "hearing")) %>%
+  mutate(word = replace(word, word == "users", "user")) %>%
+  mutate(word = replace(word, word == "questions", "question")) %>%
   filter(word != '') %>%
   anti_join(stop_words) %>%
   anti_join(own_stopwords.en)
