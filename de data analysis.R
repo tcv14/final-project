@@ -1,7 +1,5 @@
-### Please run "en data analysis.R" prior to running this file ###
-
 # load required libraries
-detach("package:igraph")
+library(igraph)
 library(tidyverse)
 library(tidytext)
 #install.packages("lsa")
@@ -19,11 +17,11 @@ library(markovchain)
 data(stop_words)
 
 # load stop words from lsa package
-stopwords_lsa <- as_data_frame(stopwords_de)
+stopwords_lsa <- tibble::as_data_frame(stopwords_de)
 colnames(stopwords_lsa) <- "word"
 
 # load stop words from tm package
-stopwords_tm <- as_data_frame(stopwords("german"))
+stopwords_tm <- tibble::as_data_frame(stopwords("german"))
 colnames(stopwords_tm) <- "word"
 
 # create own list of stop words based on subject content and what the packages do not have
@@ -32,9 +30,6 @@ own_stopwords.de <- tibble(
               "nun", "dabei", "dafür", "darauf", "hätten", "deren", "ja", "eigentlich",
               "kommt", "mal", "heute", "gerade", "schon", "warum", "sagt", "beim", "gibt",
               "gestern", "marc", "john"))
-
-# load library(igraph) now because it masks as_data_frame, which was used above
-library(igraph)
 
 #########################
 ### For News Articles ###
