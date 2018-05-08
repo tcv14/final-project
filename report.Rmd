@@ -210,6 +210,8 @@ The German tweets also reference more numbers and most of the words refer to wha
 plot_tweet.german.bigrams
 ```
 
+An application of n-grams are Markov Chains, which rely on the previous event in determining the next event. Since bigrams group words into groups of two, the general trend for which words are most likely to be grouped together can be calculated. Therefore, an entire sentence or paragraph can be composed based on a sample of text. An example of this can be found in my Shiny application (please see "Further Resources below").
+
 ## Conclusion
 
 In conclusion, the English texts are more negative than the German texts and there is not a significant difference in word usage between tweets and news articles. I, honestly, thought the German texts would be more negative since I had my hypothesis that Germans would have stronger opinions about their data being spread around without their consent. However, the `bing` sentiment library for English is much larger (6788 words vs. 3468 words) than the German sentiment library, which probably left a decent amount of German words out of the analysis. I am happy though that people care so much about the data scandal that occurred last month and are actively voicing their opinions about it.
