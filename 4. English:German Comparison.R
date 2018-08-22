@@ -1,6 +1,6 @@
 # source necessary files
-source("English Text Analysis.R")
-source("German Text Analysis.R")
+source("2. English Text Analysis.R")
+source("3. German Text Analysis.R")
 
 # frequency of words used
 count.de.en <- bind_rows(news_count.en, news_count.de)
