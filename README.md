@@ -1,4 +1,6 @@
-# Final Project for Boston University, MA 415 Data Science in R
+# Final Project
+MA 415 Data Science in R
+Boston University
 
 ## Summary
 This project examines the similarities and differences between English and German tweets following the Facebook data scandal in April 2018. I used an API to read in tweets from Twitter and used the "tidytext" package for text mining and sentiment analysis and relied on the "lsa" and "tm" packages for German stop words.
